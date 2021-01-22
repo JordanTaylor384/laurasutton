@@ -1,0 +1,78 @@
+$events-heading: (
+0px: (30px, 36px)
+);
+$events-title: (
+0px: (24px, 34px)
+);
+
+.events {
+  padding: 0px 0px 40px 0px;
+  @media (min-width: $screen-sm-min) {
+    padding: 60px 0px;
+  }
+  .container {
+    @media (min-width: $screen-sm-min) {
+      max-width: 680px;
+    }
+    @media (min-width: $screen-lg-min) {
+      max-width: 780px;
+    }
+  }
+  &__title {
+    @include sans($events-heading, bold);
+    @include marginBottom(30);
+    @include marginTop(60);
+  }
+  &__item {
+    border: 1px solid $primary;
+    @include marginBottom(25);
+    padding: 25px 30px 10px 30px;
+    @media (min-width: $screen-sm-min) {
+      padding: 40px;
+    }
+    &__grid {
+      @media (min-width: $screen-sm-min) {
+        @include display-grid;
+        @include display-grid-columns(1fr 200px);
+        @include display-grid-gap(90);
+      }
+      &__col1 {
+        @include marginBottom(15, 0);
+      }
+    }
+    &__title {
+      @include sans($events-title, bold);
+      @include marginBottom(15);
+    }
+    &__date {
+      @include sans($p, book);
+    }
+    &__location {
+      @include sans($p, book);
+    }
+    &__more {
+      @include marginBottom(0, 60);
+      @include marginTop(15, 0);
+      @media (max-width: $screen-xs-max) {
+        display: none;
+      }
+      @media (min-width: $screen-sm-min) {
+        text-align: right;
+      }
+    }
+    &__button {
+      button {
+        @extend .btn;
+        @media (min-width: $screen-sm-min) {
+          width: 100%;
+        }
+      }
+      .events__item__more {
+        display: block;
+        @media (min-width: $screen-sm-min) {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,300 @@
+/* IMPORTS */
+@import "bootstrap/bootstrap";
+@import "mixins/_custom";
+@import "mixins/_grid";
+@import "partials/_underscores";
+
+/* COLOURS */
+$black: #000000;
+$dark-grey: #555855;
+$white: #ffffff;
+$light-grey: #EEEEEE;
+
+$lime: #B3CB0F;
+$navy: #21333A;
+$dark-grey: #363D40;
+
+$text: $navy;
+$primary: $lime;
+$secondary: $light-grey;
+
+
+/* TRANSITIONS */
+$transition-speed: 400ms;
+$ease-out-quad : cubic-bezier(0.455, 0.030, 0.515, 0.955);
+$transition: $transition-speed $ease-out-quad;
+$transition-slow: $transition-speed*2 $ease-out-quad;
+
+/* UI */
+@import "partials/_fonts";
+@import "partials/_buttons";
+@import "partials/_forms";
+@import "partials/overlay";
+
+/* MODULES */
+@import "partials/_header";
+@import "partials/_footer";
+@import "partials/_intro";
+@import "partials/_content_block";
+@import "partials/_c2a";
+@import "partials/_video";
+@import "partials/_clients";
+@import "partials/_testimonials";
+@import "partials/_carousel";
+@import "partials/_forms";
+@import "partials/_news";
+@import "partials/_events";
+
+/* GLOBAL*/
+*, *:before, *:after {
+  margin             : 0;
+  padding            : 0;
+  outline            : 0;
+  -webkit-box-sizing : border-box;
+  -moz-box-sizing    : border-box;
+  box-sizing         : border-box;
+  // font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'cerebri-book', sans-serif;
+  font-style: normal;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+html, body {
+  position: relative;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.428571429;
+  color: $text;
+}
+html {
+  min-height: 100vh;
+}
+body {
+  overflow-x: hidden;
+  background-color: white;
+  position: relative;
+  &.fixed {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+}
+#page {
+  background-color: white;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  &:focus,
+  &:active {
+    outline: 0;
+  }
+}
+h1, h2, h3, h4, h5 {
+  // margin-bottom: 0px;
+  margin: 0;
+}
+p {
+  @include marginBottom(20, 30);
+  a {
+    text-decoration: underline;
+    color: $primary;
+  }
+  &.intro-text {
+    @include sans($intro, book);
+  }
+  &.heading-text {
+    @include brandon($heading, medium);
+  }
+}
+ol, ul {
+  list-style: none;
+}
+
+em, i {
+  font-style: italic;
+}
+strong {
+  font-weight: 500;
+}
+
+.text-styles {
+  p {
+    @include sans($p, book);
+    @include marginBottom(20, 30);
+    strong {
+      @include sans($p, bold);
+    }
+    a {
+      text-decoration: underline;
+      color: $primary;
+    }
+    &.intro-text {
+      @include sans($intro, book);
+    }
+    &.heading-text {
+      @include brandon($heading, medium);
+    }
+    &.title-text {
+      @include brandon($title, medium);
+    }
+  }
+  img {
+    @include marginBottom(20, 30);
+  }
+  ul {
+    @include marginBottom(20, 30);
+    // padding-left: 15px;
+    li {
+      // list-style-type: disc;
+      padding-left: 30px;
+      position: relative;
+      @include sans($p, book);
+      @include marginBottom(15);
+      &:before {
+        content: "";
+        height: 5px;
+        width: 5px;
+        border-radius: 100%;
+        background-color: $text;
+        @include center-pos(false, true);
+        left: 0px;
+      }
+    }
+  }
+  ol {
+    @include marginBottom(20, 30);
+    padding-left: 15px;
+    li {
+      list-style-type: decimal;
+      @include sans($p, book);
+      @include marginBottom(15);
+    }
+  }
+  blockquote {
+    background-color: $light-grey;
+    padding: 15px 20px;
+    border-radius: 4px;
+    @include marginBottom(20, 30);
+    p {
+      margin-bottom: 0;
+    }
+  }
+  iframe {
+    width: 100%;
+  }
+}
+
+.edit-link {
+  display: none;
+}
+
+.container {
+  @media (max-width: $screen-xs-max) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.editor.module {
+  padding: 60px 0px;
+  @extend .text-styles;
+}
+
+.cookie-notification {
+  background-color: rgba($navy, 0.8);
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  display: none;
+  padding: 10px 0px;
+  .inner {
+    position: relative;
+    p {
+      @include sans($p, book);
+      color: white;
+      padding-right: 40px;
+      margin-bottom: 0px !important;
+      a {
+        color: white;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+  .close {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    font-size: 16px;
+    cursor: pointer;
+    @include transition(color $transition);
+    // @include transform(rotate(45deg));
+
+    &:after {
+      @extend .icon-cross;
+      // @include transform(rotate(45deg));
+      // @extend .icon-cancel;
+    }
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.error-wrapper {
+  color: $text;
+  position: relative;
+  min-height: 100vh;
+  @media (min-width: $screen-sm-min) {
+    min-height: calc(100vh - 543px);
+  }
+  @media (max-height: 1080px) {
+    min-height: 400px;
+  }
+  .inner {
+    @include center-pos();
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 0px 15px;
+    color: $text;
+    h1 {
+      @include marginBottom(30);
+      color: $text;
+      @include sans($intro, book);
+    }
+    p {
+      @include sans($p, book);
+    }
+    a {
+      text-decoration: underline;
+      color: $text;
+    }
+  }
+}

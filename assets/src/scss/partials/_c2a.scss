@@ -1,0 +1,61 @@
+$call-to-action: (
+0px: (36px, 38px),
+1240px: (40px, 57px)
+);
+
+.c2a {
+  background-repeat: no-repeat;
+  color: white;
+  background-color: $primary;
+  position: relative;
+  background-blend-mode: screen;
+  background-image:url('/wp-content/themes/annearcher/assets/img/a-light-bg.png');
+  background-size: 390px;
+  background-position: calc(50%) calc(0% - 58px);
+  padding: 110px 0px 50px 0px;
+  @media (min-width: $screen-sm-min) {
+    background-size: 453px;
+    background-position: calc(50% + 250px) calc(0% - 90px);
+    padding: 60px 0px 40px 0px;
+  }
+  // &__bg {
+  //   background-color: $primary;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  // }
+  &__grid {
+    position: relative;
+    z-index: 2;
+    @media (min-width: $screen-sm-min) {
+      @include display-grid;
+      @include display-grid-columns(1fr 180px);
+      @include display-grid-gap(40);
+    }
+    @media (min-width: $screen-lg-min) {
+      @include display-grid-columns(780px 1fr);
+      @include display-grid-gap(100);
+    }
+  }
+
+  &__content {
+    // @extend .text-styles;
+    p.heading-text,
+    p.intro-text {
+      @include marginBottom(15);
+      @include brandon($call-to-action, medium);
+    }
+    p {
+      @include sans($p, book);
+    }
+  }
+  &__button {
+    @include align-self(center);
+    @include justify-self(end);
+    button {
+      @extend .btn;
+    }
+  }
+}

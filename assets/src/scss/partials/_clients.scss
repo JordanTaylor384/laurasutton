@@ -1,0 +1,20 @@
+.clients {
+  padding: 30px 65px 0px 65px;
+  @media (min-width: $screen-sm-min) {
+    padding: 30px 0px;
+  }
+  &__grid {
+    @media (min-width: $screen-sm-min) {
+      @include display-grid;
+      @include display-grid-gap(60);
+      @include display-grid-columns(1fr 1fr 1fr 1fr );
+    }
+    @media (min-width: $screen-lg-min) {
+      @include display-grid-columns(1fr 1fr 1fr 1fr);
+    }
+  }
+  a {
+    display: block;
+    @include marginBottom(15, 30);
+  }
+}

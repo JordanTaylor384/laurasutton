@@ -1,0 +1,168 @@
+.site-header {
+  // border: 1px solid green;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  background-color: white;
+  width: 100%;
+  padding: 20px 0px;
+  @media (min-width: $screen-sm-min) {
+    padding: 20px 0px 20px 0px;
+  }
+  @media (min-width: $screen-lg-min) {
+    padding: 10px 0px 30px 0px;
+  }
+  &__grid {
+    @include display-grid;
+    @include display-grid-columns(167px 1fr);
+    @media (min-width: $screen-sm-min) {
+      @include display-grid-columns(200px 1fr);
+    }
+    @media (min-width: $screen-lg-min) {
+      @include display-grid-columns(260px 1fr);
+    }
+  }
+  &__logo {
+    @include align-self(center);
+    @media (min-width: $screen-lg-min) {
+      @include align-self(end);
+      padding-top: 10px;
+    }
+    img {
+      max-width: 167px;
+      @media (min-width: $screen-sm-min) {
+        max-width: 200px;
+      }
+      @media (min-width: $screen-lg-min) {
+        max-width: 260px;
+      }
+    }
+  }
+  &__nav {
+    @include align-self(center);
+    @include justify-self(end);
+    @media (min-width: $screen-lg-min) {
+      @include align-self(start);
+    }
+
+    nav {
+      float: right;
+      @media (max-width: $screen-md-max) {
+        display: none;
+      }
+      li {
+        display: inline-block;
+        padding: 0px 20px;
+        a {
+          display: block;
+          @include sans($nav, bold);
+          padding: 5px 0px;
+          border-bottom: 4px solid transparent;
+          &:focus {
+            outline: dotted;
+          }
+        }
+        &.current-menu-item,
+        &.current_page_parent {
+          & > a {
+            border-color: $primary;
+          }
+        }
+      }
+    }
+
+    .nav-toggle {
+      @media (min-width: $screen-lg-min) {
+        display: none;
+      }
+    }
+  }
+  &__greeting {
+    @include marginBottom(30);
+    text-align: right;
+    display: block;
+    @media (max-width: $screen-md-max) {
+      display: none;
+    }
+    div {
+      display: inline;
+    }
+    .greeting {
+      @include sans($nav, light);
+    }
+    .logo {
+      img {
+        max-width: 40px;
+        margin-left: 10px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.sticky-nav {
+  position: fixed;
+  z-index: 10;
+  top: -100px;
+  // top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $navy;
+  color: white;
+  @include transition(top $transition);
+  padding: 20px 0px 20px 0px;
+  @media (min-width: $screen-lg-min) {
+    padding: 25px 0px 0px 0px;
+  }
+  &.show {
+    top: 0;
+  }
+
+  &__grid {
+    @include display-grid;
+    @include display-grid-columns(67px 1fr);
+  }
+  &__nav {
+    @include align-self(center);
+    @include justify-self(end);
+    @media (min-width: $screen-lg-min) {
+      @include align-self(end);
+    }
+    nav {
+      float: right;
+      @media (max-width: $screen-md-max) {
+        display: none;
+      }
+      li {
+        display: inline-block;
+        padding: 0px 20px;
+        a {
+          display: block;
+          @include sans($nav, bold);
+          padding: 5px 0px;
+          padding-bottom: 20px;
+          color: white;
+          border-bottom: 4px solid transparent;
+          &:focus {
+            outline: dotted;
+          }
+        }
+        &.current-menu-item,
+        &.current_page_parent {
+          & > a {
+            border-color: $primary;
+          }
+        }
+      }
+    }
+    .nav-toggle {
+      @media (min-width: $screen-lg-min) {
+        display: none;
+      }
+      span {
+        background-color: white;
+      }
+    }
+  }
+}

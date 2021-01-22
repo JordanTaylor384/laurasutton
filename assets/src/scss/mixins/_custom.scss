@@ -1,0 +1,518 @@
+// General
+$title: (
+0px: (36px, 44px),
+1240px: (51px, 57px)
+);
+$heading: (
+0px: (26px, 37px),
+1240px: (36px, 50px),
+);
+$intro: (
+0px: (18px, 31px),
+);
+$p: (
+0px: (15px, 26px),
+);
+
+$nav: (
+0px: (16px, 26px)
+);
+$button: (
+0px: (15px, 26px)
+);
+$footer: (
+0px: (29px, 39px)
+);
+
+
+@mixin sans($fs-map, $weight) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    font-family: 'cerebri-#{$weight}', sans-serif;
+    font-style: normal;
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size !important;
+    }
+    @else {
+      @media (min-width: $fs-breakpoint) {
+        @include make-font-size($fs-font-size);
+      }
+    }
+  }
+}
+@mixin brandon($fs-map, $weight) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    font-family: 'brandon-grotesque';
+    font-weight: $weight;
+    font-style: normal;
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size !important;
+    }
+    @else {
+      @media (min-width: $fs-breakpoint) {
+        @include make-font-size($fs-font-size);
+      }
+    }
+  }
+}
+
+@mixin icon($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    font-family: 'icons' !important;
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      @media (min-width: $fs-breakpoint) {
+        @include make-font-size($fs-font-size);
+      }
+    }
+  }
+}
+
+
+// Utility function for mixin font-size
+@mixin make-font-size($fs-font-size) {
+  // If $fs-font-size is a list, include
+  // both font-size and line-height
+  @if type-of($fs-font-size) == "list" {
+    font-size: nth($fs-font-size, 1) !important;
+    @if (length($fs-font-size) > 1) {
+      line-height: nth($fs-font-size, 2);
+    }
+  }
+  @else {
+    font-size: $fs-font-size !important;
+  }
+}
+
+
+@mixin center-pos($horizontal : true, $vertical : true) {
+  position : absolute;
+  @if ($horizontal and $vertical)
+  {
+    top       : 50%;
+    left      : 50%;
+    transform : translate(-50%, -50%);
+  }
+  @else if ($horizontal)
+  {
+    left      : 50%;
+    transform : translate(-50%, 0);
+  }
+  @else if ($vertical)
+  {
+    top       : 50%;
+    transform : translate(0, -50%);
+  }
+}
+
+@mixin animationDelay {
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      transition-delay: #{150 * $i}ms;
+    }
+  }
+}
+
+@mixin contain() {
+  display: block;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0px auto;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+
+@mixin min($breakpoint) {
+  $bs-point: 'no-breakpoint';
+  @if ($breakpoint == xs) {
+    $bs-point: $screen-xs-min;
+  }
+  @if ($breakpoint == sm) {
+    $bs-point: $screen-sm-min;
+  }
+  @if ($breakpoint == md) {
+    $bs-point: $screen-md-min;
+  }
+  @if ($breakpoint == lg) {
+    $bs-point: $screen-lg-min;
+  }
+  @media (min-width: $bs-point) {
+    @content;
+  }
+}
+@mixin max($breakpoint) {
+  $bs-point: 'no-breakpoint';
+  @if ($breakpoint == xs) {
+    $bs-point: $screen-xs-max;
+  }
+  @if ($breakpoint == sm) {
+    $bs-point: $screen-sm-max;
+  }
+  @if ($breakpoint == md) {
+    $bs-point: $screen-md-max;
+  }
+  @if ($breakpoint == lg) {
+    $bs-point: $screen-lg-max;
+  }
+  @media (max-width: $bs-point) {
+    @content;
+  }
+}
+
+
+// @mixin opacity($opacity)
+// {
+//   opacity     : $opacity;
+//   $opacity-ie : $opacity * 100;
+//   filter      : alpha(opacity=$opacity-ie); //IE8
+// }
+
+@mixin keyframes($animation-name)
+{
+  @-webkit-keyframes #{$animation-name}
+  {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name}
+  {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name}
+  {
+    @content;
+  }
+  @-o-keyframes #{$animation-name}
+  {
+    @content;
+  }
+  @keyframes #{$animation-name}
+  {
+    @content;
+  }
+}
+
+@mixin animation($str)
+{
+  -webkit-animation : #{$str};
+  -moz-animation    : #{$str};
+  -ms-animation     : #{$str};
+  -o-animation      : #{$str};
+  animation         : #{$str};
+}
+
+@mixin display-flex
+{
+  display                 : -webkit-box;
+  display                 : -webkit-flex;
+  display                 : -ms-flexbox;
+  display                 : flex;
+  -webkit-box-orient      : vertical;
+  -webkit-box-direction   : normal;
+  -webkit-flex-direction  : column;
+  -ms-flex-direction      : column;
+  flex-direction          : column;
+}
+@mixin justify-content($prop : flex-start)
+{
+  -webkit-box-pack        : $prop;
+  -webkit-justify-content : $prop;
+  -ms-flex-pack           : $prop;
+  justify-content         : $prop;
+}
+
+@mixin placeholder
+{
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+@mixin remove-container() {
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+}
+
+@mixin grid($size, $share) {
+  @if ($size == tablet) {
+    @media (min-width: $screen-sm-min) {
+      width: calc(100% / #{$share});
+    }
+  }
+  @if ($size == landscape-tablet) {
+    @media (min-width: $screen-md-min) {
+      width: calc(100% / #{$share});
+    }
+  }
+  @if ($size == desktop) {
+    @media (min-width: $screen-lg-min) {
+      width: calc(100% / #{$share});
+    }
+  }
+}
+
+@mixin device-hide($bootstrap-query) {
+  @if $bootstrap-query ==  sm-mobile {
+    @media (max-width: 480px)
+    {
+      display: none;
+    }
+  }
+  @if $bootstrap-query ==  mobile {
+    @media (max-width: $screen-xs-max)
+    {
+      display: none;
+    }
+  }
+  @else if $bootstrap-query == tablet {
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
+    {
+      display: none;
+    }
+  }
+  @else if $bootstrap-query == landscape-tablet {
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max)
+    {
+      display: none;
+    }
+  }
+  @else if $bootstrap-query == desktop {
+    @media (min-width: $screen-lg-min)
+    {
+      display: none;
+    }
+  }
+}
+
+// pass arguments for margin-bottom at xs,sm,md
+@mixin marginBottom($mobile, $tablet: $mobile, $desktop: $tablet, $large-desktop: $desktop)
+{
+  @if ($mobile)
+  {
+    margin-bottom: #{$mobile}px;
+    @if ($tablet)
+    {
+      @media (min-width: $screen-sm-min)
+      {
+        margin-bottom: #{$tablet}px;
+      }
+      @if ($desktop)
+      {
+        @media (min-width: $screen-md-min)
+        {
+          margin-bottom: #{$desktop}px;
+        }
+        @if ($large-desktop)
+        {
+          @media (min-width: $screen-lg-min)
+          {
+            margin-bottom: #{$large-desktop}px;
+          }
+        } @else {
+          margin-bottom: #{$desktop}px;
+        }
+      } @else {
+        margin-bottom: #{$tablet}px;
+      }
+    } @else {
+      margin-bottom: #{$mobile}px;
+    }
+  }
+}
+
+@mixin marginTop($mobile, $tablet: $mobile, $desktop: $tablet, $large-desktop: $desktop)
+{
+  @if ($mobile)
+  {
+    margin-top: #{$mobile}px;
+    @if ($tablet)
+    {
+      @media (min-width: $screen-sm-min)
+      {
+        margin-top: #{$tablet}px;
+      }
+      @if ($desktop)
+      {
+        @media (min-width: $screen-md-min)
+        {
+          margin-top: #{$desktop}px;
+        }
+        @if ($large-desktop)
+        {
+          @media (min-width: $screen-lg-min)
+          {
+            margin-top: #{$large-desktop}px;
+          }
+        } @else {
+          margin-top: #{$desktop}px;
+        }
+      } @else {
+        margin-top: #{$tablet}px;
+      }
+    } @else {
+      margin-top: #{$mobile}px;
+    }
+  }
+}
+
+@mixin respPadding($mobile, $tablet: $mobile, $desktop: $tablet, $large-desktop: $desktop)
+{
+  @if ($mobile)
+  {
+    padding: #{$mobile};
+    @if ($tablet)
+    {
+      @media (min-width: $screen-sm-min)
+      {
+        padding: #{$tablet};
+      }
+      @if ($desktop)
+      {
+        @media (min-width: $screen-md-min)
+        {
+          padding: #{$desktop};
+        }
+        @if ($large-desktop)
+        {
+          @media (min-width: $screen-lg-min)
+          {
+            padding: #{$large-desktop};
+          }
+        } @else {
+          padding: #{$desktop};
+        }
+      } @else {
+        padding: #{$tablet};
+      }
+    } @else {
+      padding: #{$mobile};
+    }
+  }
+}
+
+
+@mixin customGutter($leftRight)
+{
+  margin-left: -#{$leftRight/2}px;
+  margin-right: -#{$leftRight/2}px;
+  & > div,
+  & > span {
+    padding-left: #{$leftRight/2}px !important;
+    padding-right: #{$leftRight/2}px !important;
+  }
+}
+
+@mixin removePadding()
+{
+  &:nth-child(odd) {
+    padding-right: $grid-gutter-width/4;
+    @media (min-width: $screen-sm-min)
+    {
+      padding-right: $grid-gutter-width/2;
+    }
+  }
+  &:nth-child(even) {
+    padding-left: $grid-gutter-width/4;
+    @media (min-width: $screen-sm-min)
+    {
+      padding-left: $grid-gutter-width/2;
+    }
+  }
+}
+
+// since copass no longer support,
+// custom versions of compass mixins
+
+@function prefix($property, $prefixes: (webkit moz o ms)) {
+  $vendor-prefixed-properties: transform background-clip background-size;
+  $result: ();
+  @each $prefix in $prefixes {
+    @if index($vendor-prefixed-properties, $property) {
+      $property: -#{$prefix}-#{$property}
+    }
+    $result: append($result, $property);
+  }
+  @return $result;
+}
+
+@function trans-prefix($transition, $prefix: moz) {
+  $prefixed: ();
+  @each $trans in $transition {
+    $prop-name: nth($trans, 1);
+    $vendor-prop-name: prefix($prop-name, $prefix);
+    $prop-vals: nth($trans, 2);
+    $prefixed: append($prefixed, ($vendor-prop-name $prop-vals), comma);
+  }
+
+  @return $prefixed;
+}
+
+@mixin transition($values...) {
+  $transitions: ();
+  @each $declaration in $values {
+    $prop: nth($declaration, 1);
+    $prop-opts: ();
+    $length: length($declaration);
+    @for $i from 2 through $length {
+      $prop-opts: append($prop-opts, nth($declaration, $i));
+    }
+    $trans: ($prop, $prop-opts);
+    $transitions: append($transitions, $trans, comma);
+  }
+
+  -webkit-transition: trans-prefix($transitions, webkit);
+  -moz-transition: trans-prefix($transitions, moz);
+  -o-transition: trans-prefix($transitions, o);
+  transition: $values;
+}
+
+// transform mixin
+
+// Browser Prefixes
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+// Rotate
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+//keyframes mixin
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        $browser: '-webkit-' !global;
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        $browser: '-moz-' !global;
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        $browser: '-o-' !global;
+        @content;
+    }
+    @keyframes #{$animationName} {
+        $browser: '' !global;
+        @content;
+    }
+}

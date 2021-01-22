@@ -1,0 +1,94 @@
+.standard-form {
+  input[type="text"],
+  textarea {
+    border: 0;
+    border-radius: 4px;
+    background-color: white;
+    padding: 14px 20px;
+    border: 1px solid $dark-grey;
+    display: block;
+    width: 100%;
+    @include sans($button, book);
+    color: $text;
+    @include marginBottom(15);
+    @include transition(border-color $transition, color $transition);
+    @include placeholder() {
+      @include sans($button, book);
+      color: $text;
+    }
+    &:focus {
+      background-color: white;
+      border-color: $primary;
+      color: $primary;
+      @include placeholder() {
+        color: $primary;
+      }
+    }
+  }
+  textarea {
+    height: 120px;
+  }
+}
+
+
+.contact-form {
+  background-color: white;
+  color: $text;
+  padding: 60px 0px;
+  @media (min-width: $screen-sm-min) {
+    padding-top: 60px;
+    padding-bottom: 90px;
+  }
+
+  &__grid {
+    @media (min-width: $screen-sm-min) {
+      @include display-grid;
+      @include display-grid-columns(1fr 380px);
+      @include display-grid-gap(60);
+    }
+    @media (min-width: $screen-lg-min) {
+      @include display-grid;
+      @include display-grid-columns(490px 1fr);
+      @include display-grid-gap(130);
+    }
+    &__col1 {
+      @include marginBottom(0, 90, 90, 0);
+      p {
+        @include sans($p, book);
+      }
+      img {
+        @media (max-width: $screen-xs-max) {
+          display: none;
+        }
+      }
+    }
+    &__col2 {
+      @media (min-width: $screen-lg-min) {
+        padding-right: 100px;
+      }
+      img {
+        @include marginBottom(44, 0);
+        @media (min-width: $screen-sm-min) {
+          display: none;
+        }
+      }
+    }
+  }
+  &__title {
+    @include brandon($title, medium);
+    @include marginBottom(30);
+  }
+  &__text {
+    @include sans($p, book);
+    @include marginBottom(40, 0);
+  }
+  form {
+    @extend .standard-form;
+    button {
+      float: right;
+      @extend .btn;
+      color: white;
+      background-color: $primary;
+    }
+  }
+}

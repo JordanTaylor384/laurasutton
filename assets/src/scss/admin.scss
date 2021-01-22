@@ -1,0 +1,39 @@
+/* COLOURS */
+$primary: #267962;
+
+// wp-admin area
+body.wp-admin {
+  #adminmenuback,
+  #adminmenuwrap,
+  #adminmenu {
+    a.wp-has-current-submenu {
+      background-color: $primary;
+      color: white;
+    }
+  }
+
+  #wpadminbar {
+    background-color: $primary;
+  }
+
+  #footer-upgrade {
+    display: none;
+  }
+  #footer-left {
+    float: right;
+  }
+}
+
+.acf-flexible-content .layout {
+  border-top: 0 !important;
+}
+.acf-fc-layout-handle {
+  // border-top: 6px solid $primary;
+  font-weight: 700;
+  background-color: $primary !important;
+  color: white !important;
+}
+
+// #wpadminbar #wp-admin-bar-wp-logo>.ab-item .ab-icon:before {
+//   @extend .icon-bc;
+// }

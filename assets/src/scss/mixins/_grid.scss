@@ -1,0 +1,88 @@
+// display: grid and ms prefixes
+@mixin display-grid() {
+  display: -ms-grid;
+  @supports (display: grid) {
+    display: grid;
+  }
+}
+@mixin display-grid-columns($template-columns) {
+  -ms-grid-columns: $template-columns;
+  @supports (display: grid) {
+    grid-template-columns: $template-columns;
+  }
+}
+@mixin display-grid-column($start, $end) {
+  -ms-grid-column-start: $start;
+  -ms-grid-column-end: $end;
+  @supports (display: grid) {
+    grid-column-start: $start;
+    grid-column-end: $end;
+  }
+}
+@mixin display-grid-row($start, $end) {
+  -ms-grid-row-start: $start;
+  -ms-grid-row-end: $end;
+  @supports (display: grid) {
+    grid-row-start: $start;
+    grid-row-end: $end;
+  }
+}
+@mixin display-grid-auto($col-width) {
+  -ms-grid-columns: repeat(auto-fit, minmax(#{$col-width}px, 1fr));
+  @supports (display: grid) {
+    grid-template-columns: repeat(auto-fit, minmax(#{$col-width}px, 1fr));
+  }
+}
+@mixin display-grid-rows($template-rows) {
+  -ms-grid-rows: $template-rows;
+  @supports (display: grid) {
+    grid-template-rows: $template-rows;
+  }
+}
+@mixin display-grid-auto-rows($template-rows) {
+  -ms-grid-auto-rows: $template-rows;
+  @supports (display: grid) {
+    grid-auto-rows: $template-rows;
+  }
+}
+// @mixin display-grid-row($row) {
+//   -ms-grid-row: $row;
+//   @supports (display: grid) {
+//     grid-row: $row;
+//   }
+// }
+@mixin display-grid-areas($template-areas) {
+  @supports (display: grid) {
+    grid-template-areas: $template-areas;
+  }
+}
+@mixin display-grid-area($template-area) {
+  @supports (display: grid) {
+    grid-area: $template-area;
+  }
+}
+@mixin align-self($align) {
+  -ms-grid-row-align: $align;
+  @supports (display: grid) {
+    align-self: $align;
+  }
+}
+@mixin align-items($align) {
+  align-items: $align;
+}
+@mixin justify-self($justify) {
+  -ms-grid-column-align: $justify;
+  @supports (display: grid) {
+    justify-self: $justify;
+  }
+}
+@mixin display-grid-gap($gap) {
+  @supports (display: grid) {
+    grid-column-gap: #{$gap}px;
+  } else {
+    & > * {
+      padding-right:  #{$gap/2}px;
+      padding-left:  #{$gap/2}px;
+    }
+  }
+}

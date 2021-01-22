@@ -1,0 +1,62 @@
+<section class="module events">
+  <div class="container">
+
+    <?php if ( have_rows('block')): ?>
+      <?php while ( have_rows('block') ) : the_row(); ?>
+
+        <div class="events__title">
+          <?=the_sub_field('heading');?>
+        </div>
+
+        <?php if ( have_rows('item')): ?>
+          <?php while ( have_rows('item') ) : the_row(); ?>
+            <div class="events__item">
+              <div class="events__item__grid">
+
+                <div class="events__item__grid__col1">
+                  <div class="events__item__title">
+                    <?=the_sub_field('title');?>
+                  </div>
+                  <div class="events__item__date">
+                    <?=the_sub_field('date');?>
+                  </div>
+                  <div class="events__item__location">
+                    <?=the_sub_field('location');?>
+                  </div>
+                </div>
+
+                <div class="events__item__grid__col2">
+                  <?php if (get_sub_field('more_link')): ?>
+                    <div class="events__item__more">
+                      <a href="<?=the_sub_field('more_link');?>">
+                        <p>More Info</p>
+                      </a>
+                    </div>
+                  <?php endif; ?>
+                  <div class="events__item__button">
+                    <a href="<?=the_sub_field('button_link');?>">
+                      <button type="button" name="button">
+                        <?=the_sub_field('button_text');?>
+                      </button>
+                    </a>
+                    <?php if (get_sub_field('more_link')): ?>
+                      <div class="events__item__more">
+                        <a href="<?=the_sub_field('more_link');?>">
+                          <p>More Info</p>
+                        </a>
+                      </div>
+                    <?php endif; ?>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          <?php endwhile;?>
+        <?php endif; ?>
+
+      <?php endwhile; ?>
+    <?php endif; ?>
+
+
+  </div>
+</section>

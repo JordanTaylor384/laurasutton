@@ -1,0 +1,48 @@
+.btn {
+  padding: 12px 35px;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+  @include sans($button, book);
+  @include transition(background-color $transition, color $transition, border-color $transition);
+  background-color: white;
+  border: 1px solid $dark-grey;
+  min-width: 180px;
+  &:hover,
+  &:focus {
+    border-color: $lime;
+  }
+}
+
+.btn-right {
+  @extend .btn;
+  position: relative;
+  &:after {
+    @include center-pos(false, true);
+    right: 20px;
+    @extend .icon-arrow_right;
+  }
+}
+
+.nav-toggle {
+  width: 27px;
+  height: 23px;
+  cursor: pointer;
+  // border: 1px solid red;
+  span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: $navy;
+    & + span {
+      margin-top: 7px;
+    }
+  }
+}
+.close-toggle {
+  cursor: pointer;
+  &:after {
+    font-size: 26px;
+    @extend .icon-cross;
+  }
+}
