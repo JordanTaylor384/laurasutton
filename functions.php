@@ -188,7 +188,7 @@ add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
 // Admin footer modification
 function remove_footer_admin () {
-	echo '<span id="footer-thankyou">Developed by <a href="https://www.weareadopo.co.uk" target="_blank"><img src="'.get_stylesheet_directory_uri().'/assets/img/dopo_logo.png" style="margin-left: 5px;"/></a></span>';
+	echo '<span id="footer-thankyou">Developed by <a href="https://jordan-taylor.co.uk" target="_blank" alt="Jordan Taylor"><img src="'.get_stylesheet_directory_uri().'/assets/img/jt_logo.png" style="margin-left: 5px;"/></a></span>';
 }
 add_filter('admin_footer_text', 'remove_footer_admin');
 
