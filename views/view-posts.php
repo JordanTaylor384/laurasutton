@@ -5,16 +5,15 @@
     <div class="post__item__date">
       <?=the_field('date');?>
     </div>
-    <div class="post__item__image">
-      <a href="<?=the_permalink();?>">
+    <a href="<?=the_permalink();?>">
+      <div class="post__item__image">
         <img src="<?=$image['url'];?>" title="<?=$image['title'];?>" alt="<?=$image['alt'];?>"/>
-      </a>
-    </div>
-    <div class="post__item__title">
-      <a href="<?=the_permalink();?>">
+        <div class="post__item__image__mask"></div>
+      </div>
+      <div class="post__item__title">
         <?php the_title(); ?>
-      </a>
-    </div>
+      </div>
+    </a>
     <div class="post__item__excerpt">
       <?=the_field('excerpt');?>
     </div>

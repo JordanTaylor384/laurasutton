@@ -47,7 +47,24 @@
       em {
         @include brandon($title, medium);
         font-style: normal;
-        text-decoration: underline;
+        // text-decoration: underline $primary;
+        position: relative;
+        z-index: 0;
+        &:after {
+          content: "";
+          position: absolute;
+          height: 4px;
+          left: 0;
+          width: 100%;
+          z-index: -1;
+          background-color: $primary;
+          // background:url('/wp-content/themes/annearcher/assets/img/underline.svg') bottom;
+          // background-size: cover;
+          bottom: 5px;
+          @media (min-width: $screen-sm-min) {
+            bottom: 10px;
+          }
+        }
       }
     }
   }

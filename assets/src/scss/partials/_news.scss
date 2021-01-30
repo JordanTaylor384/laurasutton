@@ -80,7 +80,18 @@ $news-main: (
     padding: 12px 0px;
   }
   &__image {
+    position: relative;
     @include marginBottom(15);
+    &__mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-color: rgba($primary, 0.7);
+      @include transition(opacity $transition);
+    }
   }
   &__title {
     @include sans($news-title, bold);
@@ -88,6 +99,16 @@ $news-main: (
   }
   &__excerpt {
     @include sans($p, book);
+  }
+  a {
+    &:hover {
+      .post__item__title {
+        text-decoration: underline;
+      }
+      .post__item__image__mask {
+        opacity: 1;
+      }
+    }
   }
 }
 

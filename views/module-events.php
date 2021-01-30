@@ -28,20 +28,20 @@
                 <div class="events__item__grid__col2">
                   <?php if (get_sub_field('more_link')): ?>
                     <div class="events__item__more">
-                      <a href="<?=the_sub_field('more_link');?>">
+                      <a href="<?=the_sub_field('more_link');?>" target="_blank">
                         <p>More Info</p>
                       </a>
                     </div>
                   <?php endif; ?>
                   <div class="events__item__button">
-                    <a href="<?=the_sub_field('button_link');?>">
+                    <a href="<?=the_sub_field('button_link');?>" target="_blank">
                       <button type="button" name="button">
                         <?=the_sub_field('button_text');?>
                       </button>
                     </a>
                     <?php if (get_sub_field('more_link')): ?>
                       <div class="events__item__more">
-                        <a href="<?=the_sub_field('more_link');?>">
+                        <a href="<?=the_sub_field('more_link');?>" target="_blank">
                           <p>More Info</p>
                         </a>
                       </div>
