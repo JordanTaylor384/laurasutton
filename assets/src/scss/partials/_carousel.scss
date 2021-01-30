@@ -17,6 +17,14 @@
     @include sans($p, book);
     @include marginBottom(30);
   }
+
+  iframe {
+    width: 100%;
+    @media (max-width: $screen-xs-max) {
+      height: 200px;
+    }
+  }
+
   &__slider {
     // border: 1px solid red;
 

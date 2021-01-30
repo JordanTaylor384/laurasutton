@@ -4037,6 +4037,11 @@ object {
     @media (min-width: 1240px) {
       .carousel__text {
         margin-bottom: 30px; } }
+  .carousel iframe {
+    width: 100%; }
+    @media (max-width: 767px) {
+      .carousel iframe {
+        height: 200px; } }
   .carousel__slider .slide__inner {
     max-width: 750px;
     margin: 0 auto; }
@@ -4515,8 +4520,9 @@ object {
 
 .article {
   padding: 70px 0px 80px 0px; }
-  .article .container {
-    max-width: 780px; }
+  @media (min-width: 768px) {
+    .article .container {
+      max-width: 780px; } }
   .article__date {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
@@ -4559,12 +4565,14 @@ object {
     @media (min-width: 1240px) {
       .article__title {
         margin-bottom: 30px; } }
-  .article__body {
-    padding-right: 100px; }
+  @media (min-width: 768px) {
+    .article__body {
+      padding-right: 100px; } }
+  @media (min-width: 768px) {
     .article__body img {
       max-width: calc(100% + 100px);
       position: relative;
-      width: calc(100% + 100px); }
+      width: calc(100% + 100px); } }
   .article + .news.module {
     padding: 0; }
 
