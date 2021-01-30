@@ -164,15 +164,36 @@
           padding: 5px 0px;
           padding-bottom: 20px;
           color: white;
-          border-bottom: 4px solid transparent;
+          position: relative;
+          // border-bottom: 4px solid transparent;
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            height: 4px;
+            // width: 100%;
+            background-color: $primary;
+            width: 0;
+            @include transition(width $transition);
+          }
           &:focus {
             outline: dotted;
+          }
+          &:hover {
+            &:after {
+              width: 100%;
+            }
           }
         }
         &.current-menu-item,
         &.current_page_parent {
           & > a {
-            border-color: $primary;
+            &:after {
+              background-color: $primary;
+              width: 100% !important;
+            }
           }
         }
       }
