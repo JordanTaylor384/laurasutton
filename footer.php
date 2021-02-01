@@ -47,23 +47,11 @@
 	</div>
 </footer>
 
-<?php if (get_field('cookie_notification', 'option')): ?>
-	<div class="cookie-notification">
-		<div class="container">
-			<div class="inner">
-				<?php the_field('cookie_notification', 'option'); ?>
-				<div class="close"></div>
-			</div>
-		</div>
-	</div>
-<?php endif;?>
-
 </div><!-- .page -->
 </div><!-- page-classes -->
 
 <?php wp_footer(); ?>
 
-<script src="/wp-content/themes/annearcher/assets/dist/js/jquery.cookieBar.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 <script src="/wp-content/themes/annearcher/assets/dist/js/ScrollMagic.js"></script>
 <script src="/wp-content/themes/annearcher/assets/dist/js/animation.gsap.js"></script>

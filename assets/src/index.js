@@ -13,9 +13,9 @@ import * as testimonials from './js/testimonials.js';
 // custom js
 $(function () {
 
-  $('.cookie-notification').cookieBar({
-    closeButton : '.close'
-  });
+  // $('.cookie-notification').cookieBar({
+  //   closeButton : '.close'
+  // });
 
   $(window).on('load resize', function() {
     swiper.init();

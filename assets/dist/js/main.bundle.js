@@ -33,9 +33,9 @@ window.$ = window.jQuery = (jquery__WEBPACK_IMPORTED_MODULE_0___default());
 // custom js
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.cookie-notification').cookieBar({
-    closeButton : '.close'
-  });
+  // $('.cookie-notification').cookieBar({
+  //   closeButton : '.close'
+  // });
 
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load resize', function() {
     _plugins_swiper_js__WEBPACK_IMPORTED_MODULE_2__.init();

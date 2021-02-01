@@ -226,47 +226,53 @@ strong {
   @extend .text-styles;
 }
 
-.cookie-notification {
-  background-color: rgba($navy, 0.8);
-  color: white;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10000;
-  display: none;
-  padding: 10px 0px;
-  .inner {
-    position: relative;
-    p {
-      @include sans($p, book);
-      color: white;
-      padding-right: 40px;
-      margin-bottom: 0px !important;
-      a {
-        color: white;
-        text-decoration: underline;
-        cursor: pointer;
-      }
-    }
-  }
-  .close {
-    position: absolute;
-    top: 4px;
-    right: 0;
-    font-size: 16px;
-    cursor: pointer;
-    @include transition(color $transition);
-    // @include transform(rotate(45deg));
+// .cookie-notification {
+//   background-color: rgba($navy, 0.8);
+//   color: white;
+//   position: fixed;
+//   bottom: 0;
+//   left: 0;
+//   width: 100%;
+//   z-index: 10000;
+//   display: none;
+//   padding: 10px 0px;
+//   .inner {
+//     position: relative;
+//     p {
+//       @include sans($p, book);
+//       color: white;
+//       padding-right: 40px;
+//       margin-bottom: 0px !important;
+//       a {
+//         color: white;
+//         text-decoration: underline;
+//         cursor: pointer;
+//       }
+//     }
+//   }
+//   .close {
+//     position: absolute;
+//     top: 4px;
+//     right: 0;
+//     font-size: 16px;
+//     cursor: pointer;
+//     @include transition(color $transition);
+//     // @include transform(rotate(45deg));
+//
+//     &:after {
+//       @extend .icon-cross;
+//       // @include transform(rotate(45deg));
+//       // @extend .icon-cancel;
+//     }
+//     &:hover {
+//       color: white;
+//     }
+//   }
+// }
 
-    &:after {
-      @extend .icon-cross;
-      // @include transform(rotate(45deg));
-      // @extend .icon-cancel;
-    }
-    &:hover {
-      color: white;
-    }
+#cookie-notice {
+  .cn-button {
+    background-color: $primary;
   }
 }
 
