@@ -2999,34 +2999,34 @@ object {
 .contact-form form textarea {
   height: 120px; }
 
-.standard-form form.failed .wpcf7-response-output, .contact-form form form.failed .wpcf7-response-output {
+.standard-form.failed .wpcf7-response-output, .contact-form form.failed .wpcf7-response-output {
   margin-top: 50px;
   border: 0;
   background-color: red;
   color: white; }
   @media (min-width: 768px) {
-    .standard-form form.failed .wpcf7-response-output, .contact-form form form.failed .wpcf7-response-output {
+    .standard-form.failed .wpcf7-response-output, .contact-form form.failed .wpcf7-response-output {
       margin-top: 50px; } }
   @media (min-width: 992px) {
-    .standard-form form.failed .wpcf7-response-output, .contact-form form form.failed .wpcf7-response-output {
+    .standard-form.failed .wpcf7-response-output, .contact-form form.failed .wpcf7-response-output {
       margin-top: 50px; } }
   @media (min-width: 1240px) {
-    .standard-form form.failed .wpcf7-response-output, .contact-form form form.failed .wpcf7-response-output {
+    .standard-form.failed .wpcf7-response-output, .contact-form form.failed .wpcf7-response-output {
       margin-top: 50px; } }
 
-.standard-form form.success .wpcf7-response-output, .contact-form form form.success .wpcf7-response-output {
+.standard-form.success .wpcf7-response-output, .contact-form form.success .wpcf7-response-output {
   margin-top: 50px;
   border: 0;
   background-color: green;
   color: white; }
   @media (min-width: 768px) {
-    .standard-form form.success .wpcf7-response-output, .contact-form form form.success .wpcf7-response-output {
+    .standard-form.success .wpcf7-response-output, .contact-form form.success .wpcf7-response-output {
       margin-top: 50px; } }
   @media (min-width: 992px) {
-    .standard-form form.success .wpcf7-response-output, .contact-form form form.success .wpcf7-response-output {
+    .standard-form.success .wpcf7-response-output, .contact-form form.success .wpcf7-response-output {
       margin-top: 50px; } }
   @media (min-width: 1240px) {
-    .standard-form form.success .wpcf7-response-output, .contact-form form form.success .wpcf7-response-output {
+    .standard-form.success .wpcf7-response-output, .contact-form form.success .wpcf7-response-output {
       margin-top: 50px; } }
 
 .contact-form {
@@ -4275,34 +4275,34 @@ object {
 .contact-form form textarea {
   height: 120px; }
 
-.standard-form form.failed .wpcf7-response-output, .contact-form form form.failed .wpcf7-response-output {
+.standard-form.failed .wpcf7-response-output, .contact-form form.failed .wpcf7-response-output {
   margin-top: 50px;
   border: 0;
   background-color: red;
   color: white; }
   @media (min-width: 768px) {
-    .standard-form form.failed .wpcf7-response-output, .contact-form form form.failed .wpcf7-response-output {
+    .standard-form.failed .wpcf7-response-output, .contact-form form.failed .wpcf7-response-output {
       margin-top: 50px; } }
   @media (min-width: 992px) {
-    .standard-form form.failed .wpcf7-response-output, .contact-form form form.failed .wpcf7-response-output {
+    .standard-form.failed .wpcf7-response-output, .contact-form form.failed .wpcf7-response-output {
       margin-top: 50px; } }
   @media (min-width: 1240px) {
-    .standard-form form.failed .wpcf7-response-output, .contact-form form form.failed .wpcf7-response-output {
+    .standard-form.failed .wpcf7-response-output, .contact-form form.failed .wpcf7-response-output {
       margin-top: 50px; } }
 
-.standard-form form.success .wpcf7-response-output, .contact-form form form.success .wpcf7-response-output {
+.standard-form.success .wpcf7-response-output, .contact-form form.success .wpcf7-response-output {
   margin-top: 50px;
   border: 0;
   background-color: green;
   color: white; }
   @media (min-width: 768px) {
-    .standard-form form.success .wpcf7-response-output, .contact-form form form.success .wpcf7-response-output {
+    .standard-form.success .wpcf7-response-output, .contact-form form.success .wpcf7-response-output {
       margin-top: 50px; } }
   @media (min-width: 992px) {
-    .standard-form form.success .wpcf7-response-output, .contact-form form form.success .wpcf7-response-output {
+    .standard-form.success .wpcf7-response-output, .contact-form form.success .wpcf7-response-output {
       margin-top: 50px; } }
   @media (min-width: 1240px) {
-    .standard-form form.success .wpcf7-response-output, .contact-form form form.success .wpcf7-response-output {
+    .standard-form.success .wpcf7-response-output, .contact-form form.success .wpcf7-response-output {
       margin-top: 50px; } }
 
 .contact-form {
