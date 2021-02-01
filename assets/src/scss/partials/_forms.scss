@@ -28,6 +28,24 @@
   textarea {
     height: 120px;
   }
+
+  form.failed {
+    .wpcf7-response-output {
+      @include marginTop(50);
+      border: 0;
+      background-color: red;
+      color: white;
+    }
+  }
+  form.success {
+    .wpcf7-response-output {
+      @include marginTop(50);
+      border: 0;
+      background-color: green;
+      color: white;
+    }
+  }
+
 }
 
 
