@@ -59,6 +59,12 @@ $events-title: (
       @media (min-width: $screen-sm-min) {
         text-align: right;
       }
+      a {
+        @include transition(color $transition);
+        &:hover {
+          color: $primary;
+        }
+      }
     }
     &__button {
       button {

@@ -4770,6 +4770,13 @@ object {
       @media (min-width: 768px) {
         .events__item__more {
           text-align: right; } }
+      .events__item__more a {
+        -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+        .events__item__more a:hover {
+          color: #B3CB0F; }
     @media (min-width: 768px) {
       .events__item__button button {
         width: 100%; } }
