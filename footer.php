@@ -30,7 +30,7 @@
 					</button>
 				</a> -->
 
-				<?php echo do_shortcode('[contact-form-7 id="221" title="Mailerlite Signup"]');?>
+				<?php echo do_shortcode('[contact-form-7 title="Mailerlite Signup"]');?>
 
 			</div>
 			<div class="site-footer__nav">
