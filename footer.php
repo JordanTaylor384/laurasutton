@@ -24,11 +24,14 @@
 			</div>
 			<div class="site-footer__contact">
 				<p>Let's stay in touch.</p>
-				<a href="/contact">
+				<!-- <a href="/contact">
 					<button type="button" name="button">
 						Email
 					</button>
-				</a>
+				</a> -->
+
+				<?php echo do_shortcode('[contact-form-7 id="221" title="Mailerlite Signup"]');?>
+
 			</div>
 			<div class="site-footer__nav">
 				<nav>

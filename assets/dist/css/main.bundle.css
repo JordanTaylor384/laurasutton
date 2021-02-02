@@ -2813,7 +2813,7 @@ object {
   font-family: 'cerebri-bold';
   src: url("../../fonts/Cerebri_Bold.woff") format("woff"); }
 
-[class^="icon-"], [class*=" icon-"], .icon, .icon-arrow_right, .btn-right:after, .site-footer__contact button:after, .carousel__slider .swiper-button-next:after, .news__pagination .page-numbers.next:after, .icon-arrow_left, .carousel__slider .swiper-button-prev:after, .news__pagination .page-numbers.prev:after, .icon-underline, .icon-cross, .close-toggle:after {
+[class^="icon-"], [class*=" icon-"], .icon, .icon-arrow_right, .btn-right:after, .mailerlite .wpcf7-submit:after, .site-footer__contact .wpcf7 .wpcf7-submit:after, .carousel__slider .swiper-button-next:after, .news__pagination .page-numbers.next:after, .icon-arrow_left, .carousel__slider .swiper-button-prev:after, .news__pagination .page-numbers.prev:after, .icon-underline, .icon-cross, .close-toggle:after {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons' !important;
   speak: none;
@@ -2826,7 +2826,7 @@ object {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-arrow_right, .btn-right:after, .site-footer__contact button:after, .carousel__slider .swiper-button-next:after, .news__pagination .page-numbers.next:after {
+.icon-arrow_right, .btn-right:after, .mailerlite .wpcf7-submit:after, .site-footer__contact .wpcf7 .wpcf7-submit:after, .carousel__slider .swiper-button-next:after, .news__pagination .page-numbers.next:after {
   content: "\e900"; }
 
 .icon-arrow_left, .carousel__slider .swiper-button-prev:after, .news__pagination .page-numbers.prev:after {
@@ -2838,7 +2838,7 @@ object {
 .icon-cross, .close-toggle:after {
   content: "\e903"; }
 
-.btn, .btn-right, .site-footer__contact button, .contact-form form button, .content-block__text button, .c2a__button button, .testimonials__more button, .events__item__button button {
+.btn, .btn-right, .contact-form form button, .content-block__text button, .c2a__button button, .testimonials__more button, .events__item__button button {
   padding: 12px 35px;
   text-align: center;
   border-radius: 3px;
@@ -2853,15 +2853,15 @@ object {
   border: 1px solid #363D40;
   min-width: 180px; }
   @media (min-width: 0px) {
-    .btn, .btn-right, .site-footer__contact button, .contact-form form button, .content-block__text button, .c2a__button button, .testimonials__more button, .events__item__button button {
+    .btn, .btn-right, .contact-form form button, .content-block__text button, .c2a__button button, .testimonials__more button, .events__item__button button {
       font-size: 15px !important;
       line-height: 26px; } }
-  .btn:hover, .btn-right:hover, .site-footer__contact button:hover, .contact-form form button:hover, .content-block__text button:hover, .c2a__button button:hover, .testimonials__more button:hover, .events__item__button button:hover, .btn:focus, .btn-right:focus, .site-footer__contact button:focus, .contact-form form button:focus, .content-block__text button:focus, .c2a__button button:focus, .testimonials__more button:focus, .events__item__button button:focus {
+  .btn:hover, .btn-right:hover, .contact-form form button:hover, .content-block__text button:hover, .c2a__button button:hover, .testimonials__more button:hover, .events__item__button button:hover, .btn:focus, .btn-right:focus, .contact-form form button:focus, .content-block__text button:focus, .c2a__button button:focus, .testimonials__more button:focus, .events__item__button button:focus {
     border-color: #B3CB0F; }
 
-.btn-right, .site-footer__contact button {
+.btn-right {
   position: relative; }
-  .btn-right:after, .site-footer__contact button:after {
+  .btn-right:after {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
@@ -3498,22 +3498,6 @@ object {
     @media (min-width: 1240px) {
       .site-footer__contact p {
         margin-bottom: 20px; } }
-  .site-footer__contact button {
-    display: block;
-    text-decoration: none;
-    width: 100%;
-    text-align: left;
-    padding: 12px 20px;
-    margin-bottom: 30px; }
-    @media (min-width: 768px) {
-      .site-footer__contact button {
-        margin-bottom: 60px; } }
-    @media (min-width: 992px) {
-      .site-footer__contact button {
-        margin-bottom: 60px; } }
-    @media (min-width: 1240px) {
-      .site-footer__contact button {
-        margin-bottom: 60px; } }
   .site-footer__nav {
     align-items: end;
     margin-bottom: 20px; }
@@ -3558,6 +3542,59 @@ object {
           .site-footer__smallprint {
             grid-column-start: 1;
             grid-column-end: 3; } } }
+
+.mailerlite, .site-footer__contact .wpcf7 {
+  margin-bottom: 10px; }
+  @media (min-width: 768px) {
+    .mailerlite, .site-footer__contact .wpcf7 {
+      margin-bottom: 40px; } }
+  @media (min-width: 992px) {
+    .mailerlite, .site-footer__contact .wpcf7 {
+      margin-bottom: 40px; } }
+  @media (min-width: 1240px) {
+    .mailerlite, .site-footer__contact .wpcf7 {
+      margin-bottom: 40px; } }
+  .mailerlite .wrapper, .site-footer__contact .wpcf7 .wrapper {
+    position: relative; }
+  .mailerlite input[type="text"], .site-footer__contact .wpcf7 input[type="text"] {
+    padding: 12px 20px;
+    text-align: left;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: "cerebri-book", sans-serif;
+    font-style: normal;
+    -webkit-transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -o-transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    background-color: white;
+    border: 1px solid #363D40;
+    min-width: 180px;
+    width: 100%; }
+    @media (min-width: 0px) {
+      .mailerlite input[type="text"], .site-footer__contact .wpcf7 input[type="text"] {
+        font-size: 15px !important;
+        line-height: 26px; } }
+  .mailerlite .wpcf7-submit, .site-footer__contact .wpcf7 .wpcf7-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0px 20px;
+    cursor: pointer;
+    height: 52px;
+    border: 0;
+    background: none;
+    border-radius: 3px;
+    border: 1px solid #363D40;
+    -webkit-transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -o-transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+    .mailerlite .wpcf7-submit:after, .site-footer__contact .wpcf7 .wpcf7-submit:after {
+      right: 20px; }
+    .mailerlite .wpcf7-submit:hover, .site-footer__contact .wpcf7 .wpcf7-submit:hover {
+      background-color: #B3CB0F;
+      color: white; }
 
 .intro {
   padding: 30px 0px; }
