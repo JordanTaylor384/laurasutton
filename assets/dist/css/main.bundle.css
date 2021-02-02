@@ -3595,6 +3595,8 @@ object {
     .mailerlite .wpcf7-submit:hover, .site-footer__contact .wpcf7 .wpcf7-submit:hover {
       background-color: #B3CB0F;
       color: white; }
+  .mailerlite .wpcf7-response-output, .site-footer__contact .wpcf7 .wpcf7-response-output {
+    margin-top: 10px !important; }
 
 .intro {
   padding: 30px 0px; }
