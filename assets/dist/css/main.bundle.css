@@ -3159,8 +3159,8 @@ object {
   visibility: hidden; }
 
 .page-id-18 .grecaptcha-badge {
-  opacity: 1;
-  visibility: visible; }
+  opacity: 1 !important;
+  visibility: visible !important; }
 
 .overlay {
   position: fixed;
@@ -4482,8 +4482,8 @@ object {
   visibility: hidden; }
 
 .page-id-18 .grecaptcha-badge {
-  opacity: 1;
-  visibility: visible; }
+  opacity: 1 !important;
+  visibility: visible !important; }
 
 .news {
   padding: 60px 0px; }
