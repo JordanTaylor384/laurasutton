@@ -459,7 +459,7 @@ add_filter('the_content', 'filter_ptags_on_images');
 //------------------------------------------------------------------------------
 
 // function that runs when shortcode is called
-function cookie_status() {
+function cookies_status() {
 
  if (cn_cookies_accepted()) {
 	 $message = '<p>Consent Accepted</p>';
@@ -470,4 +470,4 @@ function cookie_status() {
 return $message;
 }
 // register shortcode
-add_shortcode('cookie_status', 'cookie_status');
+add_shortcode('cookies_status', 'cookies_status');
