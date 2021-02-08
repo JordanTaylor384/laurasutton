@@ -40,11 +40,13 @@
         <?php endif; ?>
       </div>
 
+      <?php if ($counter > 3) : ?>
       <div class="testimonials__more">
         <a href="#readmore">
           <button type="button" name="button">Read more</button>
         </a>
       </div>
+    <?php endif; ?>
 
     </div>
   </section>

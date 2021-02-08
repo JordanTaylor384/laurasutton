@@ -43,7 +43,7 @@
 				</nav>
 			</div>
 			<div class="site-footer__smallprint">
-				&copy; Anne Archer Associates <?php echo date("Y"); ?>. Website by xxx.
+				&copy; Anne Archer Associates <?php echo date("Y"); ?>.
 			</div>
 		</div>
 

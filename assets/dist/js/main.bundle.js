@@ -134,9 +134,9 @@ function init() {
     slidesPerView: 1,
     spaceBetween: 30,
     autoHeight: true,
-    autoplay: {
-      delay: 8000,
-    },
+    // autoplay: {
+    //   delay: 8000,
+    // },
     // effect: 'fade',
     speed: 1000,
     pagination: {
