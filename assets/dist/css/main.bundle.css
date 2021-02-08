@@ -3154,6 +3154,10 @@ object {
     color: white;
     background-color: #B3CB0F; }
 
+.page:not(.page-id-18) .grecaptcha-badge {
+  opacity: 0;
+  visibility: hidden; }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -4468,6 +4472,10 @@ object {
     float: right;
     color: white;
     background-color: #B3CB0F; }
+
+.page:not(.page-id-18) .grecaptcha-badge {
+  opacity: 0;
+  visibility: hidden; }
 
 .news {
   padding: 60px 0px; }
