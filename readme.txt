@@ -13,7 +13,7 @@ A starter theme called annearcher.
 
 == Description ==
 
-A Custom wordpress theme developed by Brown & Cooper. This template should not be removed/uninstalled
+A Custom wordpress theme developed by Jordan Taylor. This template should not be removed/uninstalled
 
 == Installation ==
 
