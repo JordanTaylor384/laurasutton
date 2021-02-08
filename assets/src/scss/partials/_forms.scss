@@ -111,7 +111,13 @@
   }
 }
 
-.page:not(.page-id-18) .grecaptcha-badge {
-   opacity: 0;
-   visibility: hidden;
+.grecaptcha-badge {
+  opacity: 0;
+  visibility: hidden;
+}
+.page-id-18 {
+  .grecaptcha-badge {
+    opacity: 1;
+    visibility: visible;
+  }
 }
