@@ -1,3 +1,5 @@
+<?php if (cn_cookies_accepted()): ?>
+
 <div class="module carousel">
 
   <div class="carousel__inner">
@@ -37,3 +39,5 @@
     </div>
   <?php endif; ?>
 </div>
+
+<?php endif; ?>
