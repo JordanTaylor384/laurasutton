@@ -276,6 +276,10 @@ strong {
   }
 }
 
+.cn-button.bootstrap {
+  background: $primary !important;
+}
+
 .error-wrapper {
   color: $text;
   position: relative;

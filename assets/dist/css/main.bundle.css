@@ -5150,6 +5150,9 @@ strong {
 #cookie-notice .cn-button {
   background-color: #B3CB0F; }
 
+.cn-button.bootstrap {
+  background: #B3CB0F !important; }
+
 .error-wrapper {
   color: #21333A;
   position: relative;
