@@ -16,6 +16,7 @@ export function init() {
     // },
     // effect: 'fade',
     speed: 1000,
+    allowTouchMove: false,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
