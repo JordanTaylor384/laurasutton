@@ -10,7 +10,7 @@
           <?=the_sub_field('content');?>
           <?php if (get_sub_field('button_text')): ?>
             <a href="<?=the_sub_field('button_link');?>">
-              <button type="button" name="button"><?=the_sub_field('button_text');?></button>
+              <button type="button" name="<?=the_sub_field('button_text');?>"><?=the_sub_field('button_text');?></button>
             </a>
           <?php endif; ?>
         </div>

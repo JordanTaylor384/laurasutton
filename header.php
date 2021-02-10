@@ -26,8 +26,8 @@
 				<div class="overlay__inner">
 					<div class="overlay__header">
 						<div class="overlay__logo">
-							<a href="/">
-								<img src="<?=the_field('header_logo', 'option');?>"/>
+							<a href="/" aria-label="Visit Anne Archer Associates Homepage">
+								<img src="<?=the_field('header_logo', 'option');?>" aria-label="Anne Archer Associates Logo"/>
 							</a>
 						</div>
 						<div class="overlay__close">
@@ -48,8 +48,8 @@
 				<div class="container">
 					<div class="site-header__grid">
 						<div class="site-header__logo">
-							<a href="/">
-								<img src="<?=the_field('header_logo', 'option');?>"/>
+							<a href="/" aria-label="Visit Anne Archer Associates Homepage">
+								<img src="<?=the_field('header_logo', 'option');?>" aria-label="Anne Archer Associates Logo"/>
 							</a>
 						</div>
 						<div class="site-header__nav">
@@ -81,8 +81,8 @@
 				<div class="container">
 					<div class="sticky-nav__grid">
 						<div class="sticky-nav__logo">
-							<a href="/">
-								<img src="<?=the_field('sticky_logo', 'option');?>"/>
+							<a href="/" aria-label="Visit Anne Archer Associates Homepage">
+								<img src="<?=the_field('sticky_logo', 'option');?>" aria-label="Anne Archer Associates Logo"/>
 							</a>
 						</div>
 						<div class="sticky-nav__nav">
@@ -103,3 +103,5 @@
 				</div>
 			</div>
 			<div class="prop"></div>
+
+			<a name="content"></a>
