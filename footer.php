@@ -23,7 +23,7 @@
 				<img src="<?=the_field('footer_logo', 'option');?>"/>
 			</div>
 			<div class="site-footer__contact">
-				<p>Let's stay in touch.</p>
+				<p>Join our mailing list</p>
 				<!-- <a href="/contact">
 					<button type="button" name="button">
 						Email
