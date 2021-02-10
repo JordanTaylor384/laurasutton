@@ -3521,7 +3521,9 @@ object {
       margin-bottom: 40px; } }
   .mailerlite .wrapper, .site-footer__contact .wpcf7 .wrapper {
     position: relative; }
-  .mailerlite input[type="text"], .site-footer__contact .wpcf7 input[type="text"] {
+  .mailerlite input[type="text"], .site-footer__contact .wpcf7 input[type="text"],
+  .mailerlite input[type="email"],
+  .site-footer__contact .wpcf7 input[type="email"] {
     padding: 12px 20px;
     text-align: left;
     border-radius: 3px;
@@ -3537,7 +3539,9 @@ object {
     min-width: 180px;
     width: 100%; }
     @media (min-width: 0px) {
-      .mailerlite input[type="text"], .site-footer__contact .wpcf7 input[type="text"] {
+      .mailerlite input[type="text"], .site-footer__contact .wpcf7 input[type="text"],
+      .mailerlite input[type="email"],
+      .site-footer__contact .wpcf7 input[type="email"] {
         font-size: 15px !important;
         line-height: 26px; } }
   .mailerlite .wpcf7-submit, .site-footer__contact .wpcf7 .wpcf7-submit {

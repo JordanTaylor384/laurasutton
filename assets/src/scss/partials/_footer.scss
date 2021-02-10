@@ -108,7 +108,8 @@
     position: relative;
     // background-color: red;
   }
-  input[type="text"] {
+  input[type="text"],
+  input[type="email"] {
     padding: 12px 20px;
     text-align: left;
     border-radius: 3px;
