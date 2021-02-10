@@ -41,13 +41,21 @@
       bottom: auto !important;
       left: auto !important;
       width: auto !important;
+      text-align: center;
       @include marginTop(30);
       @include marginBottom(30);
-      span {
-        width: 10px;
-        height: 10px;
+      .swiper-pagination-bullet {
+        width: 34px;
+        height: 34px;
+        display: inline-block;
         background-color: white;
         opacity: 1;
+        position: relative;
+        margin: 0 5px;
+        span {
+          @include sans($p, bold);
+          @include center-pos();
+        }
       }
       &-bullet-active {
         background-color: $primary !important;

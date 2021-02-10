@@ -130,7 +130,7 @@ swiper__WEBPACK_IMPORTED_MODULE_0__.default.use([swiper__WEBPACK_IMPORTED_MODULE
 
 
 function init() {
-  var testimonials = new swiper__WEBPACK_IMPORTED_MODULE_0__.default ('.carousel.module .swiper-container', {
+  var carousel = new swiper__WEBPACK_IMPORTED_MODULE_0__.default ('.carousel.module .swiper-container', {
     slidesPerView: 1,
     spaceBetween: 30,
     autoHeight: true,
@@ -141,11 +141,10 @@ function init() {
     speed: 1000,
     pagination: {
       el: '.swiper-pagination',
-      type: 'bullets',
       clickable: true,
-    },
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + '</span>';
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + '<span>' + (index + 1) + '</span>' + '</span>';
+      },
     },
     navigation: {
       nextEl: '.swiper-button-next',

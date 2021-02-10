@@ -7,7 +7,7 @@ SwiperCore.use([EffectFade]);
 import 'swiper/swiper-bundle.css';
 
 export function init() {
-  var testimonials = new Swiper ('.carousel.module .swiper-container', {
+  var carousel = new Swiper ('.carousel.module .swiper-container', {
     slidesPerView: 1,
     spaceBetween: 30,
     autoHeight: true,
@@ -18,11 +18,10 @@ export function init() {
     speed: 1000,
     pagination: {
       el: '.swiper-pagination',
-      type: 'bullets',
       clickable: true,
-    },
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + '</span>';
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + '<span>' + (index + 1) + '</span>' + '</span>';
+      },
     },
     navigation: {
       nextEl: '.swiper-button-next',

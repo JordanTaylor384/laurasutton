@@ -4101,6 +4101,7 @@ object {
     bottom: auto !important;
     left: auto !important;
     width: auto !important;
+    text-align: center;
     margin-top: 30px;
     margin-bottom: 30px; }
     @media (min-width: 768px) {
@@ -4121,11 +4122,25 @@ object {
     @media (min-width: 1240px) {
       .carousel__slider .swiper-pagination {
         margin-bottom: 30px; } }
-    .carousel__slider .swiper-pagination span {
-      width: 10px;
-      height: 10px;
+    .carousel__slider .swiper-pagination .swiper-pagination-bullet {
+      width: 34px;
+      height: 34px;
+      display: inline-block;
       background-color: white;
-      opacity: 1; }
+      opacity: 1;
+      position: relative;
+      margin: 0 5px; }
+      .carousel__slider .swiper-pagination .swiper-pagination-bullet span {
+        font-family: "cerebri-bold", sans-serif;
+        font-style: normal;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+        @media (min-width: 0px) {
+          .carousel__slider .swiper-pagination .swiper-pagination-bullet span {
+            font-size: 15px !important;
+            line-height: 26px; } }
     .carousel__slider .swiper-pagination-bullet-active {
       background-color: #B3CB0F !important; }
   .carousel__slider .swiper-button-next,
