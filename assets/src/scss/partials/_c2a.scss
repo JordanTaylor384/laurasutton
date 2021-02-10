@@ -31,7 +31,7 @@ $call-to-action: (
     z-index: 2;
     @media (min-width: $screen-sm-min) {
       @include display-grid;
-      @include display-grid-columns(1fr 180px);
+      @include display-grid-columns(1fr 220px);
       @include display-grid-gap(40);
     }
     @media (min-width: $screen-lg-min) {

@@ -3783,13 +3783,13 @@ object {
     @media (min-width: 768px) {
       .c2a__grid {
         display: -ms-grid;
-        -ms-grid-columns: 1fr 180px; }
+        -ms-grid-columns: 1fr 220px; }
         @supports (display: grid) {
           .c2a__grid {
             display: grid; } }
         @supports (display: grid) {
           .c2a__grid {
-            grid-template-columns: 1fr 180px; } }
+            grid-template-columns: 1fr 220px; } }
         @supports (display: grid) {
           .c2a__grid {
             grid-column-gap: 40px; } }
