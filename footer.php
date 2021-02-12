@@ -59,7 +59,6 @@
 <script src="/wp-content/themes/annearcher/assets/dist/js/ScrollMagic.js"></script>
 <script src="/wp-content/themes/annearcher/assets/dist/js/animation.gsap.js"></script>
 <script src="/wp-content/themes/annearcher/assets/dist/js/debug.addIndicators.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtou9S36hy276NftyvPnch3iB_4KkZqik"></script>
 
 </body>
 </html>
