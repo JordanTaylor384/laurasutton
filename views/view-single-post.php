@@ -13,9 +13,9 @@
         <div class="article__body">
           <?php the_content(); ?>
         </div>
-        <div class="article__share">
-          <?php echo do_shortcode('[Sassy_Social_Share]');?>
-        </div>
+        <!-- <div class="article__share">
+          <?php //echo do_shortcode('[Sassy_Social_Share]');?>
+        </div> -->
       </div>
     <?php endwhile; ?>
   </div>
