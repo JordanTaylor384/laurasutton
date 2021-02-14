@@ -8,7 +8,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _js_skip_link_focus_fix_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./src/js/skip-link-focus-fix.js");
+/* harmony import */ var _js_ux_fixes_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./src/js/ux-fixes.js");
 /* harmony import */ var _plugins_swiper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./src/plugins/swiper.js");
 /* harmony import */ var _plugins_autosize_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./src/plugins/autosize.js");
 /* harmony import */ var _js_welcome_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./src/js/welcome.js");
@@ -41,7 +41,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     _plugins_swiper_js__WEBPACK_IMPORTED_MODULE_2__.init();
   });
 
-  _js_skip_link_focus_fix_js__WEBPACK_IMPORTED_MODULE_1__.init();
+  _js_ux_fixes_js__WEBPACK_IMPORTED_MODULE_1__.skiplink();
+  _js_ux_fixes_js__WEBPACK_IMPORTED_MODULE_1__.noTabbing();
   _plugins_ScrollMagic_js__WEBPACK_IMPORTED_MODULE_6__.stickyNav();
   _plugins_swiper_js__WEBPACK_IMPORTED_MODULE_2__.init();
   _plugins_autosize_js__WEBPACK_IMPORTED_MODULE_3__.init();
@@ -474,13 +475,38 @@ function init() {
 
 /***/ }),
 
-/***/ "./src/js/skip-link-focus-fix.js":
+/***/ "./src/js/testimonials.js":
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "init": () => /* binding */ init
+/* harmony export */   "more": () => /* binding */ more
+/* harmony export */ });
+function more() {
+  $('.testimonials__more').on('click', function () {
+    var last = $('.testimonials__wrap.shown');
+    var next = last.next();
+    next.addClass('shown');
+    next.fadeIn(function () {
+      if ($(".testimonials__wrap.shown").length == $(".testimonials__wrap").length) {
+        $('.testimonials__more').hide();
+        console.log('all loaded');
+      }
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./src/js/ux-fixes.js":
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "skiplink": () => /* binding */ skiplink,
+/* harmony export */   "noTabbing": () => /* binding */ noTabbing
 /* harmony export */ });
 /**
 * File skip-link-focus-fix.js.
@@ -489,7 +515,7 @@ __webpack_require__.r(__webpack_exports__);
 *
 * Learn more: https://git.io/vWdr2
 */
-function init() {
+function skiplink() {
   var isIe = /(trident|msie)/i.test(navigator.userAgent);
 
   if (isIe && document.getElementById && window.addEventListener) {
@@ -513,29 +539,8 @@ function init() {
     }, false);
   }
 }
-
-/***/ }),
-
-/***/ "./src/js/testimonials.js":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "more": () => /* binding */ more
-/* harmony export */ });
-function more() {
-  $('.testimonials__more').on('click', function () {
-    var last = $('.testimonials__wrap.shown');
-    var next = last.next();
-    next.addClass('shown');
-    next.fadeIn(function () {
-      if ($(".testimonials__wrap.shown").length == $(".testimonials__wrap").length) {
-        $('.testimonials__more').hide();
-        console.log('all loaded');
-      }
-    });
-  });
+function noTabbing() {
+  $('.noindex').attr('tabindex', '-1');
 }
 
 /***/ }),

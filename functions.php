@@ -297,6 +297,16 @@ class Mobile_Slider extends Walker_Nav_Menu {
 	}
 }
 
+function add_additional_class_on_a($classes, $item, $args)
+{
+	if (isset($args->add_a_class)) {
+		$classes['class'] = $args->add_a_class;
+	}
+	return $classes;
+}
+add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
+
+
 //------------------------------------------------------------------------------------------------
 // Add a custom ACF options page
 if( function_exists('acf_add_options_page') ) {
@@ -452,7 +462,7 @@ add_filter('the_excerpt', 'excerpt_elipsis');
 
 // remove p tags from around images in WYSIWYG
 function filter_ptags_on_images($content){
-    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+	return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
 add_filter('the_content', 'filter_ptags_on_images');
 
@@ -461,13 +471,13 @@ add_filter('the_content', 'filter_ptags_on_images');
 // function that runs when shortcode is called
 function cookies_status() {
 
- if (cn_cookies_accepted()) {
-	 $message = '<p>Consent Accepted</p>';
- } else {
-	 $message = '<p>Consent Refused</p>';
- }
+	if (cn_cookies_accepted()) {
+		$message = '<p>Consent Accepted</p>';
+	} else {
+		$message = '<p>Consent Refused</p>';
+	}
 
-return $message;
+	return $message;
 }
 // register shortcode
 add_shortcode('cookies_status', 'cookies_status');

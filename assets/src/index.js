@@ -2,7 +2,7 @@
 import $ from 'jquery';
 window.$ = window.jQuery = $;
 
-import * as skiplink from './js/skip-link-focus-fix.js';
+import * as ux from './js/ux-fixes.js';
 import * as swiper from './plugins/swiper.js';
 import * as autosize from './plugins/autosize.js';
 import * as welcome from './js/welcome.js';
@@ -21,7 +21,8 @@ $(function () {
     swiper.init();
   });
 
-  skiplink.init();
+  ux.skiplink();
+  ux.noTabbing();
   scrollmagic.stickyNav();
   swiper.init();
   autosize.init();

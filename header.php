@@ -77,7 +77,7 @@
 			</header>
 
 
-			<div class="sticky-nav" aria-hidden="true" aria-hidden="true">
+			<div class="sticky-nav" aria-hidden="true">
 				<div class="container">
 					<div class="sticky-nav__grid">
 						<div class="sticky-nav__logo">
@@ -90,6 +90,7 @@
 								<?php wp_nav_menu( array(
 									'theme_location' => 'primary',
 									'menu_id'        => 'primary-menu',
+									'add_a_class'     => 'noindex',
 									'walker' => new Custom_Menu_List()
 								) ); ?>
 							</nav>

@@ -5,7 +5,7 @@
 *
 * Learn more: https://git.io/vWdr2
 */
-export function init() {
+export function skiplink() {
   var isIe = /(trident|msie)/i.test( navigator.userAgent );
 
   if ( isIe && document.getElementById && window.addEventListener ) {
@@ -28,4 +28,8 @@ export function init() {
       }
     }, false );
   }
+}
+
+export function noTabbing() {
+  $('.noindex').attr('tabindex', '-1');
 }
