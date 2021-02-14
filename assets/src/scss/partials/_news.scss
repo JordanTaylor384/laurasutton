@@ -101,7 +101,8 @@ $news-main: (
     @include sans($p, book);
   }
   a {
-    &:hover {
+    &:hover,
+    &:focus {
       .post__item__title {
         text-decoration: underline;
       }

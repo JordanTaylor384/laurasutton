@@ -1,5 +1,6 @@
 .btn {
   padding: 12px 35px;
+  display: inline-block;
   text-align: center;
   border-radius: 3px;
   cursor: pointer;
@@ -7,11 +8,17 @@
   @include transition(background-color $transition, color $transition, border-color $transition);
   background-color: white;
   border: 1px solid $dark-grey;
+  color: $text;
   min-width: 180px;
   &:hover,
   &:focus {
     border-color: $lime;
+    color: $lime;
   }
+  // &:focus {
+  //   border-color: black !important;
+  //   border: dotted;
+  // }
 }
 
 .btn-right {

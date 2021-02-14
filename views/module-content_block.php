@@ -9,9 +9,9 @@
         <div class="content-block__text">
           <?=the_sub_field('content');?>
           <?php if (get_sub_field('button_text')): ?>
-            <a href="<?=the_sub_field('button_link');?>">
-              <button type="button" name="<?=the_sub_field('button_text');?>"><?=the_sub_field('button_text');?></button>
-            </a>
+              <a href="<?=the_sub_field('button_link');?>" class="btn">
+                <?=the_sub_field('button_text');?>
+              </a>
           <?php endif; ?>
         </div>
       </div>

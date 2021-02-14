@@ -34,10 +34,8 @@
                     </div>
                   <?php endif; ?>
                   <div class="events__item__button">
-                    <a href="<?=the_sub_field('button_link');?>" target="_blank">
-                      <button type="button" name="button">
+                    <a class="btn" href="<?=the_sub_field('button_link');?>" target="_blank">
                         <?=the_sub_field('button_text');?>
-                      </button>
                     </a>
                     <?php if (get_sub_field('more_link')): ?>
                       <div class="events__item__more">

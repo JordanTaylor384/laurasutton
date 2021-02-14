@@ -2795,8 +2795,9 @@ object {
 .icon-cross, .close-toggle:after {
   content: "\e903"; }
 
-.btn, .btn-right, .contact-form form button, .content-block__text button, .c2a__button button, .testimonials__more button, .events__item__button button {
+.btn, .btn-right, .contact-form form button, .testimonials__more a {
   padding: 12px 35px;
+  display: inline-block;
   text-align: center;
   border-radius: 3px;
   cursor: pointer;
@@ -2808,13 +2809,15 @@ object {
   transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
   background-color: white;
   border: 1px solid #363D40;
+  color: #21333A;
   min-width: 180px; }
   @media (min-width: 0px) {
-    .btn, .btn-right, .contact-form form button, .content-block__text button, .c2a__button button, .testimonials__more button, .events__item__button button {
+    .btn, .btn-right, .contact-form form button, .testimonials__more a {
       font-size: 15px !important;
       line-height: 26px; } }
-  .btn:hover, .btn-right:hover, .contact-form form button:hover, .content-block__text button:hover, .c2a__button button:hover, .testimonials__more button:hover, .events__item__button button:hover, .btn:focus, .btn-right:focus, .contact-form form button:focus, .content-block__text button:focus, .c2a__button button:focus, .testimonials__more button:focus, .events__item__button button:focus {
-    border-color: #B3CB0F; }
+  .btn:hover, .btn-right:hover, .contact-form form button:hover, .testimonials__more a:hover, .btn:focus, .btn-right:focus, .contact-form form button:focus, .testimonials__more a:focus {
+    border-color: #B3CB0F;
+    color: #B3CB0F; }
 
 .btn-right {
   position: relative; }
@@ -2855,10 +2858,10 @@ object {
   font-style: normal;
   color: #21333A;
   margin-bottom: 15px;
-  -webkit-transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  -moz-transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  -o-transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+  -webkit-transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -moz-transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -o-transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
   @media (min-width: 0px) {
     .standard-form input[type="text"], .contact-form form input[type="text"],
     .standard-form textarea,
@@ -2885,6 +2888,10 @@ object {
   .contact-form form textarea::-webkit-input-placeholder {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     color: #21333A; }
     @media (min-width: 0px) {
       .standard-form input[type="text"]::-webkit-input-placeholder, .contact-form form input[type="text"]::-webkit-input-placeholder,
@@ -2897,6 +2904,10 @@ object {
   .contact-form form textarea:-moz-placeholder {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     color: #21333A; }
     @media (min-width: 0px) {
       .standard-form input[type="text"]:-moz-placeholder, .contact-form form input[type="text"]:-moz-placeholder,
@@ -2909,6 +2920,10 @@ object {
   .contact-form form textarea::-moz-placeholder {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     color: #21333A; }
     @media (min-width: 0px) {
       .standard-form input[type="text"]::-moz-placeholder, .contact-form form input[type="text"]::-moz-placeholder,
@@ -2921,6 +2936,10 @@ object {
   .contact-form form textarea:-ms-input-placeholder {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     color: #21333A; }
     @media (min-width: 0px) {
       .standard-form input[type="text"]:-ms-input-placeholder, .contact-form form input[type="text"]:-ms-input-placeholder,
@@ -2931,7 +2950,6 @@ object {
   .standard-form input[type="text"]:focus, .contact-form form input[type="text"]:focus,
   .standard-form textarea:focus,
   .contact-form form textarea:focus {
-    background-color: white;
     border-color: #B3CB0F;
     color: #B3CB0F; }
     .standard-form input[type="text"]:focus::-webkit-input-placeholder, .contact-form form input[type="text"]:focus::-webkit-input-placeholder,
@@ -3107,9 +3125,11 @@ object {
       .contact-form__text {
         margin-bottom: 0px; } }
   .contact-form form button {
-    float: right;
-    color: white;
-    background-color: #B3CB0F; }
+    float: right; }
+    .contact-form form button:hover, .contact-form form button:focus {
+      background-color: #B3CB0F;
+      color: white;
+      border-color: #B3CB0F; }
 
 .grecaptcha-badge {
   opacity: 0;
@@ -3273,7 +3293,11 @@ object {
           font-family: "cerebri-bold", sans-serif;
           font-style: normal;
           padding: 5px 0px;
-          position: relative; }
+          position: relative;
+          -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
           @media (min-width: 0px) {
             .site-header__nav nav li a {
               font-size: 16px !important;
@@ -3292,7 +3316,7 @@ object {
             -o-transition: width 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
             transition: width 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
           .site-header__nav nav li a:focus {
-            outline: dotted; }
+            color: #B3CB0F; }
           .site-header__nav nav li a:hover:after {
             width: 100%; }
         .site-header__nav nav li.current-menu-item > a:after, .site-header__nav nav li.current_page_parent > a:after {
@@ -3408,7 +3432,7 @@ object {
             -o-transition: width 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
             transition: width 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
           .sticky-nav__nav nav li a:focus {
-            outline: dotted; }
+            color: #B3CB0F; }
           .sticky-nav__nav nav li a:hover:after {
             width: 100%; }
         .sticky-nav__nav nav li.current-menu-item > a:after, .sticky-nav__nav nav li.current_page_parent > a:after {
@@ -3492,11 +3516,17 @@ object {
     .site-footer__nav nav li a {
       display: block;
       font-family: "cerebri-book", sans-serif;
-      font-style: normal; }
+      font-style: normal;
+      -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
       @media (min-width: 0px) {
         .site-footer__nav nav li a {
           font-size: 15px !important;
           line-height: 26px; } }
+      .site-footer__nav nav li a:hover, .site-footer__nav nav li a:focus {
+        color: #B3CB0F; }
   .site-footer__smallprint {
     align-items: end; }
     @media (min-width: 768px) and (max-width: 991px) {
@@ -3561,7 +3591,7 @@ object {
     transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
     .mailerlite .wpcf7-submit:after, .site-footer__contact .wpcf7 .wpcf7-submit:after {
       right: 20px; }
-    .mailerlite .wpcf7-submit:hover, .site-footer__contact .wpcf7 .wpcf7-submit:hover {
+    .mailerlite .wpcf7-submit:hover, .site-footer__contact .wpcf7 .wpcf7-submit:hover, .mailerlite .wpcf7-submit:focus, .site-footer__contact .wpcf7 .wpcf7-submit:focus {
       background-color: #B3CB0F;
       color: white; }
   .mailerlite .wpcf7-response-output, .site-footer__contact .wpcf7 .wpcf7-response-output {
@@ -4032,7 +4062,7 @@ object {
   .testimonials__more {
     text-align: center; }
     .testimonials__more a {
-      display: block;
+      display: inline-block;
       margin: 0 auto; }
   .testimonials__wrap {
     display: none; }
@@ -4197,10 +4227,10 @@ object {
   font-style: normal;
   color: #21333A;
   margin-bottom: 15px;
-  -webkit-transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  -moz-transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  -o-transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+  -webkit-transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -moz-transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -o-transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
   @media (min-width: 0px) {
     .standard-form input[type="text"], .contact-form form input[type="text"],
     .standard-form textarea,
@@ -4227,6 +4257,10 @@ object {
   .contact-form form textarea::-webkit-input-placeholder {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     color: #21333A; }
     @media (min-width: 0px) {
       .standard-form input[type="text"]::-webkit-input-placeholder, .contact-form form input[type="text"]::-webkit-input-placeholder,
@@ -4239,6 +4273,10 @@ object {
   .contact-form form textarea:-moz-placeholder {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     color: #21333A; }
     @media (min-width: 0px) {
       .standard-form input[type="text"]:-moz-placeholder, .contact-form form input[type="text"]:-moz-placeholder,
@@ -4251,6 +4289,10 @@ object {
   .contact-form form textarea::-moz-placeholder {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     color: #21333A; }
     @media (min-width: 0px) {
       .standard-form input[type="text"]::-moz-placeholder, .contact-form form input[type="text"]::-moz-placeholder,
@@ -4263,6 +4305,10 @@ object {
   .contact-form form textarea:-ms-input-placeholder {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     color: #21333A; }
     @media (min-width: 0px) {
       .standard-form input[type="text"]:-ms-input-placeholder, .contact-form form input[type="text"]:-ms-input-placeholder,
@@ -4273,7 +4319,6 @@ object {
   .standard-form input[type="text"]:focus, .contact-form form input[type="text"]:focus,
   .standard-form textarea:focus,
   .contact-form form textarea:focus {
-    background-color: white;
     border-color: #B3CB0F;
     color: #B3CB0F; }
     .standard-form input[type="text"]:focus::-webkit-input-placeholder, .contact-form form input[type="text"]:focus::-webkit-input-placeholder,
@@ -4449,9 +4494,11 @@ object {
       .contact-form__text {
         margin-bottom: 0px; } }
   .contact-form form button {
-    float: right;
-    color: white;
-    background-color: #B3CB0F; }
+    float: right; }
+    .contact-form form button:hover, .contact-form form button:focus {
+      background-color: #B3CB0F;
+      color: white;
+      border-color: #B3CB0F; }
 
 .grecaptcha-badge {
   opacity: 0;
@@ -4620,9 +4667,9 @@ object {
       .post__item__excerpt {
         font-size: 15px !important;
         line-height: 26px; } }
-  .post__item a:hover .post__item__title {
+  .post__item a:hover .post__item__title, .post__item a:focus .post__item__title {
     text-decoration: underline; }
-  .post__item a:hover .post__item__image__mask {
+  .post__item a:hover .post__item__image__mask, .post__item a:focus .post__item__image__mask {
     opacity: 1; }
 
 .article {
@@ -4869,7 +4916,7 @@ object {
         .events__item__more a:hover {
           color: #B3CB0F; }
     @media (min-width: 768px) {
-      .events__item__button button {
+      .events__item__button .btn, .events__item__button .btn-right, .events__item__button .contact-form form button, .contact-form form .events__item__button button, .events__item__button .testimonials__more a, .testimonials__more .events__item__button a {
         width: 100%; } }
     .events__item__button .events__item__more {
       display: block; }

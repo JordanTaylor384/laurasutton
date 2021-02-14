@@ -54,8 +54,5 @@ $call-to-action: (
   &__button {
     @include align-self(center);
     @include justify-self(end);
-    button {
-      @extend .btn;
-    }
   }
 }

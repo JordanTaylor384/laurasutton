@@ -11,13 +11,14 @@
     @include sans($button, book);
     color: $text;
     @include marginBottom(15);
-    @include transition(border-color $transition, color $transition);
+    @include transition(border-color $transition, color $transition, background-color $transition);
     @include placeholder() {
       @include sans($button, book);
+      @include transition(color $transition);
       color: $text;
     }
     &:focus {
-      background-color: white;
+      // border: dotted;
       border-color: $primary;
       color: $primary;
       @include placeholder() {
@@ -103,10 +104,16 @@
   form {
     @extend .standard-form;
     button {
-      float: right;
       @extend .btn;
-      color: white;
-      background-color: $primary;
+      float: right;
+      // color: white;
+      // background-color: $primary;
+      &:hover,
+      &:focus {
+        background-color: $primary;
+        color: white;
+        border-color: $primary;
+      }
     }
   }
 }

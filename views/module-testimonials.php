@@ -43,7 +43,7 @@
       <?php if ($counter > 3) : ?>
       <div class="testimonials__more">
         <a href="#readmore">
-          <button type="button" name="button">Read more</button>
+          Read more
         </a>
       </div>
     <?php endif; ?>

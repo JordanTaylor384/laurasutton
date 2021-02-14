@@ -10,8 +10,8 @@
 
       <div class="c2a__button">
         <?php if (get_sub_field('button_text')): ?>
-          <a href="<?=the_sub_field('button_link');?>">
-            <button type="button" name="button"><?=the_sub_field('button_text');?></button>
+          <a class="btn" href="<?=the_sub_field('button_link');?>">
+            <?=the_sub_field('button_text');?>
           </a>
         <?php endif; ?>
       </div>

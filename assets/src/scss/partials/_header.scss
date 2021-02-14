@@ -59,6 +59,7 @@
           padding: 5px 0px;
           position: relative;
           // border-bottom: 4px solid $primary;
+          @include transition(color $transition);
           &:after {
             content: "";
             display: block;
@@ -72,7 +73,7 @@
             @include transition(width $transition);
           }
           &:focus {
-            outline: dotted;
+            color: $lime;
           }
           &:hover {
             &:after {
@@ -179,7 +180,7 @@
             @include transition(width $transition);
           }
           &:focus {
-            outline: dotted;
+            color: $lime;
           }
           &:hover {
             &:after {

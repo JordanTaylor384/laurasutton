@@ -67,8 +67,7 @@ $events-title: (
       }
     }
     &__button {
-      button {
-        @extend .btn;
+      .btn {
         @media (min-width: $screen-sm-min) {
           width: 100%;
         }

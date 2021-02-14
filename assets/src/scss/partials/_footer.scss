@@ -51,6 +51,11 @@
         a {
           display: block;
           @include sans($p, book);
+          @include transition(color $transition);
+          &:hover,
+          &:focus {
+            color: $lime;
+          }
         }
       }
     }
@@ -137,7 +142,8 @@
       right: 20px;
       @extend .icon-arrow_right;
     }
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $primary;
       color: white;
     }

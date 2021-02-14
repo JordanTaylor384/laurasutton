@@ -17,9 +17,6 @@
 
   &__text {
     @extend .text-styles;
-    button {
-      @extend .btn;
-    }
   }
 
   &__grid__col1 {

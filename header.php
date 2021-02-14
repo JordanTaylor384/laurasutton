@@ -26,7 +26,7 @@
 				<div class="overlay__inner">
 					<div class="overlay__header">
 						<div class="overlay__logo">
-							<a href="/" aria-label="Visit Anne Archer Associates Homepage">
+							<a href="/" aria-label="Visit Anne Archer Associates Homepage" tabindex="-1">
 								<img src="<?=the_field('header_logo', 'option');?>" aria-label="Anne Archer Associates Logo"/>
 							</a>
 						</div>
@@ -48,7 +48,7 @@
 				<div class="container">
 					<div class="site-header__grid">
 						<div class="site-header__logo">
-							<a href="/" aria-label="Visit Anne Archer Associates Homepage">
+							<a href="/" aria-label="Visit Anne Archer Associates Homepage" tabindex="-1">
 								<img src="<?=the_field('header_logo', 'option');?>" aria-label="Anne Archer Associates Logo"/>
 							</a>
 						</div>
@@ -77,11 +77,11 @@
 			</header>
 
 
-			<div class="sticky-nav">
+			<div class="sticky-nav" aria-hidden="true" aria-hidden="true">
 				<div class="container">
 					<div class="sticky-nav__grid">
 						<div class="sticky-nav__logo">
-							<a href="/" aria-label="Visit Anne Archer Associates Homepage">
+							<a href="/" aria-label="Visit Anne Archer Associates Homepage" tabindex="-1">
 								<img src="<?=the_field('sticky_logo', 'option');?>" aria-label="Anne Archer Associates Logo"/>
 							</a>
 						</div>
