@@ -55,7 +55,7 @@
 						<div class="site-header__greeting">
 							<div class="greeting"></div>
 							<div class="logo">
-								<img src="<?=the_field('sticky_logo', 'option');?>"/>
+								<img src="<?=the_field('sticky_logo', 'option');?>" alt="Anne Archer Associates Logo" aria-label="Anne Archer Associates Logo"  title="Anne Archer Associates Logo"/>
 							</div>
 						</div>
 						<nav>
@@ -88,7 +88,7 @@
 						<nav>
 							<?php wp_nav_menu( array(
 								'theme_location' => 'primary',
-								'menu_id'        => 'primary-menu',
+								'menu_id'        => 'sticky-menu',
 								'add_a_class'     => 'noindex',
 								'walker' => new Custom_Menu_List()
 							) ); ?>
