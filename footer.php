@@ -20,7 +20,7 @@
 
 		<div class="site-footer__grid">
 			<div class="site-footer__logo">
-				<img src="<?=the_field('footer_logo', 'option');?>"/>
+				<img src="<?=the_field('footer_logo', 'option');?>" title="Anne Archer Associates Logo"  alt="Anne Archer Associates Logo"/>
 			</div>
 			<div class="site-footer__contact">
 				<p>Join our mailing list</p>

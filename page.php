@@ -13,8 +13,9 @@
 */
 
 get_header(); ?>
-	<?php // check if the flexible content field has rows of data ?>
-	<?php if (have_rows('module')): ?>
+<?php // check if the flexible content field has rows of data ?>
+<?php if (have_rows('module')): ?>
+	<div id="content">
 		<?php // loop through the rows of data ?>
 		<?php while (have_rows('module')) : the_row();?>
 			<?php if (get_row_layout() == 'header'): ?>
@@ -51,6 +52,7 @@ get_header(); ?>
 				<?php get_template_part( 'views/module-editor', 'editor' ); ?>
 			<?php endif; ?>
 		<?php endwhile; ?>
-	<?php endif; ?>
+	</div>
+<?php endif; ?>
 
 <?php get_footer(); ?>
