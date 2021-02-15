@@ -48,14 +48,14 @@
 				<div class="site-header__grid">
 					<div class="site-header__logo">
 						<a href="/" aria-label="Visit Anne Archer Associates Homepage" tabindex="-1">
-							<img src="<?=the_field('header_logo', 'option');?>"  alt="Anne Archer Associates Logo" aria-label="Anne Archer Associates Logo"  title="Anne Archer Associates Logo"/>
+							<img src="<?=the_field('header_logo', 'option');?>"  alt="Anne Archer Associates Logo" aria-label="Anne Archer Associates logo and link to website Home"  title="Anne Archer Associates Logo"/>
 						</a>
 					</div>
 					<div class="site-header__nav">
 						<div class="site-header__greeting">
 							<div class="greeting"></div>
 							<div class="logo">
-								<img src="<?=the_field('sticky_logo', 'option');?>" alt="Anne Archer Associates Logo" aria-label="Anne Archer Associates Logo"  title="Anne Archer Associates Logo"/>
+								<img src="<?=the_field('sticky_logo', 'option');?>" alt="Anne Archer Associates Logo" aria-label="Smiling A logo"  title="Anne Archer Associates Logo"/>
 							</div>
 						</div>
 						<nav>

@@ -100,6 +100,9 @@ $news-main: (
   &__excerpt {
     @include sans($p, book);
   }
+  &__read {
+    @include sans($p, book);
+  }
   a {
     &:hover,
     &:focus {
@@ -108,6 +111,9 @@ $news-main: (
       }
       .post__item__image__mask {
         opacity: 1;
+      }
+      .post__item__read {
+        text-decoration: underline;
       }
     }
   }

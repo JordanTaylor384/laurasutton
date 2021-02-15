@@ -4667,10 +4667,19 @@ object {
       .post__item__excerpt {
         font-size: 15px !important;
         line-height: 26px; } }
+  .post__item__read {
+    font-family: "cerebri-book", sans-serif;
+    font-style: normal; }
+    @media (min-width: 0px) {
+      .post__item__read {
+        font-size: 15px !important;
+        line-height: 26px; } }
   .post__item a:hover .post__item__title, .post__item a:focus .post__item__title {
     text-decoration: underline; }
   .post__item a:hover .post__item__image__mask, .post__item a:focus .post__item__image__mask {
     opacity: 1; }
+  .post__item a:hover .post__item__read, .post__item a:focus .post__item__read {
+    text-decoration: underline; }
 
 .article {
   padding: 70px 0px 80px 0px; }

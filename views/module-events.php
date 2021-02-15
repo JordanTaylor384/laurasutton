@@ -28,18 +28,18 @@
                 <div class="events__item__grid__col2">
                   <?php if (get_sub_field('more_link')): ?>
                     <div class="events__item__more">
-                      <a href="<?=the_sub_field('more_link');?>" target="_blank">
+                      <a href="<?=the_sub_field('more_link');?>" target="_blank" aria-label="More info about this course. External link.">
                         <p>More Info</p>
                       </a>
                     </div>
                   <?php endif; ?>
                   <div class="events__item__button">
-                    <a class="btn" href="<?=the_sub_field('button_link');?>" target="_blank">
+                    <a class="btn" href="<?=the_sub_field('button_link');?>" target="_blank" aria-label="Book your place on this course. External link.">
                         <?=the_sub_field('button_text');?>
                     </a>
                     <?php if (get_sub_field('more_link')): ?>
                       <div class="events__item__more">
-                        <a href="<?=the_sub_field('more_link');?>" target="_blank">
+                        <a href="<?=the_sub_field('more_link');?>" target="_blank" aria-label="More info about this course. External link.">
                           <p>More Info</p>
                         </a>
                       </div>
