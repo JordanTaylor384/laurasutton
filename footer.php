@@ -25,33 +25,32 @@
 			<div class="site-footer__contact">
 				<p>Join our mailing list</p>
 				<!-- <a href="/contact">
-					<button type="button" name="button">
-						Email
-					</button>
-				</a> -->
+				<button type="button" name="button">
+				Email
+			</button>
+		</a> -->
 
-				<?php echo do_shortcode('[contact-form-7 title="Mailerlite Signup"]');?>
-
-			</div>
-			<div class="site-footer__nav">
-				<nav>
-					<?php wp_nav_menu( array(
-						'theme_location' => 'footer',
-						'menu_id'        => 'footer-menu',
-						'walker' => new Custom_Menu_List()
-					) ); ?>
-				</nav>
-			</div>
-			<div class="site-footer__smallprint">
-				&copy; Anne Archer Associates <?php echo date("Y"); ?>.
-			</div>
-		</div>
+		<?php echo do_shortcode('[contact-form-7 title="Mailerlite Signup"]');?>
 
 	</div>
+	<div class="site-footer__nav">
+		<nav>
+			<?php wp_nav_menu( array(
+				'theme_location' => 'footer',
+				'menu_id'        => 'footer-menu',
+				'walker' => new Custom_Menu_List()
+			) ); ?>
+		</nav>
+	</div>
+	<div class="site-footer__smallprint">
+		&copy; Anne Archer Associates <?php echo date("Y"); ?>.
+	</div>
+</div>
+
+</div>
 </footer>
 
 </div><!-- .page -->
-</div><!-- page-classes -->
 
 <?php wp_footer(); ?>
 

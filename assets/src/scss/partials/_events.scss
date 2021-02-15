@@ -61,7 +61,8 @@ $events-title: (
       }
       a {
         @include transition(color $transition);
-        &:hover {
+        &:hover,
+        &:focus {
           color: $primary;
         }
       }
