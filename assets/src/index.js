@@ -17,8 +17,10 @@ $(function () {
   //   closeButton : '.close'
   // });
 
-  $(window).on('load resize', function() {
+  $(window).on('resize', function() {
     swiper.init();
+    ux.swiperBulletsTabbing();
+    ux.swiperArrowsTabbing();
   });
 
   ux.skiplink();
@@ -29,6 +31,8 @@ $(function () {
   welcome.init();
   overlay.init();
   testimonials.more();
+  ux.swiperBulletsTabbing();
+  ux.swiperArrowsTabbing();
 
 });
 

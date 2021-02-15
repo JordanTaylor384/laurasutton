@@ -37,8 +37,10 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   //   closeButton : '.close'
   // });
 
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load resize', function() {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function() {
     _plugins_swiper_js__WEBPACK_IMPORTED_MODULE_2__.init();
+    _js_ux_fixes_js__WEBPACK_IMPORTED_MODULE_1__.swiperBulletsTabbing();
+    _js_ux_fixes_js__WEBPACK_IMPORTED_MODULE_1__.swiperArrowsTabbing();
   });
 
   _js_ux_fixes_js__WEBPACK_IMPORTED_MODULE_1__.skiplink();
@@ -49,6 +51,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   _js_welcome_js__WEBPACK_IMPORTED_MODULE_4__.init();
   _js_overlay_js__WEBPACK_IMPORTED_MODULE_5__.init();
   _js_testimonials_js__WEBPACK_IMPORTED_MODULE_7__.more();
+  _js_ux_fixes_js__WEBPACK_IMPORTED_MODULE_1__.swiperBulletsTabbing();
+  _js_ux_fixes_js__WEBPACK_IMPORTED_MODULE_1__.swiperArrowsTabbing();
 
 });
 
@@ -506,7 +510,9 @@ function more() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "skiplink": () => /* binding */ skiplink,
-/* harmony export */   "noTabbing": () => /* binding */ noTabbing
+/* harmony export */   "noTabbing": () => /* binding */ noTabbing,
+/* harmony export */   "swiperBulletsTabbing": () => /* binding */ swiperBulletsTabbing,
+/* harmony export */   "swiperArrowsTabbing": () => /* binding */ swiperArrowsTabbing
 /* harmony export */ });
 /**
 * File skip-link-focus-fix.js.
@@ -541,6 +547,38 @@ function skiplink() {
 }
 function noTabbing() {
   $('.noindex').attr('tabindex', '-1');
+}
+function swiperBulletsTabbing() {
+  $('.swiper-pagination-bullet').each(function (index) {
+    var bullet = $(this);
+    bullet.attr('id', index + 1);
+  });
+  $('.swiper-pagination').each(function () {
+    $('.swiper-pagination-bullet').attr('tabindex', 0);
+    $('.swiper-pagination-bullet').on('keydown', function (event) {
+      if (event.keyCode == '13') {
+        var carousel = document.querySelector('.swiper-container').swiper;
+        var slideID = $(this).attr('id');
+        carousel.slideTo(slideID - 1);
+      }
+    });
+  });
+}
+function swiperArrowsTabbing() {
+  var arrows = $('.swiper-button-next:not(.swiper-button-disabled), .swiper-button-prev:not(.swiper-button-disabled)');
+  arrows.attr('tabindex', 0);
+  $('.swiper-button-next:not(.swiper-button-disabled), .swiper-button-prev:not(.swiper-button-disabled)').on('keydown', function (event) {
+    if (event.keyCode == '13') {
+      var carousel = document.querySelector('.swiper-container').swiper;
+      var slideID = $(this).attr('id');
+
+      if ($(this).hasClass('swiper-button-next')) {
+        carousel.slideNext();
+      } else if ($(this).hasClass('swiper-button-prev')) {
+        carousel.slidePrev();
+      }
+    }
+  });
 }
 
 /***/ }),

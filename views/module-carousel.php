@@ -23,7 +23,7 @@
                 <img src="<?=$image['url'];?>" title="<?=$image['title'];?>" alt="<?=$image['alt'];?>"/>
               <?php endif; ?>
               <?php if (get_sub_field('video')): ?>
-                <iframe width="100%" height="442" src="<?=the_sub_field('video');?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="100%" height="442" src="<?=the_sub_field('video');?>" tabindex="-1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               <?php endif; ?>
             </div>
           </div>

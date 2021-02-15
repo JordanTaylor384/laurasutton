@@ -3984,6 +3984,8 @@ object {
     @media (min-width: 1240px) {
       .clients a {
         margin-bottom: 30px; } }
+    .clients a:focus {
+      border: 1px solid #B3CB0F; }
 
 .testimonials {
   padding: 60px 0px 90px 0px; }
@@ -4157,13 +4159,26 @@ object {
       .carousel__slider .swiper-pagination {
         margin-bottom: 30px; } }
     .carousel__slider .swiper-pagination .swiper-pagination-bullet {
+      background-color: white;
+      border: 2px solid white;
       width: 34px;
       height: 34px;
       display: inline-block;
-      background-color: white;
       opacity: 1;
       position: relative;
-      margin: 0 5px; }
+      margin: 0 5px;
+      -moz-user-focus: normal;
+      -moz-user-select: normal;
+      -webkit-user-select: normal;
+      -khtml-user-select: normal;
+      -o-user-select: normal;
+      user-select: normal;
+      -webkit-transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -moz-transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -o-transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+      .carousel__slider .swiper-pagination .swiper-pagination-bullet:focus, .carousel__slider .swiper-pagination .swiper-pagination-bullet:hover {
+        border-color: #B3CB0F !important; }
       .carousel__slider .swiper-pagination .swiper-pagination-bullet span {
         font-family: "cerebri-bold", sans-serif;
         font-style: normal;
@@ -4176,7 +4191,8 @@ object {
             font-size: 15px !important;
             line-height: 26px; } }
     .carousel__slider .swiper-pagination-bullet-active {
-      background-color: #B3CB0F !important; }
+      background-color: #B3CB0F !important;
+      border-color: #B3CB0F !important; }
   .carousel__slider .swiper-button-next,
   .carousel__slider .swiper-button-prev {
     width: auto;
@@ -4205,9 +4221,14 @@ object {
     .carousel__slider .swiper-button-next:after,
     .carousel__slider .swiper-button-prev:after {
       font-size: 24px !important; }
-    .carousel__slider .swiper-button-next:hover,
-    .carousel__slider .swiper-button-prev:hover {
+    .carousel__slider .swiper-button-next:hover, .carousel__slider .swiper-button-next:focus,
+    .carousel__slider .swiper-button-prev:hover,
+    .carousel__slider .swiper-button-prev:focus {
       color: #B3CB0F; }
+    .carousel__slider .swiper-button-next.swiper-button-disabled:hover, .carousel__slider .swiper-button-next.swiper-button-disabled:focus,
+    .carousel__slider .swiper-button-prev.swiper-button-disabled:hover,
+    .carousel__slider .swiper-button-prev.swiper-button-disabled:focus {
+      color: inherit; }
   .carousel__slider .swiper-button-next {
     right: 40px; }
   .carousel__slider .swiper-button-prev {

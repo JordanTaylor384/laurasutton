@@ -16,5 +16,8 @@
   a {
     display: block;
     @include marginBottom(15, 30);
+    &:focus {
+      border: 1px solid $lime;
+    }
   }
 }

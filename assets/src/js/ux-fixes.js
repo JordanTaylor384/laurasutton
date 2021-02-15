@@ -33,3 +33,38 @@ export function skiplink() {
 export function noTabbing() {
   $('.noindex').attr('tabindex', '-1');
 }
+
+export function swiperBulletsTabbing() {
+  $('.swiper-pagination-bullet').each(function (index) {
+    var bullet = $(this);
+    bullet.attr('id', (index + 1));
+  });
+
+  $('.swiper-pagination').each(function (){
+    $('.swiper-pagination-bullet').attr('tabindex', 0);
+    $('.swiper-pagination-bullet').on('keydown', function (event){
+      if(event.keyCode == '13'){
+        var carousel = document.querySelector('.swiper-container').swiper;
+        var slideID = $(this).attr('id')
+        carousel.slideTo(slideID-1);
+      }
+    })
+  });
+}
+
+export function swiperArrowsTabbing() {
+  var arrows = $('.swiper-button-next:not(.swiper-button-disabled), .swiper-button-prev:not(.swiper-button-disabled)');
+  arrows.attr('tabindex', 0);
+
+  $('.swiper-button-next:not(.swiper-button-disabled), .swiper-button-prev:not(.swiper-button-disabled)').on('keydown', function (event) {
+    if (event.keyCode == '13') {
+      var carousel = document.querySelector('.swiper-container').swiper;
+      var slideID = $(this).attr('id')
+      if ($(this).hasClass('swiper-button-next')) {
+        carousel.slideNext();
+      } else if ($(this).hasClass('swiper-button-prev')) {
+        carousel.slidePrev();
+      }
+    }
+  });
+}

@@ -45,13 +45,25 @@
       @include marginTop(30);
       @include marginBottom(30);
       .swiper-pagination-bullet {
+        background-color: white;
+        border: 2px solid white;
         width: 34px;
         height: 34px;
         display: inline-block;
-        background-color: white;
         opacity: 1;
         position: relative;
         margin: 0 5px;
+        -moz-user-focus: normal;
+        -moz-user-select: normal;
+        -webkit-user-select: normal;
+        -khtml-user-select: normal;
+        -o-user-select: normal;
+        user-select: normal;
+        @include transition(border-color $transition);
+        &:focus,
+        &:hover {
+          border-color: $primary !important;
+        }
         span {
           @include sans($p, bold);
           @include center-pos();
@@ -59,6 +71,7 @@
       }
       &-bullet-active {
         background-color: $primary !important;
+        border-color: $primary !important;
       }
     }
 
@@ -74,8 +87,15 @@
       &:after {
         font-size: 24px !important;
       }
-      &:hover {
+      &:hover,
+      &:focus {
         color: $primary;
+      }
+      &.swiper-button-disabled {
+        &:hover,
+        &:focus {
+          color: inherit;
+        }
       }
     }
     .swiper-button-next {
