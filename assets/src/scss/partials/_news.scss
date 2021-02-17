@@ -104,6 +104,7 @@ $news-main: (
     @include sans($p, book);
   }
   a {
+    display: block;
     &:hover,
     &:focus {
       .post__item__title {

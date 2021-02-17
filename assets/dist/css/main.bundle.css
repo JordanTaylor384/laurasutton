@@ -4695,12 +4695,14 @@ object {
       .post__item__read {
         font-size: 15px !important;
         line-height: 26px; } }
-  .post__item a:hover .post__item__title, .post__item a:focus .post__item__title {
-    text-decoration: underline; }
-  .post__item a:hover .post__item__image__mask, .post__item a:focus .post__item__image__mask {
-    opacity: 1; }
-  .post__item a:hover .post__item__read, .post__item a:focus .post__item__read {
-    text-decoration: underline; }
+  .post__item a {
+    display: block; }
+    .post__item a:hover .post__item__title, .post__item a:focus .post__item__title {
+      text-decoration: underline; }
+    .post__item a:hover .post__item__image__mask, .post__item a:focus .post__item__image__mask {
+      opacity: 1; }
+    .post__item a:hover .post__item__read, .post__item a:focus .post__item__read {
+      text-decoration: underline; }
 
 .article {
   padding: 70px 0px 80px 0px; }
@@ -4939,6 +4941,7 @@ object {
         .events__item__more {
           text-align: right; } }
       .events__item__more a {
+        display: block;
         -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
         -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
         -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -4969,8 +4972,10 @@ object {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 
 *:focus-visible {
-  /* -webkit-focus-ring-color = '#5B9DD9' */
-  outline: -webkit-focus-ring-color auto 5px; }
+  outline: 2px solid #5b9dd9 !important; }
+
+body.safari *:focus {
+  outline: 2px solid #5b9dd9 !important; }
 
 html, body {
   position: relative;

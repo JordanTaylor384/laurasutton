@@ -60,6 +60,7 @@ $events-title: (
         text-align: right;
       }
       a {
+        display: block;
         @include transition(color $transition);
         &:hover,
         &:focus {
