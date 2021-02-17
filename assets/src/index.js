@@ -13,10 +13,6 @@ import * as testimonials from './js/testimonials.js';
 // custom js
 $(function () {
 
-  // $('.cookie-notification').cookieBar({
-  //   closeButton : '.close'
-  // });
-
   $(window).on('resize', function() {
     swiper.init();
     ux.swiperBulletsTabbing();
@@ -24,7 +20,7 @@ $(function () {
   });
 
   ux.skiplink();
-  ux.noTabbing();
+  ux.removeTabIndexes();
   scrollmagic.stickyNav();
   swiper.init();
   autosize.init();

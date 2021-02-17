@@ -33,10 +33,6 @@ window.$ = window.jQuery = (jquery__WEBPACK_IMPORTED_MODULE_0___default());
 // custom js
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
-  // $('.cookie-notification').cookieBar({
-  //   closeButton : '.close'
-  // });
-
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function() {
     _plugins_swiper_js__WEBPACK_IMPORTED_MODULE_2__.init();
     _js_ux_fixes_js__WEBPACK_IMPORTED_MODULE_1__.swiperBulletsTabbing();
@@ -44,7 +40,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   });
 
   _js_ux_fixes_js__WEBPACK_IMPORTED_MODULE_1__.skiplink();
-  _js_ux_fixes_js__WEBPACK_IMPORTED_MODULE_1__.noTabbing();
+  _js_ux_fixes_js__WEBPACK_IMPORTED_MODULE_1__.removeTabIndexes();
   _plugins_ScrollMagic_js__WEBPACK_IMPORTED_MODULE_6__.stickyNav();
   _plugins_swiper_js__WEBPACK_IMPORTED_MODULE_2__.init();
   _plugins_autosize_js__WEBPACK_IMPORTED_MODULE_3__.init();
@@ -126,12 +122,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("../node_modules/swiper/esm/components/pagination/pagination.js");
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("../node_modules/swiper/esm/components/effect-fade/effect-fade.js");
 /* harmony import */ var swiper_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("../node_modules/swiper/swiper-bundle.css");
+/* harmony import */ var _js_ux_fixes_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./src/js/ux-fixes.js");
 
 
 swiper__WEBPACK_IMPORTED_MODULE_0__.default.use([swiper__WEBPACK_IMPORTED_MODULE_1__.default]);
 swiper__WEBPACK_IMPORTED_MODULE_0__.default.use([swiper__WEBPACK_IMPORTED_MODULE_2__.default, swiper__WEBPACK_IMPORTED_MODULE_3__.default]);
 swiper__WEBPACK_IMPORTED_MODULE_0__.default.use([swiper__WEBPACK_IMPORTED_MODULE_4__.default]);
 // import Swiper styles
+
+
+
 
 
 function init() {
@@ -156,6 +156,11 @@ function init() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+  });
+
+  carousel.on('slideChange', function () {
+    _js_ux_fixes_js__WEBPACK_IMPORTED_MODULE_6__.swiperArrowsTabbing();
+    console.log('slide changed');
   });
 }
 
@@ -510,7 +515,7 @@ function more() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "skiplink": () => /* binding */ skiplink,
-/* harmony export */   "noTabbing": () => /* binding */ noTabbing,
+/* harmony export */   "removeTabIndexes": () => /* binding */ removeTabIndexes,
 /* harmony export */   "swiperBulletsTabbing": () => /* binding */ swiperBulletsTabbing,
 /* harmony export */   "swiperArrowsTabbing": () => /* binding */ swiperArrowsTabbing
 /* harmony export */ });
@@ -545,16 +550,22 @@ function skiplink() {
     }, false);
   }
 }
-function noTabbing() {
+function removeTabIndexes() {
+  // remove tabindex from elements with .noindex class
   $('.noindex').attr('tabindex', '-1');
 }
 function swiperBulletsTabbing() {
+  // add indexes to dots, from below functions
   $('.swiper-pagination-bullet').each(function (index) {
     var bullet = $(this);
     bullet.attr('id', index + 1);
+    var total = $('.swiper-pagination-bullet').length;
+    bullet.attr('aria-label', 'Video ' + (index + 1) + ' of ' + total);
   });
   $('.swiper-pagination').each(function () {
-    $('.swiper-pagination-bullet').attr('tabindex', 0);
+    // set tabindex to follow page order
+    $('.swiper-pagination-bullet').attr('tabindex', 0); // on enter press of dots, slide to slideID
+
     $('.swiper-pagination-bullet').on('keydown', function (event) {
       if (event.keyCode == '13') {
         var carousel = document.querySelector('.swiper-container').swiper;
@@ -565,8 +576,14 @@ function swiperBulletsTabbing() {
   });
 }
 function swiperArrowsTabbing() {
-  var arrows = $('.swiper-button-next:not(.swiper-button-disabled), .swiper-button-prev:not(.swiper-button-disabled)');
-  arrows.attr('tabindex', 0);
+  // remove tabindex from disabled buttons
+  $('.swiper-button-next:not(.swiper-button-disabled), .swiper-button-prev:not(.swiper-button-disabled)').attr('tabindex', 0); // added labels to not disabled buttons
+
+  $('.swiper-button-next:not(.swiper-button-disabled)').attr('aria-label', 'Next video');
+  $('.swiper-button-prev:not(.swiper-button-disabled)').attr('aria-label', 'Previous video'); // remove labels to disabled buttons
+
+  $('.swiper-button-disabled').attr('aria-label', ''); // on enter press of arrows, slide to next/prev
+
   $('.swiper-button-next:not(.swiper-button-disabled), .swiper-button-prev:not(.swiper-button-disabled)').on('keydown', function (event) {
     if (event.keyCode == '13') {
       var carousel = document.querySelector('.swiper-container').swiper;

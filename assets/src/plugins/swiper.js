@@ -6,6 +6,9 @@ SwiperCore.use([EffectFade]);
 // import Swiper styles
 import 'swiper/swiper-bundle.css';
 
+import * as ux from '../js/ux-fixes.js';
+
+
 export function init() {
   var carousel = new Swiper ('.carousel.module .swiper-container', {
     slidesPerView: 1,
@@ -28,5 +31,10 @@ export function init() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+  });
+
+  carousel.on('slideChange', function () {
+    ux.swiperArrowsTabbing();
+    console.log('slide changed');
   });
 }
