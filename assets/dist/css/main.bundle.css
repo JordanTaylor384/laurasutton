@@ -5174,15 +5174,17 @@ strong {
     @media (min-width: 1240px) {
       .text-styles ul li, .intro__text ul li, .content-block__text ul li, .article__body ul li, .editor.module ul li {
         margin-bottom: 15px; } }
+    .text-styles ul li a, .intro__text ul li a, .content-block__text ul li a, .article__body ul li a, .editor.module ul li a {
+      text-decoration: underline;
+      color: #B3CB0F; }
     .text-styles ul li:before, .intro__text ul li:before, .content-block__text ul li:before, .article__body ul li:before, .editor.module ul li:before {
       content: "";
-      height: 5px;
-      width: 5px;
+      height: 6px;
+      width: 6px;
       border-radius: 100%;
-      background-color: #21333A;
       position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
+      top: 10px;
+      background-color: #B3CB0F;
       left: 0px; }
 
 .text-styles ol, .intro__text ol, .content-block__text ol, .article__body ol, .editor.module ol {
@@ -5215,6 +5217,9 @@ strong {
     @media (min-width: 1240px) {
       .text-styles ol li, .intro__text ol li, .content-block__text ol li, .article__body ol li, .editor.module ol li {
         margin-bottom: 15px; } }
+    .text-styles ol li a, .intro__text ol li a, .content-block__text ol li a, .article__body ol li a, .editor.module ol li a {
+      text-decoration: underline;
+      color: #B3CB0F; }
 
 .text-styles blockquote, .intro__text blockquote, .content-block__text blockquote, .article__body blockquote, .editor.module blockquote {
   background-color: #EEEEEE;

@@ -179,13 +179,19 @@ strong {
       position: relative;
       @include sans($p, book);
       @include marginBottom(15);
+      a {
+        text-decoration: underline;
+        color: $primary;
+      }
       &:before {
         content: "";
-        height: 5px;
-        width: 5px;
+        height: 6px;
+        width: 6px;
         border-radius: 100%;
-        background-color: $text;
-        @include center-pos(false, true);
+        // @include center-pos(false, true);
+        position: absolute;
+        top: 10px;
+        background-color: $primary;
         left: 0px;
       }
     }
@@ -197,6 +203,10 @@ strong {
       list-style-type: decimal;
       @include sans($p, book);
       @include marginBottom(15);
+      a {
+        text-decoration: underline;
+        color: $primary;
+      }
     }
   }
   blockquote {
