@@ -13,10 +13,16 @@ $light-grey: #EEEEEE;
 $lime: #B3CB0F;
 $navy: #21333A;
 $dark-grey: #363D40;
+// post categories
+$clay: #CC4D04;
+$aqua: #7AE0DF;
+$violet: #8723CC;
+$onyx: #404040;
 
 $text: $navy;
 $primary: $lime;
 $secondary: $light-grey;
+
 
 
 /* TRANSITIONS */
@@ -44,6 +50,8 @@ $transition-slow: $transition-speed*2 $ease-out-quad;
 @import "partials/_forms";
 @import "partials/_news";
 @import "partials/_events";
+@import "partials/_collaborations";
+@import "partials/_instagram";
 
 /* GLOBAL*/
 *, *:before, *:after {
@@ -143,7 +151,7 @@ em, i {
   font-style: italic;
 }
 strong {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .text-styles {
@@ -159,12 +167,21 @@ strong {
     }
     &.intro-text {
       @include sans($intro, book);
+      strong {
+        @include sans($intro, bold);
+      }
     }
     &.heading-text {
       @include brandon($heading, medium);
+      strong {
+        @include brandon($heading, bold);
+      }
     }
     &.title-text {
       @include brandon($title, medium);
+      strong {
+        @include brandon($heading, bold);
+      }
     }
   }
   img {

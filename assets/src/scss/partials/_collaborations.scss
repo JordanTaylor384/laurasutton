@@ -1,0 +1,30 @@
+.module__collaborations {
+  padding: 20px 0px 40px 0px;
+  @media (min-width: $screen-sm-min) {
+    padding: 30px 0px 60px;
+  }
+  .container {
+    max-width: 800px;
+  }
+  &__item {
+    @include marginBottom(60, 80);
+    &__grid {
+      @include display-grid;
+      @include display-grid-gap(40);
+      @media (min-width: $screen-sm-min) {
+        @include display-grid-columns(200px 1fr);
+      }
+    }
+    &__image {
+      @include marginBottom(30, 0);
+      img {
+        @media (max-width: $screen-xs-max) {
+          max-width: 200px;
+        }
+      }
+    }
+    &__text {
+      @extend .text-styles;
+    }
+  }
+}

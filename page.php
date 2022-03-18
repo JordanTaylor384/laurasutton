@@ -51,6 +51,12 @@ get_header(); ?>
 			<?php if (get_row_layout() == 'editor'): ?>
 				<?php get_template_part( 'views/module-editor', 'editor' ); ?>
 			<?php endif; ?>
+			<?php if (get_row_layout() == 'collaborations'): ?>
+				<?php get_template_part( 'views/module-collaborations', 'collaborations' ); ?>
+			<?php endif; ?>
+			<?php if (get_row_layout() == 'instagram'): ?>
+				<?php get_template_part( 'views/module-instagram', 'instagram' ); ?>
+			<?php endif; ?>
 		<?php endwhile; ?>
 	</div>
 <?php endif; ?>

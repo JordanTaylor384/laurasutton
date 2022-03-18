@@ -6,6 +6,7 @@
   background-color: white;
   width: 100%;
   padding: 20px 0px;
+  box-shadow: rgba(#EBEBEB, 0.5) 0px 2px 4px 0px;
   @media (min-width: $screen-sm-min) {
     padding: 20px 0px 20px 0px;
   }
@@ -90,6 +91,19 @@
             }
           }
         }
+        &.menu-item-has-children {
+          position: relative;
+          padding-right: 40px;
+          &:after {
+            @include center-pos(false, true);
+            right: 10px;
+            @extend .icon-arrow_right;
+          }
+        }
+      }
+
+      .sub-menu-container {
+        display: none;
       }
     }
 
@@ -197,6 +211,10 @@
             }
           }
         }
+      }
+
+      .sub-menu-container {
+        display: none;
       }
     }
     .nav-toggle {

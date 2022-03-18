@@ -1,23 +1,49 @@
 <?php
 $limit = get_sub_field('limit');
 $category = get_sub_field('category');
+if (count($category) == 1) {
+  $categorySlug = get_category($category[0]);
+  $categorySlug = $categorySlug->category_nicename;
+} else {
+  $categorySlug = 'mixed';
+}
 ?>
 
-<div class="module post-index">
+<section class="module post-index">
 
-  <?php $args = array(
+  <?php $moduleArgs = array(
     'post_type' => 'post',
-    'category_name' => $category,
+    'cat' => $category,
     'posts_per_page' => $limit
   ); ?>
 
-  <?php $wp_query = new WP_Query($args) ;?>
+  <?php $moduleQuery = new WP_Query($moduleArgs) ;?>
 
   <div class="container">
+    <div class="post-index__introduction post-index__introduction--<?=$categorySlug;?>">
+
+      <?php if (count($category) == 1) :?>
+        <div class="post-index__icon"></div>
+      <?php endif; ?>
+
+      <?php if (get_sub_field('title')): ?>
+        <div class="post-index__title"><?=the_sub_field('title');?></div>
+      <?php endif; ?>
+
+      <?php if (get_sub_field('introduction')): ?>
+        <div class="post-index__text"><?=the_sub_field('introduction');?></div>
+      <?php endif; ?>
+
+      <?php if (count($category) == 1) :?>
+        <a class="post-index__more" href="<?=the_sub_field('view_all_link');?>">
+          View all
+        </a>
+      <?php endif; ?>
+    </div>
 
     <div class="post-index__grid slick-container">
       <?php $index = 1;?>
-      <?php if ( $wp_query->have_posts() ) : while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+      <?php if ( $moduleQuery->have_posts() ) : while ( $moduleQuery->have_posts() ) : $moduleQuery->the_post(); ?>
         <?php get_template_part( 'views/view-posts', 'posts' ); ?>
         <?php $index++;?>
       <?php endwhile; ?>
@@ -25,6 +51,6 @@ $category = get_sub_field('category');
   </div>
 
 </div>
-</div>
+</section>
 
 <?php wp_reset_query(); ?>

@@ -20,11 +20,6 @@
     <?php endwhile; ?>
   </div>
 
-
-
-
-
-
   <?php
   $currentID = get_the_ID();
   $args = array(
@@ -36,14 +31,14 @@
 
   $wp_query = new WP_Query($args); ?>
 
-  <div class="news module">
+  <div class="module__posts related">
   	<div class="container">
 
-  		<div class="news__title">
+  		<div class="module__posts__title">
         More from the blog
   		</div>
 
-  		<div class="news__grid">
+  		<div class="module__posts__grid">
   			<?php if ( $wp_query->have_posts() ) : while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
   				<?php get_template_part( 'views/view-posts', 'posts' ); ?>
   			<?php endwhile; ?>
@@ -51,7 +46,7 @@
   		<?php endif; ?>
   	</div>
   	<div class="clearfix"></div>
-  	<div class="news__pagination">
+  	<div class="module__posts__pagination">
   		<?php the_posts_pagination( array(
   			'prev_text' => '&nbsp;',
   			'next_text' => '&nbsp;'

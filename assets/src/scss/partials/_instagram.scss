@@ -1,0 +1,47 @@
+.module__instagram {
+  background-color: white;
+  @media (min-width: $screen-sm-min) {
+    padding: 0px 70px 90px 70px;
+  }
+  &__wrapper {
+    background-color: rgba($primary, 0.1);
+    padding: 50px 0px;
+    @media (min-width: $screen-sm-min) {
+      padding: 50px 40px;
+    }
+    .container {
+      @media (max-width: $screen-md-max) {
+        width: 100%;
+      }
+    }
+  }
+  &__title {
+    @include brandon($heading, 500);
+    text-align: center;
+    @include marginBottom(20);
+  }
+  &__intro {
+    @extend .text-styles;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+    @include marginBottom(50);
+  }
+  &__logo {
+    max-width: 90px;
+    margin: 0 auto;
+    @include marginBottom(30);
+  }
+  #sb_instagram {
+    padding: 0 !important;
+  }
+  #sbi_images {
+    padding: 0 !important;
+    @include display-grid;
+    @include display-grid-columns(1fr 1fr 1fr 1fr);
+    @include display-grid-gap(30);
+    .sbi_item {
+      width: 100% !important;
+    }
+  }
+}
