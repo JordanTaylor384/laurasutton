@@ -35,7 +35,7 @@ if (count($category) == 1) {
       <?php endif; ?>
 
       <?php if (count($category) == 1) :?>
-        <a class="post-index__more" href="<?=the_sub_field('view_all_link');?>">
+        <a class="post-index__more" href="<?=the_sub_field('view_all_link');?>" aria-label="View all posts in the category <?=$categorySlug;?>">
           View all
         </a>
       <?php endif; ?>
