@@ -196,6 +196,9 @@ $events-title: (
       @media (max-width: $screen-md-max) {
         display: none;
       }
+      .post__item__meta {
+        flex-grow: 0;
+      }
     }
   }
 }

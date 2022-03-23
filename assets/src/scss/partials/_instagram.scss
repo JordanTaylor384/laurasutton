@@ -35,13 +35,25 @@
   #sb_instagram {
     padding: 0 !important;
   }
-  #sbi_images {
-    padding: 0 !important;
-    @include display-grid;
-    @include display-grid-columns(1fr 1fr 1fr 1fr);
-    @include display-grid-gap(30);
-    .sbi_item {
-      width: 100% !important;
-    }
-  }
+  // #sbi_images {
+  //   padding: 0 !important;
+  //   @include display-grid;
+  //   @include display-grid-columns(1fr);
+  //   grid-row-gap: 30px;
+  //   @media (min-width: $screen-sm-min) {
+  //     @include display-grid;
+  //     @include display-grid-columns(1fr 1fr);
+  //     @include display-grid-gap(30);
+  //   }
+  //   @media (min-width: $screen-md-min) {
+  //     @include display-grid-columns(1fr 1fr 1fr 1fr);
+  //   }
+  //   .sbi_item {
+  //     width: 100% !important;
+  //     @include marginBottom(30, 0);
+  //     &:focus {
+  //       outline: 2px solid #5b9dd9 !important;
+  //     }
+  //   }
+  // }
 }

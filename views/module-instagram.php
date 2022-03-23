@@ -1,3 +1,5 @@
+<?php $feed = get_sub_field('feed_embed');?>
+
 <section class="module__instagram">
   <div class="module__instagram__wrapper">
     <div class="container">
@@ -9,7 +11,7 @@
         <?=the_sub_field('text');?>
       </div>
       <div class="module__instagram__embed">
-        <?php echo do_shortcode('[instagram-feed feed=1]');?>
+        <?php echo do_shortcode($feed);?>
       </div>
     </div>
   </div>

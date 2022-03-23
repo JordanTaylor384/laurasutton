@@ -1,11 +1,20 @@
+<?php $id = get_the_category($post_id); ?>
+<?php $category = $id[0]->name;?>
+<?php $categorySlug = $id[0]->slug;?>
+
 <div id="post">
 
   <a name="article"></a>
   <div class="article">
     <?php	while (have_posts()) : the_post(); ?>
       <div class="container">
-        <div class="article__date">
-          <?=the_field('date');?>
+        <div class="article__meta">
+          <div class="article__date">
+            <?=the_field('date');?>
+          </div>
+          <div class="post__item__category post__item__category--<?=$categorySlug;?>">
+            <?=$category;?>
+          </div>
         </div>
         <div class="article__title">
           <?=the_title();?>
