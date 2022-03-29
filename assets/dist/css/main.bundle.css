@@ -5000,7 +5000,9 @@ body.category-books .page-header__title:before {
       padding-right: 100px; } }
   @media (min-width: 768px) {
     .article__body img {
-      position: relative; } }
+      max-width: calc(100%);
+      position: relative;
+      width: calc(100%); } }
   .article + .module__news {
     padding: 0; }
 
