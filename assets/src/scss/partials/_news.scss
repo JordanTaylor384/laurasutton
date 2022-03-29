@@ -1,5 +1,5 @@
 $news-title: (
-0px: (21px, 26px)
+0px: (20px, 29px)
 );
 
 $news-main: (
@@ -32,7 +32,8 @@ $featured: (
       }
     }
     .module__posts__title {
-      @include brandon($title, medium);
+      // @include brandon($title, medium);
+      @include brandon($index-intro, medium);
       @include marginBottom(30);
     }
   }
@@ -516,7 +517,8 @@ body.category {
     }
   }
   & + .post-index {
-    padding-top: 0;
+    // padding-top: 0;
+    padding-top: 30px;
   }
 }
 

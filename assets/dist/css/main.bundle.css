@@ -4652,12 +4652,12 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   margin-bottom: 30px; }
   @media (min-width: 0px) {
     .module__posts.related .module__posts__title {
-      font-size: 36px !important;
-      line-height: 44px; } }
-  @media (min-width: 1240px) {
+      font-size: 26px !important;
+      line-height: 37px; } }
+  @media (min-width: 768px) {
     .module__posts.related .module__posts__title {
-      font-size: 51px !important;
-      line-height: 59px; } }
+      font-size: 32px !important;
+      line-height: 42px; } }
   @media (min-width: 768px) {
     .module__posts.related .module__posts__title {
       margin-bottom: 30px; } }
@@ -4862,8 +4862,8 @@ body.category-books .page-header__title:before {
     margin-bottom: 15px; }
     @media (min-width: 0px) {
       .post__item__title {
-        font-size: 21px !important;
-        line-height: 26px; } }
+        font-size: 20px !important;
+        line-height: 29px; } }
     @media (min-width: 768px) {
       .post__item__title {
         margin-bottom: 15px; } }
@@ -5198,7 +5198,7 @@ body.category-books .page-header__title:before {
     display: none; } }
 
 .post-index + .post-index {
-  padding-top: 0; }
+  padding-top: 30px; }
 
 .home .post-index {
   padding-bottom: 60px; }
