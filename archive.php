@@ -14,32 +14,32 @@
 
 get_header();
 ?>
+<div id="content">
 
+	<div class="module__posts page-header">
+		<div class="container">
 
-<div class="module__posts page-header">
-	<div class="container">
-
-		<div class="module__posts__grid page-header__grid">
-			<div class="module__posts__intro page-header__intro">
-				<div class="module__posts__title page-header__title">
-					<?=single_cat_title( '', false );?>
+			<div class="module__posts__grid page-header__grid">
+				<div class="module__posts__intro page-header__intro">
+					<div class="module__posts__title page-header__title">
+						<?=single_cat_title( '', false );?>
+					</div>
+					<p><?=the_archive_description();?></p>
 				</div>
-				<p><?=the_archive_description();?></p>
-			</div>
-			<?php if ( $wp_query->have_posts() ) : while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
-				<?php get_template_part( 'views/view-posts', 'posts' ); ?>
-			<?php endwhile; ?>
-			<?php wp_reset_query();?>
-		<?php endif; ?>
+				<?php if ( $wp_query->have_posts() ) : while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+					<?php get_template_part( 'views/view-posts', 'posts' ); ?>
+				<?php endwhile; ?>
+				<?php wp_reset_query();?>
+			<?php endif; ?>
+		</div>
+		<div class="clearfix"></div>
+		<div class="module__posts__pagination">
+			<?php the_posts_pagination( array(
+				'prev_text' => '&nbsp;',
+				'next_text' => '&nbsp;'
+			) ); ?>
+		</div>
 	</div>
-	<div class="clearfix"></div>
-	<div class="module__posts__pagination">
-		<?php the_posts_pagination( array(
-			'prev_text' => '&nbsp;',
-			'next_text' => '&nbsp;'
-		) ); ?>
-	</div>
-</div>
 </div>
 
 <?php // check if the flexible content field has rows of data ?>
@@ -52,6 +52,8 @@ get_header();
 		<?php endif; ?>
 	<?php endwhile; ?>
 <?php endif; ?>
+
+</div>
 
 <?php
 get_footer();
