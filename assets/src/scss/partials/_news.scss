@@ -175,8 +175,8 @@ body.category {
     .module__posts__title,
     .page-header__title {
       &:before {
-        @extend .icon-cross;
-        font-size: 70px;
+        @extend .icon-thoughts;
+        font-size: 60px;
         color: $clay;
       }
     }
@@ -192,8 +192,8 @@ body.category {
     .module__posts__title,
     .page-header__title {
       &:before {
-        @extend .icon-cross;
-        font-size: 70px;
+        @extend .icon-blog;
+        font-size: 60px;
         color: $aqua;
       }
     }
@@ -209,8 +209,8 @@ body.category {
     .module__posts__title,
     .page-header__title {
       &:before {
-        @extend .icon-cross;
-        font-size: 70px;
+        @extend .icon-podcasts;
+        font-size: 60px;
         color: $violet;
       }
     }
@@ -226,8 +226,8 @@ body.category {
     .module__posts__title,
     .page-header__title {
       &:before {
-        @extend .icon-cross;
-        font-size: 70px;
+        @extend .icon-books;
+        font-size: 60px;
         color: $onyx;
       }
     }
@@ -373,18 +373,22 @@ body.category {
   &__meta {
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: center;
+    @include marginBottom(20);
     @media (min-width: $screen-sm-min) {
       padding-right: 100px;
     }
   }
   &__date {
     @include sans($p, book);
-    @include marginBottom(15);
+    @include marginBottom(15, 0);
   }
   &__title {
     @include brandon($title, medium);
     @include marginBottom(30);
+    @media (min-width: $screen-sm-min) {
+      padding-right: 100px;
+    }
   }
   &__body {
     @extend .text-styles;
@@ -393,9 +397,9 @@ body.category {
     }
     img {
       @media (min-width: $screen-sm-min) {
-        max-width: calc(100% + 100px);
+        // max-width: calc(100% + 100px);
         position: relative;
-        width: calc(100% + 100px);
+        // width: calc(100% + 100px);
       }
     }
   }
@@ -423,22 +427,34 @@ body.category {
     &--blog {
       .post-index__icon {
         color: $aqua;
+        &:after {
+          @extend .icon-blog;
+        }
       }
     }
     &--thoughts,
     &--conversation {
       .post-index__icon{
         color: $clay;
+        &:after {
+          @extend .icon-thoughts;
+        }
       }
     }
     &--podcasts {
       .post-index__icon {
         color: $violet;
+        &:after {
+          @extend .icon-podcasts;
+        }
       }
     }
     &--books {
       .post-index__icon {
         color: $onyx;
+        &:after {
+          @extend .icon-books;
+        }
       }
     }
   }
@@ -449,8 +465,8 @@ body.category {
       @include display-grid-row(1, 3);
     }
     &:after {
-      @extend .icon-cross;
-      font-size: 70px;
+      // @extend .icon-cross;
+      font-size: 60px;
     }
   }
   &__text {
@@ -519,5 +535,94 @@ body.category {
         display: none;
       }
     }
+  }
+}
+
+
+.page-header {
+  padding: 60px 0px;
+  // padding-top: 60px;
+  overflow: hidden;
+  position: relative;
+  // z-index: 1;
+  @media (min-width: $screen-sm-min) {
+    // padding: 90px 0px 0px 0px;
+    padding-top: 90px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: $primary;
+    opacity: 0.1;
+    border-radius: 100%;
+    pointer-events: none;
+    z-index: 1;
+    height: 1000px;
+    width: 1000px;
+    top: -730px;
+    left: -275px;
+    @media (min-width: $screen-lg-min) {
+      top: -400px;
+      left: -200px;
+    }
+  }
+
+  &__grid {
+    @media (min-width: $screen-sm-min) {
+      @include display-grid;
+      @include display-grid-gap(36);
+      @include display-grid-columns(1fr 1fr);
+      // @include display-grid-columns(1fr 1fr 1fr);
+    }
+    @media (min-width: $screen-lg-min) {
+      @include display-grid-columns(1fr 1fr 1fr);
+    }
+  }
+  &__title {
+    @include brandon($title, medium);
+    @include marginBottom(30);
+  }
+  &__intro {
+    @extend .text-styles;
+    // @include align-self(center);
+    // @include marginTop(0, 0, 0, -60);
+    @include marginTop(0, 0, 0, 60);
+    @include display-grid-column(1,3);
+    @media (min-width: $screen-lg-min) {
+      padding-right: 250px;
+      @include display-grid-column(1,3);
+    }
+    & + .post__item {
+      &:before {
+        @media (min-width: $screen-lg-min) {
+          content: "Featured";
+        }
+        @include sans($featured, bold);
+        @include marginBottom(15);
+        color: $primary;
+        display: block;
+        position: relative;
+      }
+      .post__item__meta {
+        flex-grow: 0;
+      }
+    }
+  }
+}
+
+.blog {
+  .page-header__grid {
+    .page-header__intro {
+      & + .post__item {
+        @media (max-width: $screen-md-max) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.archive {
+  .page-header__intro {
+    @include marginBottom(60, 60, 0);
   }
 }

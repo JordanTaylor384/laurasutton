@@ -44,7 +44,7 @@
   	<div class="container">
 
   		<div class="module__posts__title">
-        More from the blog
+        More insights
   		</div>
 
   		<div class="module__posts__grid">

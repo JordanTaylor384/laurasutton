@@ -11,7 +11,8 @@
     padding: 20px 0px 20px 0px;
   }
   @media (min-width: $screen-lg-min) {
-    padding: 10px 0px 30px 0px;
+    // padding: 10px 0px 30px 0px;
+    padding: 10px 0px 0px 0px;
   }
   &__grid {
     @include display-grid;
@@ -26,8 +27,9 @@
   &__logo {
     @include align-self(center);
     @media (min-width: $screen-lg-min) {
-      @include align-self(end);
-      padding-top: 10px;
+      @include align-self(center);
+      // @include align-self(end);
+      // padding-top: 10px;
     }
     img {
       max-width: 167px;
@@ -51,59 +53,109 @@
       @media (max-width: $screen-md-max) {
         display: none;
       }
-      li {
-        display: inline-block;
-        padding: 0px 20px;
-        a {
-          display: block;
-          @include sans($nav, bold);
-          padding: 5px 0px;
-          position: relative;
-          // border-bottom: 4px solid $primary;
-          @include transition(color $transition);
-          &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            height: 4px;
-            // width: 100%;
-            background-color: $primary;
-            width: 0;
-            @include transition(width $transition);
-          }
-          &:focus {
-            color: $lime;
-          }
-          &:hover {
-            &:after {
-              width: 100%;
-            }
-          }
-        }
-        &.current-menu-item,
-        &.current_page_parent {
+      .menu {
+        & > li {
+          display: inline-block;
+          padding: 0px 20px;
+          padding-bottom: 30px;
           & > a {
+            display: block;
+            @include sans($nav, bold);
+            padding: 5px 0px;
+            position: relative;
+            // border-bottom: 4px solid $primary;
+            @include transition(color $transition);
             &:after {
+              content: "";
+              display: block;
+              position: absolute;
+              bottom: -4px;
+              left: 0;
+              height: 4px;
+              // width: 100%;
               background-color: $primary;
-              width: 100% !important;
+              width: 0;
+              @include transition(width $transition);
+            }
+            &:focus {
+              color: $lime;
+            }
+            &:hover {
+              &:after {
+                width: 100%;
+              }
             }
           }
-        }
-        &.menu-item-has-children {
-          position: relative;
-          padding-right: 40px;
-          &:after {
-            @include center-pos(false, true);
-            right: 10px;
-            @extend .icon-arrow_right;
+          &.current-menu-item,
+          &.current_page_parent {
+            & > a {
+              &:after {
+                background-color: $primary;
+                width: 100% !important;
+              }
+            }
+          }
+          &.menu-item-has-children {
+            position: relative;
+            padding-right: 40px;
+            &:after {
+              // @include center-pos(false, true);
+              position: absolute;
+              top: 12px;
+              right: 10px;
+              font-size: 14px;
+              @extend .icon-chevron_down;
+            }
+            &:hover {
+              .sub-menu-container {
+                opacity: 1;
+                pointer-events: all;
+              }
+            }
           }
         }
       }
 
       .sub-menu-container {
-        display: none;
+        // display: none;
+        // dropdown navs
+        position: absolute;
+        top: calc(100% + 0px);
+        left: 0;
+        // width: 360px;
+        width: 100vw;
+        height: 100%;
+        z-index: 1001;
+        pointer-events: none;
+        opacity: 0;
+        @include transition(opacity $transition, top $ease-out-quad $transition-speed*1.25);
+        & > .sub-menu-inner {
+          position: relative;
+          z-index: 1001;
+          background-color: $navy;
+          padding: 20px 20px;
+          & > .sub-menu {
+            margin-left: -10px;
+          }
+        }
+        li {
+          display: inline-block;
+          // float: none;
+          text-align: left;
+          a {
+            color: white;
+            display: block;
+            padding: 0px 10px;
+            @include sans($nav, bold);
+            @include transition(color $transition);
+            &:hover {
+              color: lighten($primary, 10%);
+            }
+          }
+        }
+
+
+
       }
     }
 

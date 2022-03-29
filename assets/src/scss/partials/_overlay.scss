@@ -40,7 +40,9 @@
         height: 3px;
         width: 30px;
         display: block;
-        @include center-pos(false, true);
+        // @include center-pos(false, true);
+        position: absolute;
+        top: 12px;
         left: 0;
       }
       &.current-menu-item,
@@ -51,6 +53,16 @@
       }
       a {
         @include sans($nav, bold);
+      }
+      .sub-menu {
+        padding-top: 10px;
+        li {
+          padding-left: 15px;
+          &:before {
+            width: 3px;
+            background-color: $navy;
+          }
+        }
       }
     }
   }

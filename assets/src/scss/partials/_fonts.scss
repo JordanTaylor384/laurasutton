@@ -50,11 +50,32 @@
   @extend .icon;
   content: "\e901";
 }
-.icon-underline{
+.icon-underline {
   @extend .icon;
   content: "\e902";
 }
-.icon-cross{
+.icon-cross {
   @extend .icon;
   content: "\e903";
+}
+.icon-chevron_down {
+  @extend .icon;
+  content: "\e904";
+}
+
+.icon-thoughts {
+  @extend .icon;
+  content: "\e905";
+}
+.icon-blog {
+  @extend .icon;
+  content: "\e906";
+}
+.icon-podcasts {
+  @extend .icon;
+  content: "\e907";
+}
+.icon-books {
+  @extend .icon;
+  content: "\e908";
 }
