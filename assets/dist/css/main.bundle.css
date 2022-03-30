@@ -3370,6 +3370,8 @@ body.category-books .page-header__title:before, .post-index__introduction--books
             -moz-transform: rotate(180deg);
             -ms-transform: rotate(180deg);
             transform: rotate(180deg); }
+          .site-header__nav nav .menu > li.menu-item-has-children:hover a:after {
+            width: 100%; }
       .site-header__nav nav .sub-menu-container {
         position: absolute;
         top: calc(100% - 10px);
@@ -5198,7 +5200,7 @@ body.category-books .page-header__title:before {
     display: none; } }
 
 .post-index + .post-index {
-  padding-top: 30px; }
+  padding-top: 50px; }
 
 .home .post-index {
   padding-bottom: 60px; }
