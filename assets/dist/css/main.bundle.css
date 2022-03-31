@@ -5652,11 +5652,17 @@ body.category-books .page-header__title:before {
   background-color: white; }
   @media (min-width: 768px) {
     .module__instagram {
+      padding: 0px 30px 90px 30px; } }
+  @media (min-width: 992px) {
+    .module__instagram {
       padding: 0px 70px 90px 70px; } }
   .module__instagram__wrapper {
     background-color: rgba(179, 203, 15, 0.1);
     padding: 50px 0px; }
     @media (min-width: 768px) {
+      .module__instagram__wrapper {
+        padding: 50px 30px; } }
+    @media (min-width: 992px) {
       .module__instagram__wrapper {
         padding: 50px 40px; } }
     @media (max-width: 1239px) {
