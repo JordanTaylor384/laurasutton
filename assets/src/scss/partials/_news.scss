@@ -559,10 +559,16 @@ body.category {
     border-radius: 100%;
     pointer-events: none;
     z-index: 1;
-    height: 1000px;
-    width: 1000px;
-    top: -730px;
-    left: -275px;
+    height: 700px;
+    width: 700px;
+    top: -450px;
+    left: -200px;
+    @media (min-width: $screen-sm-min) {
+      height: 1000px;
+      width: 1000px;
+      top: -730px;
+      left: -275px;
+    }
     @media (min-width: $screen-lg-min) {
       top: -400px;
       left: -200px;

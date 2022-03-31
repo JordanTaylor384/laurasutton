@@ -3243,6 +3243,8 @@ body.category-books .page-header__title:before, .post-index__introduction--books
           .overlay__nav li .sub-menu li:before {
             width: 3px;
             background-color: #21333A; }
+          .overlay__nav li .sub-menu li.current-menu-item:before {
+            background-color: #B3CB0F; }
 
 /* MODULES */
 .site-header {
@@ -5227,10 +5229,16 @@ body.category-books .page-header__title:before {
     border-radius: 100%;
     pointer-events: none;
     z-index: 1;
-    height: 1000px;
-    width: 1000px;
-    top: -730px;
-    left: -275px; }
+    height: 700px;
+    width: 700px;
+    top: -450px;
+    left: -200px; }
+    @media (min-width: 768px) {
+      .page-header:after {
+        height: 1000px;
+        width: 1000px;
+        top: -730px;
+        left: -275px; } }
     @media (min-width: 1240px) {
       .page-header:after {
         top: -400px;
