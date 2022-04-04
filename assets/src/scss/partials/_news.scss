@@ -262,17 +262,14 @@ body.category {
 
 .post__item {
   @include marginBottom(60);
-  & > a {
+  &__inner {
     height: 100%;
     // @include display-grid;
     display: flex;
     flex-direction: column;
+  }
   & > &:not(.post__item__meta) {
     flex-shrink: 1;
-  }
-    // display: block;
-    // position: relative;
-    // padding-bottom: 43px;
   }
   &__image {
     position: relative;

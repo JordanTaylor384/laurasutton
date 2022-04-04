@@ -3413,6 +3413,8 @@ body.category-books .page-header__title:before, .post-index__introduction--books
                 line-height: 26px; } }
             .site-header__nav nav .sub-menu-container li a:hover {
               background-color: rgba(179, 203, 15, 0.2); }
+          .site-header__nav nav .sub-menu-container li.current-menu-item a {
+            color: #B3CB0F; }
     @media (min-width: 1240px) {
       .site-header__nav .nav-toggle {
         display: none; } }
@@ -4830,12 +4832,12 @@ body.category-books .page-header__title:before {
   @media (min-width: 1240px) {
     .post__item {
       margin-bottom: 60px; } }
-  .post__item > a {
+  .post__item__inner {
     height: 100%;
     display: flex;
     flex-direction: column; }
-    .post__item > a > .post__item > a:not(.post__item__meta) {
-      flex-shrink: 1; }
+  .post__item > .post__item:not(.post__item__meta) {
+    flex-shrink: 1; }
   .post__item__image {
     position: relative;
     margin-bottom: 15px; }

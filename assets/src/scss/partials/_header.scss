@@ -160,9 +160,12 @@
               background-color: rgba(#B3CB0F, 0.2);
             }
           }
+          &.current-menu-item {
+            a {
+              color: $primary;
+            }
+          }
         }
-
-
 
       }
     }
