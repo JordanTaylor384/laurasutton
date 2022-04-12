@@ -34,7 +34,7 @@ if (count($category) == 1) {
         <div class="post-index__text"><?=the_sub_field('introduction');?></div>
       <?php endif; ?>
 
-      <?php if (count($category) == 1) :?>
+      <?php if (count($category) == 1 && $categorySlug != 'books') :?>
         <a class="post-index__more" href="<?=the_sub_field('view_all_link');?>" aria-label="View all posts in the category <?=$categorySlug;?>">
           View all
         </a>
