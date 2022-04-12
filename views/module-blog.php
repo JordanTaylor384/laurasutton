@@ -44,10 +44,17 @@ if (count($category) == 1) {
     <div class="post-index__grid slick-container">
       <?php $index = 1;?>
       <?php if ( $moduleQuery->have_posts() ) : while ( $moduleQuery->have_posts() ) : $moduleQuery->the_post(); ?>
-        <?php get_template_part( 'views/view-posts', 'posts' ); ?>
+        <?php if ($categorySlug == 'books'): ?>
+          <?php get_template_part( 'views/view-posts-books', 'posts' ); ?>
+        <?php else: ?>
+          <?php get_template_part( 'views/view-posts', 'posts' ); ?>
+        <?php endif; ?>
         <?php $index++;?>
       <?php endwhile; ?>
     <?php	endif; ?>
+
+
+
   </div>
 
 </div>
