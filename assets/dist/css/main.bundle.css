@@ -6027,6 +6027,13 @@ strong {
       top: 10px;
       background-color: #B3CB0F;
       left: 0px; }
+    .text-styles ul li strong, .intro__text ul li strong, .content-block__text ul li strong, .article__body ul li strong, .post-index__text ul li strong, .page-header__intro ul li strong, .module__collaborations__item__text ul li strong, .module__instagram__intro ul li strong, .editor.module ul li strong {
+      font-family: "cerebri-bold", sans-serif;
+      font-style: normal; }
+      @media (min-width: 0px) {
+        .text-styles ul li strong, .intro__text ul li strong, .content-block__text ul li strong, .article__body ul li strong, .post-index__text ul li strong, .page-header__intro ul li strong, .module__collaborations__item__text ul li strong, .module__instagram__intro ul li strong, .editor.module ul li strong {
+          font-size: 16px !important;
+          line-height: 26px; } }
 
 .text-styles ol, .intro__text ol, .content-block__text ol, .article__body ol, .post-index__text ol, .page-header__intro ol, .module__collaborations__item__text ol, .module__instagram__intro ol, .editor.module ol {
   margin-bottom: 20px;

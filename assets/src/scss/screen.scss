@@ -242,6 +242,9 @@ strong {
         background-color: $primary;
         left: 0px;
       }
+      strong {
+        @include sans($p, bold);
+      }
     }
   }
   ol {
