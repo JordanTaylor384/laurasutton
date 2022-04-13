@@ -5811,7 +5811,28 @@ p {
     p {
       margin-bottom: 30px; } }
   p a {
-    color: #B3CB0F; }
+    color: #21333A;
+    position: relative;
+    overflow: hidden; }
+    p a:after, p a:before {
+      overflow: hidden;
+      content: "";
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      -webkit-transition: width 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -moz-transition: width 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -o-transition: width 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      transition: width 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+    p a:before {
+      background-color: #21333A;
+      width: 100%; }
+    p a:after {
+      background-color: #B3CB0F;
+      width: 0; }
+    p a:hover:after {
+      width: 100%; }
   p.intro-text {
     font-family: "cerebri-book", sans-serif;
     font-style: normal; }
