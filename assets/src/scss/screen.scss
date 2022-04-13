@@ -158,7 +158,7 @@ strong {
   p {
     @include sans($p, book);
     @include marginBottom(20, 30);
-    strong {
+    strong, b {
       @include sans($p, bold);
     }
     a {
@@ -193,25 +193,25 @@ strong {
     }
     &.intro-text {
       @include sans($intro, book);
-      strong {
+      strong, b {
         @include sans($intro, bold);
       }
     }
     &.heading-text {
       @include brandon($heading, medium);
-      strong {
+      strong, b {
         @include brandon($heading, bold);
       }
     }
     &.title-text {
       @include brandon($title, medium);
-      strong {
+      strong, b {
         @include brandon($heading, bold);
       }
     }
   }
   h1, h2, h3, h4, h5, h6 {
-    strong {
+    strong, b {
       @include sans($p, bold);
     }
   }
@@ -242,7 +242,7 @@ strong {
         background-color: $primary;
         left: 0px;
       }
-      strong {
+      strong, b {
         @include sans($p, bold);
       }
     }
