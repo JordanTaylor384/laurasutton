@@ -245,6 +245,21 @@ strong {
       strong, b {
         @include sans($p, bold);
       }
+      ul {
+        li {
+          &:before {
+            content: "";
+            height: 2px;
+            width: 6px;
+            // border-radius: 100%;
+            // @include center-pos(false, true);
+            position: absolute;
+            top: 10px;
+            background-color: $text;
+            left: 0px;
+          }
+        }
+      }
     }
   }
   ol {

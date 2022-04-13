@@ -6034,6 +6034,14 @@ strong {
         .text-styles ul li strong, .intro__text ul li strong, .content-block__text ul li strong, .article__body ul li strong, .post-index__text ul li strong, .page-header__intro ul li strong, .module__collaborations__item__text ul li strong, .module__instagram__intro ul li strong, .editor.module ul li strong, .text-styles ul li b, .intro__text ul li b, .content-block__text ul li b, .article__body ul li b, .post-index__text ul li b, .page-header__intro ul li b, .module__collaborations__item__text ul li b, .module__instagram__intro ul li b, .editor.module ul li b {
           font-size: 16px !important;
           line-height: 26px; } }
+    .text-styles ul li ul li:before, .intro__text ul li ul li:before, .content-block__text ul li ul li:before, .article__body ul li ul li:before, .post-index__text ul li ul li:before, .page-header__intro ul li ul li:before, .module__collaborations__item__text ul li ul li:before, .module__instagram__intro ul li ul li:before, .editor.module ul li ul li:before {
+      content: "";
+      height: 2px;
+      width: 6px;
+      position: absolute;
+      top: 10px;
+      background-color: #21333A;
+      left: 0px; }
 
 .text-styles ol, .intro__text ol, .content-block__text ol, .article__body ol, .post-index__text ol, .page-header__intro ol, .module__collaborations__item__text ol, .module__instagram__intro ol, .editor.module ol {
   margin-bottom: 20px;
