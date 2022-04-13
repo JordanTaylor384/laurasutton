@@ -6038,8 +6038,9 @@ strong {
       content: "";
       height: 2px;
       width: 6px;
+      border-radius: 0px;
       position: absolute;
-      top: 10px;
+      top: 13px;
       background-color: #21333A;
       left: 0px; }
 

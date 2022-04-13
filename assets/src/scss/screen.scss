@@ -252,9 +252,10 @@ strong {
             height: 2px;
             width: 6px;
             // border-radius: 100%;
+            border-radius: 0px;
             // @include center-pos(false, true);
             position: absolute;
-            top: 10px;
+            top: 13px;
             background-color: $text;
             left: 0px;
           }
