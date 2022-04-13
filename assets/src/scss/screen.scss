@@ -141,7 +141,7 @@ p {
       overflow: hidden;
       content: "";
       height: 1px;
-      bottom: 0;
+      bottom: 2px;
       left: 0;
       position: absolute;
       @include transition(width $transition);
@@ -197,7 +197,7 @@ strong {
         overflow: hidden;
         content: "";
         height: 1px;
-        bottom: 0;
+        bottom: 2px;
         left: 0;
         position: absolute;
         @include transition(width $transition);

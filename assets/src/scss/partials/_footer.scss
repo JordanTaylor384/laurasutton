@@ -137,15 +137,16 @@
     background: none;
     border-radius: 3px;
     border: 1px solid $dark-grey;
-    @include transition(background-color $transition, color $transition);
+    @include transition(background-color $transition, color $transition, border-color $transition);
     &:after {
       right: 20px;
       @extend .icon-arrow_right;
     }
     &:hover,
     &:focus {
-      background-color: $primary;
       color: white;
+      background-color: $navy;
+      border-color: $navy;
     }
   }
   .wpcf7-response-output {
