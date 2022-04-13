@@ -133,7 +133,7 @@ h1, h2, h3, h4, h5 {
 p {
   @include marginBottom(20, 30);
   a {
-    text-decoration: underline;
+    // text-decoration: underline;
     color: $primary;
   }
   &.intro-text {
@@ -162,8 +162,34 @@ strong {
       @include sans($p, bold);
     }
     a {
-      text-decoration: underline;
-      color: $primary;
+      // text-decoration: underline;
+      // color: $primary;
+      color: $text;
+      position: relative;
+      overflow: hidden;
+      &:after,
+      &:before {
+        overflow: hidden;
+        content: "";
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        @include transition(width $transition);
+      }
+      &:before {
+        background-color: $text;
+        width: 100%;
+      }
+      &:after {
+        background-color: $primary;
+        width: 0;
+      }
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+      }
     }
     &.intro-text {
       @include sans($intro, book);
@@ -197,7 +223,7 @@ strong {
       @include sans($p, book);
       @include marginBottom(15);
       a {
-        text-decoration: underline;
+        // text-decoration: underline;
         color: $primary;
       }
       &:before {
@@ -221,7 +247,7 @@ strong {
       @include sans($p, book);
       @include marginBottom(15);
       a {
-        text-decoration: underline;
+        // text-decoration: underline;
         color: $primary;
       }
     }

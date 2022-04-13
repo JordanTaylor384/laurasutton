@@ -12,8 +12,11 @@
   min-width: 180px;
   &:hover,
   &:focus {
-    border-color: $lime;
-    color: $lime;
+    // border-color: $lime;
+    // color: $lime;
+    color: white;
+    border-color: $navy;
+    background-color: $navy;
   }
   // &:focus {
   //   border-color: black !important;

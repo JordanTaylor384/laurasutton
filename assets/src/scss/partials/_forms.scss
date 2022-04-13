@@ -110,9 +110,9 @@
       // background-color: $primary;
       &:hover,
       &:focus {
-        background-color: $primary;
         color: white;
-        border-color: $primary;
+        border-color: $navy;
+        background-color: $navy;
       }
     }
   }
