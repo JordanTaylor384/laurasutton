@@ -27,6 +27,7 @@ $events-title: (
     border: 1px solid $primary;
     @include marginBottom(25);
     padding: 25px 30px 10px 30px;
+    border-radius: 3px;
     @media (min-width: $screen-sm-min) {
       padding: 40px;
     }

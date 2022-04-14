@@ -3626,16 +3626,32 @@ body.category-books .page-header__title:before, .post-index__introduction--books
       display: block;
       font-family: "cerebri-book", sans-serif;
       font-style: normal;
-      -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-      -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-      -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-      transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+      color: #21333A;
+      position: relative;
+      overflow: hidden; }
       @media (min-width: 0px) {
         .site-footer__nav nav li a {
           font-size: 16px !important;
           line-height: 26px; } }
-      .site-footer__nav nav li a:hover, .site-footer__nav nav li a:focus {
-        color: #B3CB0F; }
+      .site-footer__nav nav li a:after, .site-footer__nav nav li a:before {
+        overflow: hidden;
+        content: "";
+        height: 1px;
+        bottom: 2px;
+        left: 0;
+        position: absolute;
+        -webkit-transition: width 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        -moz-transition: width 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        -o-transition: width 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        transition: width 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+      .site-footer__nav nav li a:before {
+        background-color: #21333A;
+        width: 100%; }
+      .site-footer__nav nav li a:after {
+        background-color: #B3CB0F;
+        width: 0; }
+      .site-footer__nav nav li a:hover:after {
+        width: 100%; }
   .site-footer__smallprint {
     align-items: end; }
     @media (min-width: 768px) and (max-width: 991px) {
@@ -5420,7 +5436,8 @@ body.category-books .page-header__title:before {
 .events__item {
   border: 1px solid #B3CB0F;
   margin-bottom: 25px;
-  padding: 25px 30px 10px 30px; }
+  padding: 25px 30px 10px 30px;
+  border-radius: 3px; }
   @media (min-width: 768px) {
     .events__item {
       margin-bottom: 25px; } }

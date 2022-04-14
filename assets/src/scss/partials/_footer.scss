@@ -51,11 +51,34 @@
         a {
           display: block;
           @include sans($p, book);
-          @include transition(color $transition);
-          &:hover,
-          &:focus {
-            color: $lime;
+          // @include transition(color $transition);
+          color: $text;
+          position: relative;
+          overflow: hidden;
+          &:after,
+          &:before {
+            overflow: hidden;
+            content: "";
+            height: 1px;
+            bottom: 2px;
+            left: 0;
+            position: absolute;
+            @include transition(width $transition);
           }
+          &:before {
+            background-color: $text;
+            width: 100%;
+          }
+          &:after {
+            background-color: $primary;
+            width: 0;
+          }
+          &:hover {
+            &:after {
+              width: 100%;
+            }
+          }
+
         }
       }
     }
@@ -108,7 +131,7 @@
 // }
 
 .mailerlite {
-    @include marginBottom(10, 40);
+  @include marginBottom(10, 40);
   .wrapper {
     position: relative;
     // background-color: red;
