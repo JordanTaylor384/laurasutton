@@ -88,6 +88,21 @@ add_action( 'after_setup_theme', 'annearcher_setup' );
 
 
 //-----------------------------------------------------------------------------------------------------------------
+
+// disable wordpress auto-updates emails (core, plugin, theme)
+add_filter( 'auto_core_update_send_email', 'wp_stop_auto_update_emails', 10, 4 );
+add_filter( 'auto_plugin_update_send_email', '__return_false' );
+add_filter( 'auto_theme_update_send_email', '__return_false' );
+function wp_stop_update_emails( $send, $type, $core_update, $result ) {
+	if ( ! empty( $type ) && $type == 'success' ) {
+		return false;
+	}
+	return true;
+}
+
+//----------------------------------------------------------------------------------------------------------------
+
+
 /**
 * Implement the Custom Header feature.
 */
@@ -345,6 +360,11 @@ add_shortcode( 'readmore', 'read_more' );
 //----------------------------------------------------------------------------------
 // test to remove wordpress fuzzy redirect
 remove_filter('template_redirect', 'redirect_canonical');
+
+//---------------------------------------------------------------------------------
+// force YOAST settings panel in editor to bottom
+add_filter( 'wpseo_metabox_prio', function() { return 'low'; } );
+
 
 //-------------------------------------------------------------------------------------------------
 // remove spans from Contact Form 7
