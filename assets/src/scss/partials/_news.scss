@@ -631,3 +631,24 @@ body.category {
     @include marginBottom(60, 60, 0);
   }
 }
+
+body.home {
+  .post-index {
+    &__introduction {
+      @include display-grid;
+      @include display-grid-gap(20);
+      @include display-grid-columns(1fr 100px);
+      @include align-items(end);
+      @media (min-width: $screen-sm-min) {
+        @include align-items(center);
+      }
+    }
+    &__title {
+      @include display-grid-column(1,2);
+    }
+    &__more {
+      @include display-grid-column(2,3);
+      @include display-grid-row(1, 2);
+    }
+  }
+}

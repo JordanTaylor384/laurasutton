@@ -20,8 +20,8 @@ if (count($category) == 1) {
   <?php $moduleQuery = new WP_Query($moduleArgs) ;?>
 
   <div class="container">
-    <div class="post-index__introduction post-index__introduction--<?=$categorySlug;?>">
 
+    <div class="post-index__introduction post-index__introduction--<?=$categorySlug;?>">
       <?php if (count($category) == 1) :?>
         <div class="post-index__icon"></div>
       <?php endif; ?>
@@ -36,6 +36,12 @@ if (count($category) == 1) {
 
       <?php if (count($category) == 1 && $categorySlug != 'books') :?>
         <a class="post-index__more" href="<?=the_sub_field('view_all_link');?>" aria-label="View all posts in the category <?=$categorySlug;?>">
+          View all
+        </a>
+      <?php endif; ?>
+
+      <?php if (is_front_page()): ?>
+        <a class="post-index__more" href="/insights" aria-label="View all posts">
           View all
         </a>
       <?php endif; ?>

@@ -5397,6 +5397,48 @@ body.category-books .page-header__title:before {
     .archive .page-header__intro {
       margin-bottom: 0px; } }
 
+body.home .post-index__introduction {
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 100px;
+  align-items: end; }
+  @supports (display: grid) {
+    body.home .post-index__introduction {
+      display: grid; } }
+  @supports (display: grid) {
+    body.home .post-index__introduction {
+      grid-column-gap: 20px; } }
+  body.home .post-index__introduction else > * {
+    padding-right: 10px;
+    padding-left: 10px; }
+  @supports (display: grid) {
+    body.home .post-index__introduction {
+      grid-template-columns: 1fr 100px; } }
+  @media (min-width: 768px) {
+    body.home .post-index__introduction {
+      align-items: center; } }
+
+body.home .post-index__title {
+  -ms-grid-column-start: 1;
+  -ms-grid-column-end: 2; }
+  @supports (display: grid) {
+    body.home .post-index__title {
+      grid-column-start: 1;
+      grid-column-end: 2; } }
+
+body.home .post-index__more {
+  -ms-grid-column-start: 2;
+  -ms-grid-column-end: 3;
+  -ms-grid-row-start: 1;
+  -ms-grid-row-end: 2; }
+  @supports (display: grid) {
+    body.home .post-index__more {
+      grid-column-start: 2;
+      grid-column-end: 3; } }
+  @supports (display: grid) {
+    body.home .post-index__more {
+      grid-row-start: 1;
+      grid-row-end: 2; } }
+
 @media (min-width: 768px) {
   .events .thin-container {
     max-width: 680px; } }
