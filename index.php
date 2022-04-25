@@ -19,6 +19,12 @@ if (is_home()) {
 	$post_id = get_option('page_for_posts');
 }
 
+// get post category
+$categorySlug = get_the_category($post->id);
+$categorySlug = $categorySlug[0];
+// get category slug
+$categorySlug = $categorySlug->slug;
+
 $args = array(
 	'post_type' => 'post',
 	// 'paged' => get_query_var( 'paged' ),
@@ -41,7 +47,11 @@ $wp_query = new WP_Query($args);
 					<p><?=the_field('insights_description', $post_id);?></p>
 				</div>
 				<?php if ( $wp_query->have_posts() ) : while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
-					<?php get_template_part( 'views/view-posts', 'posts' ); ?>
+					<?php if ($categorySlug == "books"): ?>
+						<?php get_template_part( 'views/view-posts-books', 'posts' ); ?>
+					<?php else: ?>
+						<?php get_template_part( 'views/view-posts', 'posts' ); ?>
+					<?php endif; ?>
 				<?php endwhile; ?>
 				<?php wp_reset_query();?>
 			<?php endif; ?>
