@@ -613,6 +613,20 @@ body.category {
       }
     }
   }
+
+  &.page-header--single {
+    .page-header__intro {
+      @include marginBottom(60);
+      @include display-grid-column(1,4);
+      @media (min-width: $screen-lg-min) {
+        padding-right: 250px;
+        @include display-grid-column(1,4);
+      }
+      & + .post__item:before {
+        display: none;
+      }
+    }
+  }
 }
 
 .blog {

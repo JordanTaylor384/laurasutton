@@ -18,10 +18,17 @@ $categorySlug = get_the_category($post->id);
 $categorySlug = $categorySlug[0];
 // get category slug
 $categorySlug = $categorySlug->slug;
-?>
+
+// if more than 1 post, display a featured post
+if ($wp_query->found_posts > 1) {
+	$isSingle = '';
+} else {
+	$isSingle = 'page-header--single';
+} ?>
+
 <div id="content">
 
-	<div class="module__posts page-header">
+	<div class="module__posts page-header <?=$isSingle;?>">
 		<div class="container">
 
 			<div class="module__posts__grid page-header__grid">
@@ -31,6 +38,9 @@ $categorySlug = $categorySlug->slug;
 					</div>
 					<p><?=the_archive_description();?></p>
 				</div>
+
+
+
 				<?php if ( $wp_query->have_posts() ) : while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 					<?php if ($categorySlug == "books"): ?>
 						<?php get_template_part( 'views/view-posts-books', 'posts' ); ?>
@@ -40,6 +50,7 @@ $categorySlug = $categorySlug->slug;
 				<?php endwhile; ?>
 				<?php wp_reset_query();?>
 			<?php endif; ?>
+
 		</div>
 		<div class="clearfix"></div>
 		<div class="module__posts__pagination">

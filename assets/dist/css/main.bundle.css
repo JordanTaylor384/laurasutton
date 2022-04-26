@@ -5380,6 +5380,34 @@ body.category-books .page-header__title:before {
           margin-bottom: 15px; } }
     .page-header__intro + .post__item .post__item__meta {
       flex-grow: 0; }
+  .page-header.page-header--single .page-header__intro {
+    margin-bottom: 60px;
+    -ms-grid-column-start: 1;
+    -ms-grid-column-end: 4; }
+    @media (min-width: 768px) {
+      .page-header.page-header--single .page-header__intro {
+        margin-bottom: 60px; } }
+    @media (min-width: 992px) {
+      .page-header.page-header--single .page-header__intro {
+        margin-bottom: 60px; } }
+    @media (min-width: 1240px) {
+      .page-header.page-header--single .page-header__intro {
+        margin-bottom: 60px; } }
+    @supports (display: grid) {
+      .page-header.page-header--single .page-header__intro {
+        grid-column-start: 1;
+        grid-column-end: 4; } }
+    @media (min-width: 1240px) {
+      .page-header.page-header--single .page-header__intro {
+        padding-right: 250px;
+        -ms-grid-column-start: 1;
+        -ms-grid-column-end: 4; }
+        @supports (display: grid) {
+          .page-header.page-header--single .page-header__intro {
+            grid-column-start: 1;
+            grid-column-end: 4; } } }
+    .page-header.page-header--single .page-header__intro + .post__item:before {
+      display: none; }
 
 @media (max-width: 1239px) {
   .blog .page-header__grid .page-header__intro + .post__item {
