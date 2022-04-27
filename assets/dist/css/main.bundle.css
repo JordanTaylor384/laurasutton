@@ -2828,6 +2828,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   cursor: pointer;
   font-family: "cerebri-book", sans-serif;
   font-style: normal;
+  letter-spacing: 0.1px;
   -webkit-transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
   -moz-transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
   -o-transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -2882,6 +2883,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   width: 100%;
   font-family: "cerebri-book", sans-serif;
   font-style: normal;
+  letter-spacing: 0.1px;
   color: #21333A;
   margin-bottom: 15px;
   -webkit-transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -2914,6 +2916,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   .contact-form form textarea::-webkit-input-placeholder {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -2930,6 +2933,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   .contact-form form textarea:-moz-placeholder {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -2946,6 +2950,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   .contact-form form textarea::-moz-placeholder {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -2962,6 +2967,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   .contact-form form textarea:-ms-input-placeholder {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -3083,7 +3089,8 @@ body.category-books .page-header__title:before, .post-index__introduction--books
         margin-bottom: 0px; } }
     .contact-form__grid__col1 p {
       font-family: "cerebri-book", sans-serif;
-      font-style: normal; }
+      font-style: normal;
+      letter-spacing: 0.1px; }
       @media (min-width: 0px) {
         .contact-form__grid__col1 p {
           font-size: 16px !important;
@@ -3110,9 +3117,11 @@ body.category-books .page-header__title:before, .post-index__introduction--books
         display: none; } }
   .contact-form__title {
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     margin-bottom: 30px; }
@@ -3136,6 +3145,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   .contact-form__text {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     margin-bottom: 40px; }
     @media (min-width: 0px) {
       .contact-form__text {
@@ -3223,7 +3233,8 @@ body.category-books .page-header__title:before, .post-index__introduction--books
         background-color: #B3CB0F; }
       .overlay__nav li a {
         font-family: "cerebri-bold", sans-serif;
-        font-style: normal; }
+        font-style: normal;
+        letter-spacing: 0.1px; }
         @media (min-width: 0px) {
           .overlay__nav li a {
             font-size: 16px !important;
@@ -3340,6 +3351,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
           display: block;
           font-family: "cerebri-bold", sans-serif;
           font-style: normal;
+          letter-spacing: 0.1px;
           padding: 5px 0px;
           position: relative;
           -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -3417,6 +3429,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
             padding: 5px 10px;
             font-family: "cerebri-bold", sans-serif;
             font-style: normal;
+            letter-spacing: 0.1px;
             -webkit-transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
             -moz-transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
             -o-transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -3452,7 +3465,8 @@ body.category-books .page-header__title:before, .post-index__introduction--books
       display: inline; }
     .site-header__greeting .greeting {
       font-family: "cerebri-light", sans-serif;
-      font-style: normal; }
+      font-style: normal;
+      letter-spacing: 0.1px; }
       @media (min-width: 0px) {
         .site-header__greeting .greeting {
           font-size: 16px !important;
@@ -3517,6 +3531,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
           display: block;
           font-family: "cerebri-bold", sans-serif;
           font-style: normal;
+          letter-spacing: 0.1px;
           padding: 5px 0px;
           padding-bottom: 20px;
           color: white;
@@ -3580,6 +3595,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   .site-footer__contact p {
     display: block;
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     margin-bottom: 20px; }
@@ -3626,6 +3642,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
       display: block;
       font-family: "cerebri-book", sans-serif;
       font-style: normal;
+      letter-spacing: 0.1px;
       color: #21333A;
       position: relative;
       overflow: hidden; }
@@ -3685,6 +3702,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
     cursor: pointer;
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     -webkit-transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -moz-transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -o-transition: background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -3780,6 +3798,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
         margin-bottom: 0px; } }
     .intro__text .intro-text {
       font-family: 'brandon-grotesque';
+      letter-spacing: 0.1px;
       font-weight: book;
       font-style: normal; }
       @media (min-width: 0px) {
@@ -3788,9 +3807,11 @@ body.category-books .page-header__title:before, .post-index__introduction--books
           line-height: 31px; } }
     .intro__text .heading-text {
       font-family: 'brandon-grotesque';
+      letter-spacing: 0.1px;
       font-weight: medium;
       font-style: normal;
       font-family: 'brandon-grotesque';
+      letter-spacing: 0.1px;
       font-weight: medium;
       font-style: normal; }
       @media (min-width: 0px) {
@@ -3803,9 +3824,11 @@ body.category-books .page-header__title:before, .post-index__introduction--books
           line-height: 50px; } }
     .intro__text .title-text {
       font-family: 'brandon-grotesque';
+      letter-spacing: 0.1px;
       font-weight: medium;
       font-style: normal;
       font-family: 'brandon-grotesque';
+      letter-spacing: 0.1px;
       font-weight: medium;
       font-style: normal; }
       @media (min-width: 0px) {
@@ -3818,9 +3841,11 @@ body.category-books .page-header__title:before, .post-index__introduction--books
           line-height: 59px; } }
       .intro__text .title-text em {
         font-family: 'brandon-grotesque';
+        letter-spacing: 0.1px;
         font-weight: medium;
         font-style: normal;
         font-family: 'brandon-grotesque';
+        letter-spacing: 0.1px;
         font-weight: medium;
         font-style: normal;
         font-style: normal;
@@ -3972,9 +3997,11 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   .c2a__content p.intro-text {
     margin-bottom: 15px;
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal; }
     @media (min-width: 768px) {
@@ -4001,7 +4028,8 @@ body.category-books .page-header__title:before, .post-index__introduction--books
         line-height: 57px; } }
   .c2a__content p {
     font-family: "cerebri-book", sans-serif;
-    font-style: normal; }
+    font-style: normal;
+    letter-spacing: 0.1px; }
     @media (min-width: 0px) {
       .c2a__content p {
         font-size: 16px !important;
@@ -4025,9 +4053,11 @@ body.category-books .page-header__title:before, .post-index__introduction--books
     text-align: center; }
   .video__title {
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     margin-bottom: 30px; }
@@ -4051,6 +4081,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   .video__text {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     margin-bottom: 30px; }
     @media (min-width: 0px) {
       .video__text {
@@ -4118,9 +4149,11 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   .testimonials__title {
     text-align: center;
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     margin-bottom: 30px; }
@@ -4168,21 +4201,24 @@ body.category-books .page-header__title:before, .post-index__introduction--books
         padding: 30px 40px; } }
   .testimonials__quote {
     font-family: "cerebri-book", sans-serif;
-    font-style: normal; }
+    font-style: normal;
+    letter-spacing: 0.1px; }
     @media (min-width: 0px) {
       .testimonials__quote {
         font-size: 16px !important;
         line-height: 26px; } }
   .testimonials__role {
     font-family: "cerebri-bold", sans-serif;
-    font-style: normal; }
+    font-style: normal;
+    letter-spacing: 0.1px; }
     @media (min-width: 0px) {
       .testimonials__role {
         font-size: 16px !important;
         line-height: 26px; } }
   .testimonials__name {
     font-family: "cerebri-book", sans-serif;
-    font-style: normal; }
+    font-style: normal;
+    letter-spacing: 0.1px; }
     @media (min-width: 0px) {
       .testimonials__name {
         font-size: 16px !important;
@@ -4209,9 +4245,11 @@ body.category-books .page-header__title:before, .post-index__introduction--books
     margin: 0 auto; }
   .carousel__title {
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     margin-bottom: 30px; }
@@ -4235,6 +4273,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   .carousel__text {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     margin-bottom: 30px; }
     @media (min-width: 0px) {
       .carousel__text {
@@ -4308,6 +4347,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
       .carousel__slider .swiper-pagination .swiper-pagination-bullet span {
         font-family: "cerebri-bold", sans-serif;
         font-style: normal;
+        letter-spacing: 0.1px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -4372,6 +4412,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   width: 100%;
   font-family: "cerebri-book", sans-serif;
   font-style: normal;
+  letter-spacing: 0.1px;
   color: #21333A;
   margin-bottom: 15px;
   -webkit-transition: border-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), background-color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -4404,6 +4445,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   .contact-form form textarea::-webkit-input-placeholder {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -4420,6 +4462,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   .contact-form form textarea:-moz-placeholder {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -4436,6 +4479,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   .contact-form form textarea::-moz-placeholder {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -4452,6 +4496,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   .contact-form form textarea:-ms-input-placeholder {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     -webkit-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -4573,7 +4618,8 @@ body.category-books .page-header__title:before, .post-index__introduction--books
         margin-bottom: 0px; } }
     .contact-form__grid__col1 p {
       font-family: "cerebri-book", sans-serif;
-      font-style: normal; }
+      font-style: normal;
+      letter-spacing: 0.1px; }
       @media (min-width: 0px) {
         .contact-form__grid__col1 p {
           font-size: 16px !important;
@@ -4600,9 +4646,11 @@ body.category-books .page-header__title:before, .post-index__introduction--books
         display: none; } }
   .contact-form__title {
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     margin-bottom: 30px; }
@@ -4626,6 +4674,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
   .contact-form__text {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     margin-bottom: 40px; }
     @media (min-width: 0px) {
       .contact-form__text {
@@ -4681,9 +4730,11 @@ body.category-books .page-header__title:before, .post-index__introduction--books
 
 .module__posts.related .module__posts__title {
   font-family: 'brandon-grotesque';
+  letter-spacing: 0.1px;
   font-weight: medium;
   font-style: normal;
   font-family: 'brandon-grotesque';
+  letter-spacing: 0.1px;
   font-weight: medium;
   font-style: normal;
   margin-bottom: 30px; }
@@ -4732,6 +4783,7 @@ body.category-books .page-header__title:before, .post-index__introduction--books
     color: #21333A;
     font-family: "cerebri-bold", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     border-radius: 100%;
     height: 40px;
     width: 40px;
@@ -4822,9 +4874,11 @@ body.category-books .page-header__title:before {
 
 .single-post .module__posts__title {
   font-family: 'brandon-grotesque';
+  letter-spacing: 0.1px;
   font-weight: medium;
   font-style: normal;
   font-family: 'brandon-grotesque';
+  letter-spacing: 0.1px;
   font-weight: medium;
   font-style: normal; }
   @media (min-width: 0px) {
@@ -4896,6 +4950,7 @@ body.category-books .page-header__title:before {
   .post__item__title {
     font-family: "cerebri-bold", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     margin-bottom: 15px; }
     @media (min-width: 0px) {
       .post__item__title {
@@ -4912,7 +4967,8 @@ body.category-books .page-header__title:before {
         margin-bottom: 15px; } }
   .post__item__excerpt {
     font-family: "cerebri-book", sans-serif;
-    font-style: normal; }
+    font-style: normal;
+    letter-spacing: 0.1px; }
     @media (min-width: 0px) {
       .post__item__excerpt {
         font-size: 16px !important;
@@ -4925,6 +4981,7 @@ body.category-books .page-header__title:before {
   .post__item__date {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     padding-bottom: 4px; }
     @media (min-width: 0px) {
       .post__item__date {
@@ -4936,6 +4993,7 @@ body.category-books .page-header__title:before {
     display: inline-block;
     font-family: "cerebri-bold", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     padding: 4px 15px; }
     @media (min-width: 0px) {
       .post__item__category {
@@ -4955,7 +5013,8 @@ body.category-books .page-header__title:before {
       color: #404040; }
   .post__item__read {
     font-family: "cerebri-book", sans-serif;
-    font-style: normal; }
+    font-style: normal;
+    letter-spacing: 0.1px; }
     @media (min-width: 0px) {
       .post__item__read {
         font-size: 16px !important;
@@ -4995,6 +5054,7 @@ body.category-books .page-header__title:before {
   .article__date {
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     margin-bottom: 15px; }
     @media (min-width: 0px) {
       .article__date {
@@ -5011,9 +5071,11 @@ body.category-books .page-header__title:before {
         margin-bottom: 0px; } }
   .article__title {
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     margin-bottom: 30px; }
@@ -5151,9 +5213,11 @@ body.category-books .page-header__title:before {
 
 .post-index__title {
   font-family: 'brandon-grotesque';
+  letter-spacing: 0.1px;
   font-weight: 500;
   font-style: normal;
   font-family: 'brandon-grotesque';
+  letter-spacing: 0.1px;
   font-weight: 500;
   font-style: normal; }
   @media (min-width: 0px) {
@@ -5182,6 +5246,7 @@ body.category-books .page-header__title:before {
 .post-index__more {
   font-family: "cerebri-bold", sans-serif;
   font-style: normal;
+  letter-spacing: 0.1px;
   text-decoration: underline;
   -ms-grid-column-align: end; }
   @media (min-width: 0px) {
@@ -5300,9 +5365,11 @@ body.category-books .page-header__title:before {
           grid-template-columns: 1fr 1fr 1fr; } } }
   .page-header__title {
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     margin-bottom: 30px; }
@@ -5352,8 +5419,10 @@ body.category-books .page-header__title:before {
     .page-header__intro + .post__item:before {
       font-family: "cerebri-bold", sans-serif;
       font-style: normal;
+      letter-spacing: 0.1px;
       font-family: "cerebri-bold", sans-serif;
       font-style: normal;
+      letter-spacing: 0.1px;
       margin-bottom: 15px;
       color: #B3CB0F;
       display: block;
@@ -5478,6 +5547,7 @@ body.home .post-index__more {
 .events__title {
   font-family: "cerebri-bold", sans-serif;
   font-style: normal;
+  letter-spacing: 0.1px;
   margin-bottom: 30px;
   margin-top: 60px; }
   @media (min-width: 0px) {
@@ -5550,6 +5620,7 @@ body.home .post-index__more {
   .events__item__title {
     font-family: "cerebri-bold", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     margin-bottom: 15px; }
     @media (min-width: 0px) {
       .events__item__title {
@@ -5566,14 +5637,16 @@ body.home .post-index__more {
         margin-bottom: 15px; } }
   .events__item__date {
     font-family: "cerebri-book", sans-serif;
-    font-style: normal; }
+    font-style: normal;
+    letter-spacing: 0.1px; }
     @media (min-width: 0px) {
       .events__item__date {
         font-size: 16px !important;
         line-height: 26px; } }
   .events__item__location {
     font-family: "cerebri-book", sans-serif;
-    font-style: normal; }
+    font-style: normal;
+    letter-spacing: 0.1px; }
     @media (min-width: 0px) {
       .events__item__location {
         font-size: 16px !important;
@@ -5782,9 +5855,11 @@ body.home .post-index__more {
         width: 100%; } }
   .module__instagram__title {
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: 500;
     font-style: normal;
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: 500;
     font-style: normal;
     text-align: center;
@@ -5936,16 +6011,19 @@ p {
       width: 100%; }
   p.intro-text {
     font-family: "cerebri-book", sans-serif;
-    font-style: normal; }
+    font-style: normal;
+    letter-spacing: 0.1px; }
     @media (min-width: 0px) {
       p.intro-text {
         font-size: 18px !important;
         line-height: 31px; } }
   p.heading-text {
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal; }
     @media (min-width: 0px) {
@@ -5969,6 +6047,7 @@ strong {
 .text-styles p, .intro__text p, .content-block__text p, .article__body p, .post-index__text p, .page-header__intro p, .module__collaborations__item__text p, .module__instagram__intro p, .editor.module p {
   font-family: "cerebri-book", sans-serif;
   font-style: normal;
+  letter-spacing: 0.1px;
   margin-bottom: 20px; }
   @media (min-width: 0px) {
     .text-styles p, .intro__text p, .content-block__text p, .article__body p, .post-index__text p, .page-header__intro p, .module__collaborations__item__text p, .module__instagram__intro p, .editor.module p {
@@ -5985,7 +6064,8 @@ strong {
       margin-bottom: 30px; } }
   .text-styles p strong, .intro__text p strong, .content-block__text p strong, .article__body p strong, .post-index__text p strong, .page-header__intro p strong, .module__collaborations__item__text p strong, .module__instagram__intro p strong, .editor.module p strong, .text-styles p b, .intro__text p b, .content-block__text p b, .article__body p b, .post-index__text p b, .page-header__intro p b, .module__collaborations__item__text p b, .module__instagram__intro p b, .editor.module p b {
     font-family: "cerebri-bold", sans-serif;
-    font-style: normal; }
+    font-style: normal;
+    letter-spacing: 0.1px; }
     @media (min-width: 0px) {
       .text-styles p strong, .intro__text p strong, .content-block__text p strong, .article__body p strong, .post-index__text p strong, .page-header__intro p strong, .module__collaborations__item__text p strong, .module__instagram__intro p strong, .editor.module p strong, .text-styles p b, .intro__text p b, .content-block__text p b, .article__body p b, .post-index__text p b, .page-header__intro p b, .module__collaborations__item__text p b, .module__instagram__intro p b, .editor.module p b {
         font-size: 16px !important;
@@ -6015,23 +6095,27 @@ strong {
       width: 100%; }
   .text-styles p.intro-text, .intro__text p.intro-text, .content-block__text p.intro-text, .article__body p.intro-text, .post-index__text p.intro-text, .page-header__intro p.intro-text, .module__collaborations__item__text p.intro-text, .module__instagram__intro p.intro-text, .editor.module p.intro-text {
     font-family: "cerebri-book", sans-serif;
-    font-style: normal; }
+    font-style: normal;
+    letter-spacing: 0.1px; }
     @media (min-width: 0px) {
       .text-styles p.intro-text, .intro__text p.intro-text, .content-block__text p.intro-text, .article__body p.intro-text, .post-index__text p.intro-text, .page-header__intro p.intro-text, .module__collaborations__item__text p.intro-text, .module__instagram__intro p.intro-text, .editor.module p.intro-text {
         font-size: 18px !important;
         line-height: 31px; } }
     .text-styles p.intro-text strong, .intro__text p.intro-text strong, .content-block__text p.intro-text strong, .article__body p.intro-text strong, .post-index__text p.intro-text strong, .page-header__intro p.intro-text strong, .module__collaborations__item__text p.intro-text strong, .module__instagram__intro p.intro-text strong, .editor.module p.intro-text strong, .text-styles p.intro-text b, .intro__text p.intro-text b, .content-block__text p.intro-text b, .article__body p.intro-text b, .post-index__text p.intro-text b, .page-header__intro p.intro-text b, .module__collaborations__item__text p.intro-text b, .module__instagram__intro p.intro-text b, .editor.module p.intro-text b {
       font-family: "cerebri-bold", sans-serif;
-      font-style: normal; }
+      font-style: normal;
+      letter-spacing: 0.1px; }
       @media (min-width: 0px) {
         .text-styles p.intro-text strong, .intro__text p.intro-text strong, .content-block__text p.intro-text strong, .article__body p.intro-text strong, .post-index__text p.intro-text strong, .page-header__intro p.intro-text strong, .module__collaborations__item__text p.intro-text strong, .module__instagram__intro p.intro-text strong, .editor.module p.intro-text strong, .text-styles p.intro-text b, .intro__text p.intro-text b, .content-block__text p.intro-text b, .article__body p.intro-text b, .post-index__text p.intro-text b, .page-header__intro p.intro-text b, .module__collaborations__item__text p.intro-text b, .module__instagram__intro p.intro-text b, .editor.module p.intro-text b {
           font-size: 18px !important;
           line-height: 31px; } }
   .text-styles p.heading-text, .intro__text p.heading-text, .content-block__text p.heading-text, .article__body p.heading-text, .post-index__text p.heading-text, .page-header__intro p.heading-text, .module__collaborations__item__text p.heading-text, .module__instagram__intro p.heading-text, .editor.module p.heading-text {
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal; }
     @media (min-width: 0px) {
@@ -6044,9 +6128,11 @@ strong {
         line-height: 50px; } }
     .text-styles p.heading-text strong, .intro__text p.heading-text strong, .content-block__text p.heading-text strong, .article__body p.heading-text strong, .post-index__text p.heading-text strong, .page-header__intro p.heading-text strong, .module__collaborations__item__text p.heading-text strong, .module__instagram__intro p.heading-text strong, .editor.module p.heading-text strong, .text-styles p.heading-text b, .intro__text p.heading-text b, .content-block__text p.heading-text b, .article__body p.heading-text b, .post-index__text p.heading-text b, .page-header__intro p.heading-text b, .module__collaborations__item__text p.heading-text b, .module__instagram__intro p.heading-text b, .editor.module p.heading-text b {
       font-family: 'brandon-grotesque';
+      letter-spacing: 0.1px;
       font-weight: bold;
       font-style: normal;
       font-family: 'brandon-grotesque';
+      letter-spacing: 0.1px;
       font-weight: bold;
       font-style: normal; }
       @media (min-width: 0px) {
@@ -6059,9 +6145,11 @@ strong {
           line-height: 50px; } }
   .text-styles p.title-text, .intro__text p.title-text, .content-block__text p.title-text, .article__body p.title-text, .post-index__text p.title-text, .page-header__intro p.title-text, .module__collaborations__item__text p.title-text, .module__instagram__intro p.title-text, .editor.module p.title-text {
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal;
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: medium;
     font-style: normal; }
     @media (min-width: 0px) {
@@ -6074,9 +6162,11 @@ strong {
         line-height: 59px; } }
     .text-styles p.title-text strong, .intro__text p.title-text strong, .content-block__text p.title-text strong, .article__body p.title-text strong, .post-index__text p.title-text strong, .page-header__intro p.title-text strong, .module__collaborations__item__text p.title-text strong, .module__instagram__intro p.title-text strong, .editor.module p.title-text strong, .text-styles p.title-text b, .intro__text p.title-text b, .content-block__text p.title-text b, .article__body p.title-text b, .post-index__text p.title-text b, .page-header__intro p.title-text b, .module__collaborations__item__text p.title-text b, .module__instagram__intro p.title-text b, .editor.module p.title-text b {
       font-family: 'brandon-grotesque';
+      letter-spacing: 0.1px;
       font-weight: bold;
       font-style: normal;
       font-family: 'brandon-grotesque';
+      letter-spacing: 0.1px;
       font-weight: bold;
       font-style: normal; }
       @media (min-width: 0px) {
@@ -6090,7 +6180,8 @@ strong {
 
 .text-styles h1 strong, .intro__text h1 strong, .content-block__text h1 strong, .article__body h1 strong, .post-index__text h1 strong, .page-header__intro h1 strong, .module__collaborations__item__text h1 strong, .module__instagram__intro h1 strong, .editor.module h1 strong, .text-styles h1 b, .intro__text h1 b, .content-block__text h1 b, .article__body h1 b, .post-index__text h1 b, .page-header__intro h1 b, .module__collaborations__item__text h1 b, .module__instagram__intro h1 b, .editor.module h1 b, .text-styles h2 strong, .intro__text h2 strong, .content-block__text h2 strong, .article__body h2 strong, .post-index__text h2 strong, .page-header__intro h2 strong, .module__collaborations__item__text h2 strong, .module__instagram__intro h2 strong, .editor.module h2 strong, .text-styles h2 b, .intro__text h2 b, .content-block__text h2 b, .article__body h2 b, .post-index__text h2 b, .page-header__intro h2 b, .module__collaborations__item__text h2 b, .module__instagram__intro h2 b, .editor.module h2 b, .text-styles h3 strong, .intro__text h3 strong, .content-block__text h3 strong, .article__body h3 strong, .post-index__text h3 strong, .page-header__intro h3 strong, .module__collaborations__item__text h3 strong, .module__instagram__intro h3 strong, .editor.module h3 strong, .text-styles h3 b, .intro__text h3 b, .content-block__text h3 b, .article__body h3 b, .post-index__text h3 b, .page-header__intro h3 b, .module__collaborations__item__text h3 b, .module__instagram__intro h3 b, .editor.module h3 b, .text-styles h4 strong, .intro__text h4 strong, .content-block__text h4 strong, .article__body h4 strong, .post-index__text h4 strong, .page-header__intro h4 strong, .module__collaborations__item__text h4 strong, .module__instagram__intro h4 strong, .editor.module h4 strong, .text-styles h4 b, .intro__text h4 b, .content-block__text h4 b, .article__body h4 b, .post-index__text h4 b, .page-header__intro h4 b, .module__collaborations__item__text h4 b, .module__instagram__intro h4 b, .editor.module h4 b, .text-styles h5 strong, .intro__text h5 strong, .content-block__text h5 strong, .article__body h5 strong, .post-index__text h5 strong, .page-header__intro h5 strong, .module__collaborations__item__text h5 strong, .module__instagram__intro h5 strong, .editor.module h5 strong, .text-styles h5 b, .intro__text h5 b, .content-block__text h5 b, .article__body h5 b, .post-index__text h5 b, .page-header__intro h5 b, .module__collaborations__item__text h5 b, .module__instagram__intro h5 b, .editor.module h5 b, .text-styles h6 strong, .intro__text h6 strong, .content-block__text h6 strong, .article__body h6 strong, .post-index__text h6 strong, .page-header__intro h6 strong, .module__collaborations__item__text h6 strong, .module__instagram__intro h6 strong, .editor.module h6 strong, .text-styles h6 b, .intro__text h6 b, .content-block__text h6 b, .article__body h6 b, .post-index__text h6 b, .page-header__intro h6 b, .module__collaborations__item__text h6 b, .module__instagram__intro h6 b, .editor.module h6 b {
   font-family: "cerebri-bold", sans-serif;
-  font-style: normal; }
+  font-style: normal;
+  letter-spacing: 0.1px; }
   @media (min-width: 0px) {
     .text-styles h1 strong, .intro__text h1 strong, .content-block__text h1 strong, .article__body h1 strong, .post-index__text h1 strong, .page-header__intro h1 strong, .module__collaborations__item__text h1 strong, .module__instagram__intro h1 strong, .editor.module h1 strong, .text-styles h1 b, .intro__text h1 b, .content-block__text h1 b, .article__body h1 b, .post-index__text h1 b, .page-header__intro h1 b, .module__collaborations__item__text h1 b, .module__instagram__intro h1 b, .editor.module h1 b, .text-styles h2 strong, .intro__text h2 strong, .content-block__text h2 strong, .article__body h2 strong, .post-index__text h2 strong, .page-header__intro h2 strong, .module__collaborations__item__text h2 strong, .module__instagram__intro h2 strong, .editor.module h2 strong, .text-styles h2 b, .intro__text h2 b, .content-block__text h2 b, .article__body h2 b, .post-index__text h2 b, .page-header__intro h2 b, .module__collaborations__item__text h2 b, .module__instagram__intro h2 b, .editor.module h2 b, .text-styles h3 strong, .intro__text h3 strong, .content-block__text h3 strong, .article__body h3 strong, .post-index__text h3 strong, .page-header__intro h3 strong, .module__collaborations__item__text h3 strong, .module__instagram__intro h3 strong, .editor.module h3 strong, .text-styles h3 b, .intro__text h3 b, .content-block__text h3 b, .article__body h3 b, .post-index__text h3 b, .page-header__intro h3 b, .module__collaborations__item__text h3 b, .module__instagram__intro h3 b, .editor.module h3 b, .text-styles h4 strong, .intro__text h4 strong, .content-block__text h4 strong, .article__body h4 strong, .post-index__text h4 strong, .page-header__intro h4 strong, .module__collaborations__item__text h4 strong, .module__instagram__intro h4 strong, .editor.module h4 strong, .text-styles h4 b, .intro__text h4 b, .content-block__text h4 b, .article__body h4 b, .post-index__text h4 b, .page-header__intro h4 b, .module__collaborations__item__text h4 b, .module__instagram__intro h4 b, .editor.module h4 b, .text-styles h5 strong, .intro__text h5 strong, .content-block__text h5 strong, .article__body h5 strong, .post-index__text h5 strong, .page-header__intro h5 strong, .module__collaborations__item__text h5 strong, .module__instagram__intro h5 strong, .editor.module h5 strong, .text-styles h5 b, .intro__text h5 b, .content-block__text h5 b, .article__body h5 b, .post-index__text h5 b, .page-header__intro h5 b, .module__collaborations__item__text h5 b, .module__instagram__intro h5 b, .editor.module h5 b, .text-styles h6 strong, .intro__text h6 strong, .content-block__text h6 strong, .article__body h6 strong, .post-index__text h6 strong, .page-header__intro h6 strong, .module__collaborations__item__text h6 strong, .module__instagram__intro h6 strong, .editor.module h6 strong, .text-styles h6 b, .intro__text h6 b, .content-block__text h6 b, .article__body h6 b, .post-index__text h6 b, .page-header__intro h6 b, .module__collaborations__item__text h6 b, .module__instagram__intro h6 b, .editor.module h6 b {
       font-size: 16px !important;
@@ -6124,6 +6215,7 @@ strong {
     position: relative;
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     margin-bottom: 15px; }
     @media (min-width: 0px) {
       .text-styles ul li, .intro__text ul li, .content-block__text ul li, .article__body ul li, .post-index__text ul li, .page-header__intro ul li, .module__collaborations__item__text ul li, .module__instagram__intro ul li, .editor.module ul li {
@@ -6151,7 +6243,8 @@ strong {
       left: 0px; }
     .text-styles ul li strong, .intro__text ul li strong, .content-block__text ul li strong, .article__body ul li strong, .post-index__text ul li strong, .page-header__intro ul li strong, .module__collaborations__item__text ul li strong, .module__instagram__intro ul li strong, .editor.module ul li strong, .text-styles ul li b, .intro__text ul li b, .content-block__text ul li b, .article__body ul li b, .post-index__text ul li b, .page-header__intro ul li b, .module__collaborations__item__text ul li b, .module__instagram__intro ul li b, .editor.module ul li b {
       font-family: "cerebri-bold", sans-serif;
-      font-style: normal; }
+      font-style: normal;
+      letter-spacing: 0.1px; }
       @media (min-width: 0px) {
         .text-styles ul li strong, .intro__text ul li strong, .content-block__text ul li strong, .article__body ul li strong, .post-index__text ul li strong, .page-header__intro ul li strong, .module__collaborations__item__text ul li strong, .module__instagram__intro ul li strong, .editor.module ul li strong, .text-styles ul li b, .intro__text ul li b, .content-block__text ul li b, .article__body ul li b, .post-index__text ul li b, .page-header__intro ul li b, .module__collaborations__item__text ul li b, .module__instagram__intro ul li b, .editor.module ul li b {
           font-size: 16px !important;
@@ -6182,6 +6275,7 @@ strong {
     list-style-type: decimal;
     font-family: "cerebri-book", sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     margin-bottom: 15px; }
     @media (min-width: 0px) {
       .text-styles ol li, .intro__text ol li, .content-block__text ol li, .article__body ol li, .post-index__text ol li, .page-header__intro ol li, .module__collaborations__item__text ol li, .module__instagram__intro ol li, .editor.module ol li {
@@ -6200,10 +6294,10 @@ strong {
       color: #B3CB0F; }
 
 .text-styles blockquote, .intro__text blockquote, .content-block__text blockquote, .article__body blockquote, .post-index__text blockquote, .page-header__intro blockquote, .module__collaborations__item__text blockquote, .module__instagram__intro blockquote, .editor.module blockquote {
-  background-color: #EEEEEE;
-  padding: 15px 20px;
-  border-radius: 4px;
-  margin-bottom: 20px; }
+  background-color: rgba(179, 203, 15, 0.05);
+  padding: 30px 60px 30px 40px;
+  margin-bottom: 20px;
+  border-left: 7px solid #B3CB0F; }
   @media (min-width: 768px) {
     .text-styles blockquote, .intro__text blockquote, .content-block__text blockquote, .article__body blockquote, .post-index__text blockquote, .page-header__intro blockquote, .module__collaborations__item__text blockquote, .module__instagram__intro blockquote, .editor.module blockquote {
       margin-bottom: 30px; } }
@@ -6263,7 +6357,8 @@ strong {
       margin-bottom: 30px;
       color: #21333A;
       font-family: "cerebri-book", sans-serif;
-      font-style: normal; }
+      font-style: normal;
+      letter-spacing: 0.1px; }
       @media (min-width: 768px) {
         .error-wrapper .inner h1 {
           margin-bottom: 30px; } }
@@ -6279,7 +6374,8 @@ strong {
           line-height: 31px; } }
     .error-wrapper .inner p {
       font-family: "cerebri-book", sans-serif;
-      font-style: normal; }
+      font-style: normal;
+      letter-spacing: 0.1px; }
       @media (min-width: 0px) {
         .error-wrapper .inner p {
           font-size: 16px !important;

@@ -29,6 +29,7 @@ $footer: (
   @each $fs-breakpoint, $fs-font-size in $fs-map {
     font-family: 'cerebri-#{$weight}', sans-serif;
     font-style: normal;
+    letter-spacing: 0.1px;
     @if $fs-breakpoint == null {
       font-size: $fs-font-size !important;
     }
@@ -42,6 +43,7 @@ $footer: (
 @mixin brandon($fs-map, $weight) {
   @each $fs-breakpoint, $fs-font-size in $fs-map {
     font-family: 'brandon-grotesque';
+    letter-spacing: 0.1px;
     font-weight: $weight;
     font-style: normal;
     @if $fs-breakpoint == null {
