@@ -134,30 +134,11 @@ p {
   @include marginBottom(20, 30);
   a {
     color: $text;
+    text-decoration: underline;
     position: relative;
-    overflow: hidden;
-    &:after,
-    &:before {
-      overflow: hidden;
-      content: "";
-      height: 1px;
-      bottom: 2px;
-      left: 0;
-      position: absolute;
-      @include transition(width $transition);
-    }
-    &:before {
-      background-color: $text;
-      width: 100%;
-    }
-    &:after {
-      background-color: $primary;
-      width: 0;
-    }
+    @include transition(color $transition);
     &:hover {
-      &:after {
-        width: 100%;
-      }
+      color: $primary;
     }
   }
 
@@ -187,33 +168,12 @@ strong {
       @include sans($p, bold);
     }
     a {
-      // text-decoration: underline;
-      // color: $primary;
       color: $text;
+      text-decoration: underline;
       position: relative;
-      overflow: hidden;
-      &:after,
-      &:before {
-        overflow: hidden;
-        content: "";
-        height: 1px;
-        bottom: 2px;
-        left: 0;
-        position: absolute;
-        @include transition(width $transition);
-      }
-      &:before {
-        background-color: $text;
-        width: 100%;
-      }
-      &:after {
-        background-color: $primary;
-        width: 0;
-      }
+      @include transition(color $transition);
       &:hover {
-        &:after {
-          width: 100%;
-        }
+        color: $primary;
       }
     }
     &.intro-text {
