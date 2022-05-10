@@ -226,6 +226,8 @@ add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
 
 // Remove generator tag
 remove_action('wp_head', 'wp_generator');
+remove_action( 'wp_head', 'wlwmanifest_link' ) ;
+remove_action( 'wp_head', 'rsd_link' ) ;
 
 //---------------------------------------------------------------------------------------------------------------
 //Adds additional markup into WP menus
