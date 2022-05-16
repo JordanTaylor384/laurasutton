@@ -11,12 +11,17 @@
   color: $text;
   min-width: 180px;
   &:hover,
-  &:focus {
+  &:active {
     // border-color: $lime;
     // color: $lime;
     color: white;
     border-color: $navy;
     background-color: $navy;
+  }
+  &:visited {
+    background-color: white !important;
+    border: 1px solid $dark-grey !important;
+    color: $text !important;
   }
   // &:focus {
   //   border-color: black !important;
