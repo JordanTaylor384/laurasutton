@@ -2845,10 +2845,6 @@ body.category-books .page-header__title:before, .post-index__introduction--books
     color: white;
     border-color: #21333A;
     background-color: #21333A; }
-  .btn:visited, .btn-right:visited, .contact-form form button:visited, .testimonials__more a:visited {
-    background-color: white !important;
-    border: 1px solid #363D40 !important;
-    color: #21333A !important; }
 
 .btn-right {
   position: relative; }
