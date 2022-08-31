@@ -1,4 +1,4 @@
-<?php if (cn_cookies_accepted()): ?>
+<?php //if (cn_cookies_accepted()): ?>
 
 <div class="module carousel">
 
@@ -40,4 +40,4 @@
   <?php endif; ?>
 </div>
 
-<?php endif; ?>
+<?php //endif; ?>

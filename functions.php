@@ -491,18 +491,18 @@ add_filter('the_content', 'filter_ptags_on_images');
 //------------------------------------------------------------------------------
 
 // function that runs when shortcode is called
-function cookies_status() {
+//function cookies_status() {
 
-	if (cn_cookies_accepted()) {
-		$message = '<p>Consent Accepted</p>';
-	} else {
-		$message = '<p>Consent Refused</p>';
-	}
+	//if (cn_cookies_accepted()) {
+		//$message = '<p>Consent Accepted</p>';
+	//} else {
+		//$message = '<p>Consent Refused</p>';
+	//}
 
-	return $message;
-}
+	//return $message;
+//}
 // register shortcode
-add_shortcode('cookies_status', 'cookies_status');
+//add_shortcode('cookies_status', 'cookies_status');
 
 //------------------------------------------------------------------------------
 function mv_browser_body_class($classes) {

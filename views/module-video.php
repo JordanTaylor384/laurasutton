@@ -1,4 +1,4 @@
-<?php if (cn_cookies_accepted()): ?>
+<?php //if (cn_cookies_accepted()): ?>
 
   <section class="module video">
     <div class="container">
@@ -18,4 +18,4 @@
     </div>
   </section>
 
-<?php endif; ?>
+<?php //endif; ?>

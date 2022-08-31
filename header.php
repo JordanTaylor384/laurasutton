@@ -17,16 +17,6 @@
 	<?php wp_head(); ?>
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-214152762-1"></script>
-	<?php if (cn_cookies_accepted()): ?>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-214152762-1');
-		</script>
-	<?php endif; ?>
 
 </head>
 
