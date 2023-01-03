@@ -1,52 +1,39 @@
-<section class="module testimonials">
+<section class="module__testimonials">
   <div class="container">
 
-    <div class="testimonials__title">
-      <?=the_sub_field('title');?>
-    </div>
+    <?php if (get_sub_field('heading')): ?>
+      <div class="module__testimonials__heading">
+        <?=the_sub_field('heading');?>
+      </div>
+    <?php endif; ?>
 
-    <div class="testimonials__grid">
-      <?php if ( have_rows('testimonials')): ?>
-        <?php $counter = 0; ?>
-        <?php $group = 1; ?>
-
-        <?php while ( have_rows('testimonials') ) : the_row(); ?>
-          <?php
-          if ($counter % 3 === 0) :
-            if ($group === 1) :
-              echo '<div class="testimonials__wrap shown" data-group="'.$group.'">';
-            else:
-              echo '<div class="testimonials__wrap" data-group="'.$group.'">';
-            endif;
-          endif;
-          ?>
-            <div class="testimonials__item">
-              <div class="testimonials__quote">
-                <?=the_sub_field('quote');?>
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <?php if ( have_rows('item')): ?>
+          <?php while ( have_rows('item') ) : the_row(); ?>
+            <div class="module__testimonials__item swiper-slide">
+              <div class="module__testimonials__item__quote">
+                <?=the_sub_field('text');?>
               </div>
-              <div class="testimonials__name">
-                <?=the_sub_field('name');?>
-              </div>
-              <div class="testimonials__role">
-                <?=the_sub_field('role');?>
+              <div class="module__testimonials__item__grid">
+                <?php $image = get_sub_field('image');?>
+                <img class="module__testimonials__item__image" src="<?=$image['url'];?>" alt="<?=$image['title'];?>">
+                <div class="module__testimonials__item__name">
+                  <?=the_sub_field('name');?>
+                </div>
               </div>
             </div>
-            <?php if($counter % 3 === 2) :    echo '</div>'; endif; ?>
-
-            <?php $counter++;?>
-            <?php
-            if ($counter % 3 === 0) { $group++; }; ?>
           <?php endwhile; ?>
         <?php endif; ?>
       </div>
 
-      <?php if ($counter > 3) : ?>
-      <div class="testimonials__more">
-        <a href="#readmore">
-          Read more
-        </a>
-      </div>
-    <?php endif; ?>
+      <?php if (count(get_sub_field('item')) > 1): ?>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      <?php endif; ?>
 
     </div>
-  </section>
+
+  </div>
+</section>

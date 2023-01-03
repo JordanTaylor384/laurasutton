@@ -1,3 +1,30 @@
+// General
+$title: (
+0px: (36px, 44px),
+1240px: (51px, 59px)
+);
+$heading: (
+0px: (26px, 37px),
+1240px: (36px, 50px),
+);
+$large-intro: (
+0px: (22px, 34px),
+);
+$intro: (
+0px: (18px, 31px),
+);
+$p: (
+0px: (16px, 26px),
+);
+
+$overlay: (
+0px: (28px, 34px)
+);
+$input: (
+0px: (17px, 25px)
+);
+
+
 @font-face {
   font-family: "icons";
   src: url('../../fonts/icomoon/icomoon.eot');
@@ -7,18 +34,37 @@
   url('../../fonts/icomoon/icomoon.svg#icomoon') format('svg'); /* Legacy iOS */
 }
 
-@font-face {
-  font-family: 'cerebri-light';
-  src: url("../../fonts/Cerebri_Light.woff") format("woff");
+@mixin inter($fs-map, $weight) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    font-family: 'Inter', sans-serif;
+    font-weight: $weight;
+    font-style: normal;
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size !important;
+    }
+    @else {
+      @media (min-width: $fs-breakpoint) {
+        @include make-font-size($fs-font-size);
+      }
+    }
+  }
 }
-@font-face {
-  font-family: 'cerebri-book';
-  src: url("../../fonts/Cerebri_Book.woff") format("woff");
+@mixin bebas($fs-map, $weight) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    font-family: 'bebas-neue-pro', sans-serif;
+    font-weight: $weight;
+    font-style: normal;
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size !important;
+    }
+    @else {
+      @media (min-width: $fs-breakpoint) {
+        @include make-font-size($fs-font-size);
+      }
+    }
+  }
 }
-@font-face {
-  font-family: 'cerebri-bold';
-  src: url("../../fonts/Cerebri_Bold.woff") format("woff");
-}
+
 
 [class^="icon-"], [class*=" icon-"], .icon {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -35,26 +81,37 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-// .icon-logo {
-//   @extend .icon;
-//   content: "\e900";
-// }
 
-
-// arrows
-.icon-arrow_right {
+.icon-twitter {
   @extend .icon;
   content: "\e900";
 }
-.icon-arrow_left {
+.icon-linkedin {
   @extend .icon;
   content: "\e901";
 }
-.icon-underline{
+.icon-star {
   @extend .icon;
   content: "\e902";
 }
-.icon-cross{
+.icon-arrow_right {
+  @extend .icon;
+  content: "\e907";
+}
+.icon-arrow_left {
   @extend .icon;
   content: "\e903";
+}
+
+.icon-triangle_down {
+  @extend .icon;
+  content: "\e906";
+}
+.icon-caret_down {
+  @extend .icon;
+  content: "\e904";
+}
+.icon-cross {
+  @extend .icon;
+  content: "\e905";
 }

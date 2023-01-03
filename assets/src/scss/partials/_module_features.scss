@@ -1,0 +1,44 @@
+.module__features {
+  padding: 60px 0px 100px 0px;
+  &__heading {
+    @include bebas($heading, 700);
+    @include marginBottom(15);
+    text-align: center;
+  }
+  &__subtitle {
+    @include inter($p, 400);
+    @include marginBottom(60);
+    text-align: center;
+  }
+  &__grid {
+    @include display-grid;
+    @include display-grid-columns(1fr 1fr);
+    @include display-grid-gap(33);
+  }
+  &__item {
+    @include marginBottom(30);
+    padding: 46px 18px 18px 46px;
+    img {
+      height: 100px;
+    }
+    p {
+      @include inter($p, 400);
+    }
+    &__grid {
+      display: flex;
+      grid-gap: 47px;
+    }
+    &--grey {
+      border: 3px solid #C4CDD5;
+    }
+    &--yellow {
+      border: 3px solid $lemon;
+    }
+    &--teal {
+      border: 3px solid $teal;
+    }
+    &--orange {
+      border: 3px solid $orange;
+    }
+  }
+}

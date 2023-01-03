@@ -1,0 +1,48 @@
+$services: (
+0px: (44px, 48px)
+);
+
+.module__services {
+  background-color: $teal;
+  padding: 100px 0px 80px 0px;
+  &__grid {
+    @include display-grid;
+    @include display-grid-columns(1fr 1fr 1fr);
+    @include display-grid-gap(28);
+  }
+  &__heading {
+    @include inter($intro, 400);
+    text-transform: uppercase;
+    color: white;
+    @include marginBottom(45);
+  }
+  &__item {
+    border-top: 5px solid transparent;
+    color: white;
+    background-color: $teal;
+    height: 260px;
+    position: relative;
+    padding-top: 24px;
+    &:after {
+      @extend .icon-arrow_right;
+      color: white;
+      font-size: 30px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    &--orange {
+      border-color: $orange;
+    }
+    &--yellow {
+      border-color: $lemon;
+    }
+    &--aqua {
+      border-color: $aqua;
+    }
+
+    &__label {
+      @include bebas($services, 400);
+    }
+  }
+}

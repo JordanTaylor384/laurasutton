@@ -1,16 +1,15 @@
-<section class="module clients">
-  <div class="container">
-
-    <div class="clients__grid">
-      <?php if ( have_rows('logos')): ?>
-        <?php while ( have_rows('logos') ) : the_row(); ?>
+<section class="module__clients">
+  <div class="module__clients__heading">
+    <?=the_sub_field('text');?>
+  </div>
+  <div class="module__clients__items">
+    <?php if ( have_rows('item')): ?>
+      <?php while ( have_rows('item') ) : the_row(); ?>
+        <div class="module__clients__item">
           <?php $image = get_sub_field('image');?>
-          <a href="<?=the_sub_field('link');?>" target="_blank">
-            <img src="<?=$image['url'];?>" title="<?=$image['title'];?>" alt="<?=$image['alt'];?>"/>
-          </a>
-        <?php endwhile; ?>
-      <?php endif; ?>
-    </div>
-
+          <img src="<?=$image['url'];?>" alt="">
+        </div>
+      <?php endwhile; ?>
+    <?php endif; ?>
   </div>
 </section>

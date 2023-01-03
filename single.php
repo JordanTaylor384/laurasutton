@@ -10,9 +10,7 @@
 get_header(); ?>
 
 <?php
-if (in_category('article')) {
-  get_template_part( 'views/view-single-post', 'post' );
-}
+get_template_part( 'views/view-single-post', 'post' );
 ?>
 
 <?php get_footer();

@@ -1,0 +1,55 @@
+.module__text {
+  p {
+    @include inter($intro, 400);
+    &.intro-text {
+      @include inter($large-intro, 400);
+    }
+  }
+
+  &__grid {
+    @include display-grid();
+    &__col {
+      &--1 {
+        text-align: center;
+        padding: 0px 60px;
+        .module__text__button {
+          @extend .btn--block;
+          @extend .btn--orange;
+          display: inline-block;
+          @include marginTop(20);
+        }
+      }
+      &--2 {
+        color: #6A6A6A;
+        .module__text__button {
+          @include inter($p, 700);
+          display: table;
+          color: black;
+          position: relative;
+          border-bottom: 4px solid $orange;
+        }
+      }
+      &--img {
+        img {
+          border-radius: 100%;
+          border: 3px solid $lemon;
+          padding: 14px;
+        }
+      }
+    }
+  }
+  &--columns-1 {
+    @include display-grid-columns(1fr);
+    padding: 70px 0px 40px 0px;
+  }
+  &--columns-2 {
+    @include display-grid-columns(5fr 7fr);
+    @include display-grid-gap(60);
+    padding: 70px 0px 70px 0px;
+  }
+  &--columns-img {
+    @include display-grid-columns(4fr 8fr);
+    @include display-grid-gap(90);
+    padding: 70px 0px 70px 0px;
+  }
+}

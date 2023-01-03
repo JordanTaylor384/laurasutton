@@ -1,13 +1,13 @@
 <?php
 /**
-* annearcher functions and definitions
+* laurasutton functions and definitions
 *
 * @link https://developer.wordpress.org/themes/basics/theme-functions/
 *
-* @package annearcher
+* @package laurasutton
 */
 
-if ( ! function_exists( 'annearcher_setup' ) ) :
+if ( ! function_exists( 'laurasutton_setup' ) ) :
 	/**
 	* Sets up theme defaults and registers support for various WordPress features.
 	*
@@ -15,14 +15,14 @@ if ( ! function_exists( 'annearcher_setup' ) ) :
 	* runs before the init hook. The init hook is too late for some features, such
 	* as indicating support for post thumbnails.
 	*/
-	function annearcher_setup() {
+	function laurasutton_setup() {
 		/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on annearcher, use a find and replace
-		* to change 'annearcher' to the name of your theme in all the template files.
+		* If you're building a theme based on laurasutton, use a find and replace
+		* to change 'laurasutton' to the name of your theme in all the template files.
 		*/
-		load_theme_textdomain( 'annearcher', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'laurasutton', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -44,9 +44,9 @@ if ( ! function_exists( 'annearcher_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary' => esc_html__( 'Primary', 'annearcher' ),
-			'footer' => esc_html__( 'Footer', 'annearcher' ),
-			'overlay' => esc_html__( 'Overlay', 'annearcher' ),
+			'primary' => esc_html__( 'Primary', 'laurasutton' ),
+			'footer' => esc_html__( 'Footer', 'laurasutton' ),
+			'overlay' => esc_html__( 'Overlay', 'laurasutton' ),
 		) );
 
 		/*
@@ -62,7 +62,7 @@ if ( ! function_exists( 'annearcher_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'annearcher_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'laurasutton_custom_background_args', array(
 			'default-color' => 'red',
 			'default-image' => '',
 		) ) );
@@ -84,36 +84,22 @@ if ( ! function_exists( 'annearcher_setup' ) ) :
 	}
 endif;
 
-add_action( 'after_setup_theme', 'annearcher_setup' );
+add_action( 'after_setup_theme', 'laurasutton_setup' );
 
 
 //-----------------------------------------------------------------------------------------------------------------
-/**
-* Implement the Custom Header feature.
-*/
-require get_template_directory() . '/inc/custom-header.php';
 
-/**
-* Custom template tags for this theme.
-*/
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
-* Functions which enhance the theme by hooking into WordPress.
-*/
-require get_template_directory() . '/inc/template-functions.php';
-
-/**
-* Customizer additions.
-*/
-require get_template_directory() . '/inc/customizer.php';
-
-/**
-* Load Jetpack compatibility file.
-*/
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
+// disable wordpress auto-updates emails (core, plugin, theme)
+add_filter( 'auto_core_update_send_email', 'wp_stop_auto_update_emails', 10, 4 );
+add_filter( 'auto_plugin_update_send_email', '__return_false' );
+add_filter( 'auto_theme_update_send_email', '__return_false' );
+function wp_stop_update_emails( $send, $type, $core_update, $result ) {
+	if ( ! empty( $type ) && $type == 'success' ) {
+		return false;
+	}
+	return true;
 }
+
 //----------------------- UNDERSCORES_ ^^^^^^^ ------------------------------------------------------------------
 
 
@@ -140,7 +126,7 @@ function posts_custom_id_columns($column_name, $id){
 /**
 * Enqueue scripts and styles.
 */
-function annearcher_scripts() {
+function laurasutton_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script('comment-reply');
 	}
@@ -150,7 +136,7 @@ function annearcher_scripts() {
 	wp_enqueue_style( 'default', get_template_directory_uri() . '/assets/dist/css/main.bundle.css?ver='.$cache , array(), null );
 
 }
-add_action( 'wp_enqueue_scripts', 'annearcher_scripts' );
+add_action( 'wp_enqueue_scripts', 'laurasutton_scripts' );
 
 //---------------------------------------------------------------------------------------------------------------
 
@@ -164,7 +150,7 @@ add_action('admin_enqueue_scripts', 'admin_theme_style');
 function my_login_logo() { ?>
 	<style type="text/css">
 	#login h1 a, .login h1 a {
-		background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/img/anne_archer_small_logo2x.png);
+		background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/img/small_logo2x.png);
 		height: 65px;
 		width: 320px;
 		/* background-size: 320px 65px; */
@@ -211,6 +197,8 @@ add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
 
 // Remove generator tag
 remove_action('wp_head', 'wp_generator');
+remove_action( 'wp_head', 'wlwmanifest_link' ) ;
+remove_action( 'wp_head', 'rsd_link' ) ;
 
 //---------------------------------------------------------------------------------------------------------------
 //Adds additional markup into WP menus
@@ -346,6 +334,11 @@ add_shortcode( 'readmore', 'read_more' );
 // test to remove wordpress fuzzy redirect
 remove_filter('template_redirect', 'redirect_canonical');
 
+//---------------------------------------------------------------------------------
+// force YOAST settings panel in editor to bottom
+add_filter( 'wpseo_metabox_prio', function() { return 'low'; } );
+
+
 //-------------------------------------------------------------------------------------------------
 // remove spans from Contact Form 7
 add_filter('wpcf7_form_elements', function($content) {
@@ -469,18 +462,18 @@ add_filter('the_content', 'filter_ptags_on_images');
 //------------------------------------------------------------------------------
 
 // function that runs when shortcode is called
-function cookies_status() {
+//function cookies_status() {
 
-	if (cn_cookies_accepted()) {
-		$message = '<p>Consent Accepted</p>';
-	} else {
-		$message = '<p>Consent Refused</p>';
-	}
+//if (cn_cookies_accepted()) {
+//$message = '<p>Consent Accepted</p>';
+//} else {
+//$message = '<p>Consent Refused</p>';
+//}
 
-	return $message;
-}
+//return $message;
+//}
 // register shortcode
-add_shortcode('cookies_status', 'cookies_status');
+//add_shortcode('cookies_status', 'cookies_status');
 
 //------------------------------------------------------------------------------
 function mv_browser_body_class($classes) {
@@ -507,3 +500,55 @@ function mv_browser_body_class($classes) {
 	return $classes;
 }
 add_filter('body_class','mv_browser_body_class');
+
+
+//------------------------------------------------------------------------------
+////////////// projects post type
+
+function custom_post_type_projects() {
+
+	// Set UI labels for Custom Post Type
+	$labels = array(
+		'name' => _x( 'Projects', 'Post Type General Name', 'twentythirteen' ),
+		'singular_name' => _x( 'Project', 'Post Type Singular Name', 'twentythirteen' ),
+		'menu_name' => __( 'Projects', 'twentythirteen' ),
+	);
+	// Set other options for Custom Post Type
+	$args = array(
+		'label' => __( 'projects', 'twentythirteen' ),
+		'description' => __( 'Add projects', 'twentythirteen' ),
+		'labels' => $labels,
+		'supports' => array(
+			'title',
+			'custom-fields',
+			'editor',
+		),
+		/* A hierarchical CPT is like Pages and can have
+		* Parent and child items. A non-hierarchical CPT
+		* is like Posts.
+		*/
+		'hierarchical' => false,
+		'has_archive' => true,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'show_in_menu' => true,
+		'show_in_nav_menus' => true,
+		'show_in_admin_bar' => true,
+		'menu_position' => null,
+		'menu_icon' => 'dashicons-media-document',
+		'can_export'  => true,
+		'exclude_from_search' => false,
+		'capability_type' => 'post',
+	);
+
+	// Registering your Custom Post Type
+	register_post_type( 'projects', $args );
+}
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not
+* unnecessarily executed.
+*/
+
+add_action( 'init', 'custom_post_type_projects', 0 );
