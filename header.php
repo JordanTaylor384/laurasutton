@@ -3,7 +3,7 @@
 * The header for our theme
 * This is the template that displays all of the <head> section and everything up until <div id="content">
 * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
-* @package annearcher
+* @package laurasutton
 */
 ?>
 
@@ -13,96 +13,55 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="stylesheet" href="https://use.typekit.net/duo0nym.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.typekit.net/has4awm.css">
+
 	<?php wp_head(); ?>
-
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-214152762-1"></script>
-
 </head>
 
 <body <?php body_class('in');?>>
 	<div id="page" class="site navigator">
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'annearcher' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'laurasutton' ); ?></a>
 
-		<div class="overlay">
-			<div class="overlay__inner">
-				<div class="overlay__header">
-					<div class="overlay__logo">
-						<a href="/" aria-label="Visit Anne Archer Associates Homepage" tabindex="-1">
-							<img src="<?=the_field('header_logo', 'option');?>"  alt="Anne Archer Associates Logo" aria-label="Anne Archer Associates Logo"  title="Anne Archer Associates Logo"/>
-						</a>
-					</div>
-					<div class="overlay__close">
-						<div class="close-toggle"></div>
-					</div>
-				</div>
-				<nav class="overlay__nav">
-					<?php wp_nav_menu( array(
-						'theme_location' => 'overlay',
-						'menu_id'        => 'overlay-menu',
-						'walker' => new Custom_Menu_List()
-					) ); ?>
-				</nav>
-			</div>
-		</div>
 
 		<header class="site-header">
-			<div class="container">
+			<div class="site-header__fixed">
 				<div class="site-header__grid">
 					<div class="site-header__logo">
-						<a href="/" aria-label="Visit Anne Archer Associates Homepage" tabindex="-1">
-							<img src="<?=the_field('header_logo', 'option');?>"  alt="Anne Archer Associates Logo" aria-label="Anne Archer Associates logo and link to website Home"  title="Anne Archer Associates Logo"/>
+						<?php $logoImage = get_field('logo_image', 'options');?>
+						<a href="/">
+							<img class="site-header__logo--fixed" src="<?=$logoImage['url'];?>" alt="">
 						</a>
 					</div>
-					<div class="site-header__nav">
-						<div class="site-header__greeting">
-							<div class="greeting"></div>
-							<div class="logo">
-								<img src="<?=the_field('sticky_logo', 'option');?>" alt="Anne Archer Associates Logo" aria-label="Smiling A logo"  title="Anne Archer Associates Logo"/>
-							</div>
-						</div>
-						<nav>
-							<?php wp_nav_menu( array(
-								'theme_location' => 'primary',
-								'menu_id'        => 'primary-menu',
-								'walker' => new Custom_Menu_List()
-							) ); ?>
-						</nav>
-						<div class="nav-toggle">
+					<div class="site-header__nav-toggle">
+						<div class="hamburger">
 							<span></span>
 							<span></span>
 							<span></span>
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="site-header__prop">
+				<?php $logoText = get_field('logo_text', 'options');?>
+				<img class="site-header__logo--text" src="<?=$logoText['url'];?>" alt="">
 			</div>
 		</header>
 
+		<div class="overlay">
+			<div class="overlay__inner">
+				<div class="overlay__close">
 
-		<div class="sticky-nav" aria-hidden="true">
-			<div class="container">
-				<div class="sticky-nav__grid">
-					<div class="sticky-nav__logo">
-						<a href="/" aria-label="Visit Anne Archer Associates Homepage" tabindex="-1">
-							<img src="<?=the_field('sticky_logo', 'option');?>"  alt="Anne Archer Associates Logo" aria-label="Anne Archer Associates Logo"  title="Anne Archer Associates Logo"/>
-						</a>
-					</div>
-					<div class="sticky-nav__nav">
-						<nav>
-							<?php wp_nav_menu( array(
-								'theme_location' => 'primary',
-								'menu_id'        => 'sticky-menu',
-								'add_a_class'     => 'noindex',
-								'walker' => new Custom_Menu_List()
-							) ); ?>
-						</nav>
-						<div class="nav-toggle">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
-					</div>
+				</div>
+				<div class="overlay__menu">
+					<?php wp_nav_menu( array(
+						'theme_location' => 'primary',
+						'menu_id'        => 'primary-menu',
+						'walker' => new Custom_Menu_List()
+					) ); ?>
 				</div>
 			</div>
 		</div>
-		<div class="prop"></div>

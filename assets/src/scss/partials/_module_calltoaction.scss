@@ -1,0 +1,33 @@
+$calltoaction: (
+0px: (42px, 60px)
+);
+
+.module__calltoaction {
+  text-align: center;
+  padding: 60px 0px 80px 0px;
+  &__heading {
+    @include bebas($calltoaction, 400);
+    @include marginBottom(30);
+  }
+  &__content {
+    @include inter($p, 400);
+  }
+  &__button {
+    @extend .btn--block;
+    @extend .btn--orange;
+    display: inline-block;
+  }
+
+  &--teal {
+    background-color: $teal;
+    color: white;
+  }
+  &--yellow {
+    background-color: $lemon;
+    color: $black;
+  }
+  &--gradient {
+    background-image: linear-gradient(to right, rgba($gradient_1, 0.1) , rgba($gradient_2, 0.1));
+    color: $black;
+  }
+}

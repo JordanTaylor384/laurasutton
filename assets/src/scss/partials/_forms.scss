@@ -1,130 +1,91 @@
-.standard-form {
-  input[type="text"],
-  textarea {
-    border: 0;
-    border-radius: 4px;
+.module__contact {
+  position: relative;
+  background-image: linear-gradient(to right, rgba($gradient_1, 0.1) , rgba($gradient_2, 0.1));
+  color: $black;
+  padding: 230px 0px 200px 0px;
+  .container {
+    max-width: 620px;
+  }
+  &__form {
     background-color: white;
-    padding: 14px 20px;
-    border: 1px solid $dark-grey;
-    display: block;
-    width: 100%;
-    @include sans($button, book);
-    color: $text;
-    @include marginBottom(15);
-    @include transition(border-color $transition, color $transition, background-color $transition);
-    @include placeholder() {
-      @include sans($button, book);
-      @include transition(color $transition);
-      color: $text;
+    padding: 60px 50px;
+    box-shadow: 5px 5px 0px 0px $black;
+    input[type="text"],
+    input[type="email"],
+    input[type="telephone"],
+    textarea {
+      @extend .input-simple;
     }
-    &:focus {
-      // border: dotted;
-      border-color: $primary;
-      color: $primary;
-      @include placeholder() {
-        color: $primary;
-      }
-    }
-  }
-  textarea {
-    height: 120px;
-  }
-
-  &.failed {
-    .wpcf7-response-output {
-      @include marginTop(50);
-      border: 0;
-      background-color: red;
-      color: white;
-    }
-  }
-  &.success {
-    .wpcf7-response-output {
-      @include marginTop(50);
-      border: 0;
-      background-color: green;
-      color: white;
-    }
-  }
-
-}
-
-
-.contact-form {
-  background-color: white;
-  color: $text;
-  padding: 60px 0px;
-  @media (min-width: $screen-sm-min) {
-    padding-top: 60px;
-    padding-bottom: 90px;
-  }
-
-  &__grid {
-    @media (min-width: $screen-sm-min) {
-      @include display-grid;
-      @include display-grid-columns(1fr 380px);
-      @include display-grid-gap(60);
-    }
-    @media (min-width: $screen-lg-min) {
-      @include display-grid;
-      @include display-grid-columns(490px 1fr);
-      @include display-grid-gap(130);
-    }
-    &__col1 {
-      @include marginBottom(0, 90, 90, 0);
-      p {
-        @include sans($p, book);
-      }
-      img {
-        @media (max-width: $screen-xs-max) {
-          display: none;
-        }
-      }
-    }
-    &__col2 {
-      @media (min-width: $screen-lg-min) {
-        padding-right: 100px;
-      }
-      img {
-        @include marginBottom(44, 0);
-        @media (min-width: $screen-sm-min) {
-          display: none;
-        }
-      }
-    }
-  }
-  &__title {
-    @include brandon($title, medium);
-    @include marginBottom(30);
-  }
-  &__text {
-    @include sans($p, book);
-    @include marginBottom(40, 0);
-  }
-  form {
-    @extend .standard-form;
+    input[type="submit"],
     button {
-      @extend .btn;
-      float: right;
-      // color: white;
-      // background-color: $primary;
-      &:hover,
-      &:focus {
-        color: white;
-        border-color: $navy;
-        background-color: $navy;
-      }
+      @extend .btn--block;
+      @extend .btn--orange;
+      width: 100%;
+      border: 0;
     }
+    p {
+      @include inter($p, 400);
+    }
+  }
+  &__heading {
+    @include bebas($heading, 700);
+    @include marginBottom(15);
+    text-align: center;
+  }
+  &__subtitle {
+    @include inter($p, 400);
+    @include marginBottom(60);
+    text-align: center;
   }
 }
 
-.grecaptcha-badge {
-  opacity: 0;
-  visibility: hidden;
+.input-simple {
+  border: 2px solid #EDEDED;
+  padding: 16px 23px;
+  @include marginBottom(30);
+  width: 100%;
+  @include inter($input, 500);
+  @include placeholder() {
+    @include inter($input, 400);
+    color: $black;
+    opacity: 1;
+  }
 }
-.page-id-18 {
-  .grecaptcha-badge {
-    opacity: 1 !important;
-    visibility: visible !important;
+
+
+// selectric reset
+.selectric {
+  border: 0;
+  background: none;
+  .label {
+    margin: 0;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    text-overflow: inherit;
+    height: inherit;
+  }
+  .button {
+    display: none;
+  }
+}
+
+.selectric-wrapper {
+  @include marginBottom(30);
+}
+.selectric {
+  .label {
+    background-color: white;
+    color: $black;
+    @include inter($input, 400);
+    position: relative;
+    border: 2px solid #EDEDED;
+    padding: 16px 23px;
+    &:after {
+      @include center-pos(false, true);
+      right: 18px;
+      @extend .icon-triangle_down;
+      font-size: 8px;
+    }
   }
 }

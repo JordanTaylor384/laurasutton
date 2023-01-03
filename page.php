@@ -18,44 +18,41 @@ get_header(); ?>
 	<div id="content">
 		<?php // loop through the rows of data ?>
 		<?php while (have_rows('module')) : the_row();?>
-			<?php if (get_row_layout() == 'header'): ?>
-				<?php get_template_part( 'views/module-intro', 'header' ); ?>
-			<?php endif; ?>
-			<?php if (get_row_layout() == 'content_block'): ?>
-				<?php get_template_part( 'views/module-content_block', 'content_block' ); ?>
-			<?php endif; ?>
-			<?php if (get_row_layout() == 'call_to_action'): ?>
-				<?php get_template_part( 'views/module-call_to_action', 'call_to_action' ); ?>
-			<?php endif; ?>
-			<?php if (get_row_layout() == 'video'): ?>
-				<?php get_template_part( 'views/module-video', 'video' ); ?>
-			<?php endif; ?>
-			<?php if (get_row_layout() == 'clients'): ?>
-				<?php get_template_part( 'views/module-clients', 'clients' ); ?>
+			<?php if (get_row_layout() == 'text'): ?>
+				<?php get_template_part( 'views/module-text', 'text' ); ?>
 			<?php endif; ?>
 			<?php if (get_row_layout() == 'testimonials'): ?>
 				<?php get_template_part( 'views/module-testimonials', 'testimonials' ); ?>
 			<?php endif; ?>
-			<?php if (get_row_layout() == 'carousel'): ?>
-				<?php get_template_part( 'views/module-carousel', 'carousel' ); ?>
+			<?php if (get_row_layout() == 'calltoaction'): ?>
+				<?php get_template_part( 'views/module-calltoaction', 'calltoaction' ); ?>
+			<?php endif; ?>
+			<?php if (get_row_layout() == 'content_block'): ?>
+				<?php get_template_part( 'views/module-content_block', 'content_block' ); ?>
+			<?php endif; ?>
+			<?php if (get_row_layout() == 'page_header'): ?>
+				<?php get_template_part( 'views/module-page_header', 'page_header' ); ?>
+			<?php endif; ?>
+			<?php if (get_row_layout() == 'homepage_header'): ?>
+				<?php get_template_part( 'views/module-homepage_header', 'homepage_header' ); ?>
+			<?php endif; ?>
+			<?php if (get_row_layout() == 'services'): ?>
+				<?php get_template_part( 'views/module-services', 'services' ); ?>
+			<?php endif; ?>
+			<?php if (get_row_layout() == 'grid'): ?>
+				<?php get_template_part( 'views/module-grid', 'grid' ); ?>
+			<?php endif; ?>
+			<?php if (get_row_layout() == 'posts'): ?>
+				<?php get_template_part( 'views/module-posts', 'posts' ); ?>
+			<?php endif; ?>
+			<?php if (get_row_layout() == 'clients'): ?>
+				<?php get_template_part( 'views/module-clients', 'clients' ); ?>
+			<?php endif; ?>
+			<?php if (get_row_layout() == 'features'): ?>
+				<?php get_template_part( 'views/module-features', 'features' ); ?>
 			<?php endif; ?>
 			<?php if (get_row_layout() == 'form'): ?>
-				<?php get_template_part( 'views/module-contact_form', 'form' ); ?>
-			<?php endif; ?>
-			<?php if (get_row_layout() == 'events'): ?>
-				<?php get_template_part( 'views/module-events', 'events' ); ?>
-			<?php endif; ?>
-			<?php if (get_row_layout() == 'blog'): ?>
-				<?php get_template_part( 'views/module-blog', 'blog' ); ?>
-			<?php endif; ?>
-			<?php if (get_row_layout() == 'editor'): ?>
-				<?php get_template_part( 'views/module-editor', 'editor' ); ?>
-			<?php endif; ?>
-			<?php if (get_row_layout() == 'collaborations'): ?>
-				<?php get_template_part( 'views/module-collaborations', 'collaborations' ); ?>
-			<?php endif; ?>
-			<?php if (get_row_layout() == 'instagram'): ?>
-				<?php get_template_part( 'views/module-instagram', 'instagram' ); ?>
+				<?php get_template_part( 'views/module-form', 'form' ); ?>
 			<?php endif; ?>
 		<?php endwhile; ?>
 	</div>

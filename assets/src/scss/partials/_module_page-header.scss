@@ -1,0 +1,36 @@
+$page-header: (
+0px: (36px, 44px)
+);
+
+.module__page-header {
+  height: 300px;
+  position: relative;
+  background-image: linear-gradient(to right, rgba($gradient_1, 0.1) , rgba($gradient_2, 0.1));
+  color: $black;
+
+  &__title {
+    @include center-pos(true, false);
+    bottom: 0;
+    text-transform: uppercase;
+    @include bebas($page-header, 375);
+    padding-bottom: 10px;
+    letter-spacing: 4px;
+    border-bottom: 5px solid transparent;
+  }
+
+  &--yellow {
+    .module__page-header__title {
+      border-color: $lemon;
+    }
+  }
+  &--teal {
+    .module__page-header__title {
+      border-color: $teal;
+    }
+  }
+  &--orange {
+    .module__page-header__title {
+      border-color: $orange;
+    }
+  }
+}

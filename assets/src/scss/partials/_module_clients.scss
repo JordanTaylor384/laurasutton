@@ -1,0 +1,26 @@
+.module__clients {
+  padding: 48px 0px;
+  &__heading {
+    text-transform: uppercase;
+    @include inter($p, 500);
+    letter-spacing: 1px;
+    text-align: center;
+    @include marginBottom(30);
+  }
+  &__items {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 45px;
+  }
+  & + .module__text {
+    .module__text__grid {
+      padding-top: 20px;
+    }
+  }
+}

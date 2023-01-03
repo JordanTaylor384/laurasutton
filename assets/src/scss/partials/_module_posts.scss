@@ -1,0 +1,120 @@
+.module__posts {
+  position: relative;
+  padding: 90px 0px;
+  &__grid {
+    @include display-grid;
+    @include display-grid-columns(1fr 1fr);
+    @include display-grid-gap(95);
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  &__background {
+    position: absolute;
+    height: 66.666%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &--orange {
+    .module__posts__background {
+      background-color: $orange;
+    }
+  }
+  &--yellow {
+    .module__posts__background {
+      background-color: $lemon;
+    }
+  }
+  &--teal {
+    .module__posts__background {
+      background-color: $teal;
+    }
+  }
+  &--aqua {
+    .module__posts__background {
+      background-color: $aqua;
+    }
+  }
+
+  .post__item__more {
+    border-bottom: 4px solid white;
+  }
+
+  &__featured {
+    background-color: $lemon;
+    padding: 100px 0px 0px 0px;
+    .post__item {
+      @include marginBottom(60);
+      a {
+        @include display-grid;
+        @include display-grid-columns(1fr 1fr);
+        @include display-grid-gap(95);
+      }
+    }
+  }
+  &--layout {
+    padding: 0;
+    .module__posts__grid {
+      padding: 90px 0px;
+    }
+  }
+}
+
+$post-title: (
+0px: (30px, 42px)
+);
+
+.post__item {
+  &__image {
+    box-shadow: 6px 6px 0px -2px $orange;
+    @include marginBottom(24);
+  }
+  &__title {
+    @include bebas($post-title, 700);
+    @include marginBottom(24);
+  }
+  &__excerpt {
+    @include inter($p, 400);
+  }
+  &__more {
+    display: inline-block;
+    @include inter($intro, 700);
+  }
+}
+
+$single-title: (
+0px: (60px, 72px)
+);
+$single-back: (
+0px: (24px, 34px)
+);
+
+.article {
+  padding: 218px 0px 60px 0px;
+  @extend .text-styles;
+  .container {
+    max-width: 678px;
+  }
+  &__title {
+    @include bebas($single-title, 700);
+    @include marginBottom(30);
+  }
+  &__body {
+    p.intro-text {
+      @include inter($intro, 400);
+    }
+  }
+  &__back {
+    @include marginBottom(20);
+    @include bebas($single-back, 400);
+    display: block;
+    &:before {
+      @extend .icon-arrow_left;
+      font-size: 18px;
+      padding-right: 15px;
+    }
+  }
+}

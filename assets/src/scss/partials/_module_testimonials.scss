@@ -1,0 +1,64 @@
+$quote: (
+0px: (32px, 48px)
+);
+$testimonials-heading: (
+0px: (28px, 34px)
+);
+
+.module__testimonials {
+  background-image: linear-gradient(to right, rgba($gradient_1, 0.1) , rgba($gradient_2, 0.1));
+  padding: 70px 0px;
+  position: relative;
+
+  &__heading {
+    @include bebas($testimonials-heading, 375);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    @include marginBottom(50);
+    text-align: center;
+  }
+
+  &__item {
+    background-color: white;
+    padding: 60px 110px;
+    &__grid {
+      @include display-grid;
+      @include display-grid-columns(70px 1fr);
+      @include align-items(center);
+    }
+    &__image {
+      border-radius: 100%;
+      border: 1px solid $orange;
+      height: 68px;
+      width: 68px;
+    }
+    &__name {
+      padding-left: 15px;
+      @include inter($p, 400);
+    }
+    &__quote p {
+      @include bebas($quote, 400);
+    }
+  }
+}
+
+.swiper-pagination {
+  @include marginTop(40);
+  position: relative;
+  bottom: 0 !important;
+  left: 0 !important;
+  &-bullet {
+    border-radius: 0;
+    background-color: transparent;
+    border: 2px solid $orange;
+    height: 15px;
+    width: 15px;
+    opacity: 1;
+    span {
+      display: none;
+    }
+    &-active {
+      background-color: $orange;
+    }
+  }
+}

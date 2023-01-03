@@ -10,14 +10,14 @@ import * as ux from '../js/ux-fixes.js';
 
 
 export function init() {
-  var carousel = new Swiper ('.carousel.module .swiper-container', {
+  var carousel = new Swiper ('.module__testimonials .swiper', {
     slidesPerView: 1,
     spaceBetween: 30,
     autoHeight: true,
-    // autoplay: {
-    //   delay: 8000,
-    // },
-    // effect: 'fade',
+    autoplay: {
+      delay: 8000,
+    },
+    effect: 'fade',
     speed: 1000,
     allowTouchMove: false,
     pagination: {

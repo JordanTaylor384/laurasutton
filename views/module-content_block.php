@@ -1,24 +1,27 @@
-<?php $image = get_sub_field('image'); ?>
-
-<section class="module content-block <?=the_sub_field('layout');?>">
-
+<section class="module__content-block <?=the_sub_field('theme');?> <?=the_sub_field('layout');?>">
   <div class="container">
-    <div class="content-block__grid">
+    <div class="module__content-block__grid">
 
-      <div class="content-block__grid__col1">
-        <div class="content-block__text">
-          <?=the_sub_field('content');?>
-          <?php if (get_sub_field('button_text')): ?>
-              <a href="<?=the_sub_field('button_link');?>" class="btn">
-                <?=the_sub_field('button_text');?>
-              </a>
-          <?php endif; ?>
+      <div class="module__content-block__content">
+        <div class="module__content-block__title">
+          <?=the_sub_field('title');?>
         </div>
+
+        <?=the_sub_field('content');?>
+        <?php if (have_rows('links')): ?>
+          <?php while (have_rows('links') ) : the_row(); ?>
+            <a class="module__content-block__link" href="<?=the_sub_field('link_url');?>">
+              <?=the_sub_field('link_text');?>
+            </a>
+          <?php endwhile; ?>
+        <?php endif; ?>
       </div>
 
-      <div class="content-block__grid__col2">
-        <img src="<?=$image['url'];?>" title="<?=$image['title'];?>" alt="<?=$image['alt'];?>"/>
+      <div class="module__content-block__image">
+        <?php $image = get_sub_field('image');?>
+        <img src="<?=$image['url'];?>" alt="<?=$image['title'];?>" />
       </div>
+
 
     </div>
   </div>

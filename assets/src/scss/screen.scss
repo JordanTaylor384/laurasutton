@@ -5,25 +5,18 @@
 @import "partials/_underscores";
 
 /* COLOURS */
-$black: #000000;
-$dark-grey: #555855;
+$black: #0E0036;
+$dark-grey: #1A1919;
 $white: #ffffff;
 $light-grey: #EEEEEE;
 
-$lime: #B3CB0F;
-$navy: #21333A;
-$dark-grey: #363D40;
-// post categories
-$clay: #CC4D04;
-$aqua: #7AE0DF;
-$violet: #8723CC;
-$onyx: #404040;
-
-$text: $navy;
-$primary: $lime;
-$secondary: $light-grey;
-
-
+$text: $black;
+$orange: #EE7524;
+$teal: #2A7080;
+$lemon: #F9DE4A;
+$aqua: #21BDC5;
+$gradient_1: #F9D613;
+$gradient_2: #EE7524;
 
 /* TRANSITIONS */
 $transition-speed: 400ms;
@@ -35,23 +28,22 @@ $transition-slow: $transition-speed*2 $ease-out-quad;
 @import "partials/_fonts";
 @import "partials/_buttons";
 @import "partials/_forms";
-@import "partials/overlay";
-
-/* MODULES */
 @import "partials/_header";
 @import "partials/_footer";
-@import "partials/_intro";
-@import "partials/_content_block";
-@import "partials/_c2a";
-@import "partials/_video";
-@import "partials/_clients";
-@import "partials/_testimonials";
-@import "partials/_carousel";
 @import "partials/_forms";
-@import "partials/_news";
-@import "partials/_events";
-@import "partials/_collaborations";
-@import "partials/_instagram";
+
+/* MODULES */
+@import "partials/_module_testimonials";
+@import "partials/_module_calltoaction";
+@import "partials/_module_content-block";
+@import "partials/_module_page-header";
+@import "partials/_module_homepage-header";
+@import "partials/_module_services";
+@import "partials/_module_grid";
+@import "partials/_module_posts";
+@import "partials/_module_text";
+@import "partials/_module_clients";
+@import "partials/_module_features";
 
 /* GLOBAL*/
 *, *:before, *:after {
@@ -64,7 +56,7 @@ $transition-slow: $transition-speed*2 $ease-out-quad;
   // font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'cerebri-book', sans-serif;
+  font-family: 'inter', sans-serif;
   font-style: normal;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
@@ -138,15 +130,15 @@ p {
     position: relative;
     @include transition(color $transition);
     &:hover {
-      color: $primary;
+      color: $orange;
     }
   }
 
   &.intro-text {
-    @include sans($intro, book);
+    // @include inter($intro, book);
   }
   &.heading-text {
-    @include brandon($heading, medium);
+    // @include bebas($heading, medium);
   }
 }
 ol, ul {
@@ -162,10 +154,10 @@ strong {
 
 .text-styles {
   p {
-    @include sans($p, book);
+    @include inter($p, 400);
     @include marginBottom(20, 30);
     strong, b {
-      @include sans($p, bold);
+      // @include inter($p, bold);
     }
     a {
       color: $text;
@@ -173,31 +165,31 @@ strong {
       position: relative;
       @include transition(color $transition);
       &:hover {
-        color: $primary;
+        color: $orange;
       }
     }
     &.intro-text {
-      @include sans($intro, book);
+      @include inter($large-intro, 400);
       strong, b {
-        @include sans($intro, bold);
+        @include inter($large-intro, 600);
       }
     }
     &.heading-text {
-      @include brandon($heading, medium);
+      @include bebas($heading, medium);
       strong, b {
-        @include brandon($heading, bold);
+        @include bebas($heading, bold);
       }
     }
     &.title-text {
-      @include brandon($title, medium);
+      @include bebas($title, medium);
       strong, b {
-        @include brandon($heading, bold);
+        @include bebas($title, medium);
       }
     }
   }
   h1, h2, h3, h4, h5, h6 {
     strong, b {
-      @include sans($p, bold);
+      // @include inter($p, bold);
     }
   }
   img {
@@ -208,13 +200,13 @@ strong {
     // padding-left: 15px;
     li {
       // list-style-type: disc;
-      padding-left: 30px;
+      padding-left: 20px;
       position: relative;
-      @include sans($p, book);
+      @include inter($p, 400);
       @include marginBottom(15);
       a {
         // text-decoration: underline;
-        color: $primary;
+        color: $orange;
       }
       &:before {
         content: "";
@@ -224,11 +216,11 @@ strong {
         // @include center-pos(false, true);
         position: absolute;
         top: 10px;
-        background-color: $primary;
+        background-color: $black;
         left: 0px;
       }
       strong, b {
-        @include sans($p, bold);
+        // @include inter($p, bold);
       }
       ul {
         li {
@@ -250,28 +242,18 @@ strong {
   }
   ol {
     @include marginBottom(20, 30);
-    padding-left: 15px;
+    padding-left: 20px;
     li {
       list-style-type: decimal;
-      @include sans($p, book);
+      @include inter($p, 400);
       @include marginBottom(15);
       a {
         // text-decoration: underline;
-        color: $primary;
+        color: $orange;
       }
     }
   }
-  blockquote {
-    background-color: rgba($primary, 0.05);
-    // padding: 15px 20px;
-    padding: 30px 60px 30px 40px;
-    // border-radius: 4px;
-    @include marginBottom(20, 30);
-    border-left: 7px solid $primary;
-    p {
-      margin-bottom: 0;
-    }
-  }
+
   iframe {
     width: 100%;
     @media (max-width: $screen-xs-max) {
@@ -291,64 +273,7 @@ strong {
   }
 }
 
-.editor.module {
-  padding: 60px 0px;
-  @extend .text-styles;
-}
 
-// .cookie-notification {
-//   background-color: rgba($navy, 0.8);
-//   color: white;
-//   position: fixed;
-//   bottom: 0;
-//   left: 0;
-//   width: 100%;
-//   z-index: 10000;
-//   display: none;
-//   padding: 10px 0px;
-//   .inner {
-//     position: relative;
-//     p {
-//       @include sans($p, book);
-//       color: white;
-//       padding-right: 40px;
-//       margin-bottom: 0px !important;
-//       a {
-//         color: white;
-//         text-decoration: underline;
-//         cursor: pointer;
-//       }
-//     }
-//   }
-//   .close {
-//     position: absolute;
-//     top: 4px;
-//     right: 0;
-//     font-size: 16px;
-//     cursor: pointer;
-//     @include transition(color $transition);
-//     // @include transform(rotate(45deg));
-//
-//     &:after {
-//       @extend .icon-cross;
-//       // @include transform(rotate(45deg));
-//       // @extend .icon-cancel;
-//     }
-//     &:hover {
-//       color: white;
-//     }
-//   }
-// }
-
-#cookie-notice {
-  .cn-button {
-    background-color: $primary;
-  }
-}
-
-.cn-button.bootstrap {
-  background: $primary !important;
-}
 
 .error-wrapper {
   color: $text;
@@ -370,10 +295,10 @@ strong {
     h1 {
       @include marginBottom(30);
       color: $text;
-      @include sans($intro, book);
+      // @include inter($intro, book);
     }
     p {
-      @include sans($p, book);
+      // @include inter($p, book);
     }
     a {
       text-decoration: underline;

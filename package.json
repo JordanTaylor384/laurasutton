@@ -1,5 +1,5 @@
 {
-  "name": "annearcher",
+  "name": "laurasutton",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -42,6 +42,7 @@
     "jquery.nicescroll": "^3.7.6",
     "scrollmagic": "^2.0.7",
     "scrollmagic-plugin-gsap": "^1.0.4",
+    "selectric": "^1.13.0",
     "simplebar": "^5.3.0",
     "swiper": "^6.3.4"
   }
