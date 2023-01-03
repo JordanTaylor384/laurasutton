@@ -10,8 +10,6 @@
     @include display-grid();
     &__col {
       &--1 {
-        text-align: center;
-        padding: 0px 60px;
         .module__text__button {
           @extend .btn--block;
           @extend .btn--orange;
@@ -41,6 +39,10 @@
   &--columns-1 {
     @include display-grid-columns(1fr);
     padding: 70px 0px 40px 0px;
+    .module__text__grid__col--1 {
+      text-align: center;
+      padding: 0px 60px;
+    }
   }
   &--columns-2 {
     @include display-grid-columns(5fr 7fr);

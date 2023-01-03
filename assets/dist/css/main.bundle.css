@@ -4325,21 +4325,18 @@ object {
   @supports (display: grid) {
     .module__text__grid {
       display: grid; } }
-  .module__text__grid__col--1 {
-    text-align: center;
-    padding: 0px 60px; }
-    .module__text__grid__col--1 .module__text__button {
-      display: inline-block;
-      margin-top: 20px; }
-      @media (min-width: 768px) {
-        .module__text__grid__col--1 .module__text__button {
-          margin-top: 20px; } }
-      @media (min-width: 992px) {
-        .module__text__grid__col--1 .module__text__button {
-          margin-top: 20px; } }
-      @media (min-width: 1240px) {
-        .module__text__grid__col--1 .module__text__button {
-          margin-top: 20px; } }
+  .module__text__grid__col--1 .module__text__button {
+    display: inline-block;
+    margin-top: 20px; }
+    @media (min-width: 768px) {
+      .module__text__grid__col--1 .module__text__button {
+        margin-top: 20px; } }
+    @media (min-width: 992px) {
+      .module__text__grid__col--1 .module__text__button {
+        margin-top: 20px; } }
+    @media (min-width: 1240px) {
+      .module__text__grid__col--1 .module__text__button {
+        margin-top: 20px; } }
   .module__text__grid__col--2 {
     color: #6A6A6A; }
     .module__text__grid__col--2 .module__text__button {
@@ -4365,6 +4362,9 @@ object {
   @supports (display: grid) {
     .module__text--columns-1 {
       grid-template-columns: 1fr; } }
+  .module__text--columns-1 .module__text__grid__col--1 {
+    text-align: center;
+    padding: 0px 60px; }
 
 .module__text--columns-2 {
   -ms-grid-columns: 5fr 7fr;
