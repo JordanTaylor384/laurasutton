@@ -1,5 +1,8 @@
 .module__features {
-  padding: 60px 0px 100px 0px;
+  padding: 30px 0px;
+  @media (min-width: $screen-lg-min) {
+    padding: 60px 0px 100px 0px;
+  }
   &__heading {
     @include bebas($heading, 700);
     @include marginBottom(15);
@@ -11,22 +14,35 @@
     text-align: center;
   }
   &__grid {
-    @include display-grid;
-    @include display-grid-columns(1fr 1fr);
-    @include display-grid-gap(33);
+    @media (min-width: $screen-lg-min) {
+      @include display-grid;
+      @include display-grid-columns(1fr 1fr);
+      @include display-grid-gap(33);
+    }
   }
   &__item {
     @include marginBottom(30);
-    padding: 46px 18px 18px 46px;
+    @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+      padding: 30px 20px;
+    }
+    @media (min-width: $screen-lg-min) {
+      padding: 46px 18px 18px 46px;
+    }
     img {
       height: 100px;
     }
     p {
       @include inter($p, 400);
+      @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+        margin-bottom: 0px !important;
+      }
     }
     &__grid {
       display: flex;
       grid-gap: 47px;
+      @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+        align-items: center;
+      }
     }
     &--grey {
       border: 3px solid #C4CDD5;

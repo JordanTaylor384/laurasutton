@@ -12,11 +12,19 @@
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
     align-items: center;
     grid-gap: 45px;
+    flex-wrap: wrap;
+    @media (min-width: $screen-lg-min) {
+      flex-wrap: nowrap;
+    }
+    img {
+      @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+        max-width: 100px;
+      }
+    }
   }
   & + .module__text {
     .module__text__grid {

@@ -9,32 +9,28 @@ import 'swiper/swiper-bundle.css';
 import * as ux from '../js/ux-fixes.js';
 
 
-export function init() {
-  var carousel = new Swiper ('.module__testimonials .swiper', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    autoHeight: true,
-    autoplay: {
-      delay: 8000,
-    },
-    effect: 'fade',
-    speed: 1000,
-    allowTouchMove: false,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + '<span>' + (index + 1) + '</span>' + '</span>';
-      },
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+export function testimonials() {
+  if ($('.module__testimonials').length > 0) {
+    $('.module__testimonials .swiper').each(function (index) {
+      var swiper = new Swiper($(this)[0], {
+        // width: 270,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        autoHeight: true,
+        // effect: 'fade',
+        speed: 1000,
+        allowTouchMove: false,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true,
+        },
+      });
+    });
+  }
 
-  carousel.on('slideChange', function () {
-    ux.swiperArrowsTabbing();
-    console.log('slide changed');
-  });
+  // swiper.on('slideChange', function () {
+  //   ux.swiperArrowsTabbing();
+  //   console.log('slide changed');
+  // });
 }

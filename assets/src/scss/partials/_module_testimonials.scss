@@ -1,8 +1,10 @@
 $quote: (
-0px: (32px, 48px)
+0px: (28px, 44px),
+1024px: (32px, 48px)
 );
 $testimonials-heading: (
-0px: (28px, 34px)
+0px: (24px, 32px),
+1024px: (28px, 34px)
 );
 
 .module__testimonials {
@@ -20,7 +22,10 @@ $testimonials-heading: (
 
   &__item {
     background-color: white;
-    padding: 60px 110px;
+    padding: 30px 90px;
+    @media (min-width: $screen-lg-min) {
+      padding: 60px 110px;
+    }
     &__grid {
       @include display-grid;
       @include display-grid-columns(70px 1fr);
@@ -36,8 +41,27 @@ $testimonials-heading: (
       padding-left: 15px;
       @include inter($p, 400);
     }
-    &__quote p {
-      @include bebas($quote, 400);
+    &__quote {
+      position: relative;
+      p {
+        @include bebas($quote, 400);
+      }
+      &:before {
+        position: absolute;
+        top: -30px;
+        left: -50px;
+        content: "\0022";
+        font-size: 70px;
+        color: $orange;
+      }
+      &:after {
+        position: absolute;
+        bottom: -50px;
+        right: -50px;
+        content: "\0022";
+        font-size: 70px;
+        color: $orange;
+      }
     }
   }
 }

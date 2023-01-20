@@ -505,17 +505,17 @@ add_filter('body_class','mv_browser_body_class');
 //------------------------------------------------------------------------------
 ////////////// projects post type
 
-function custom_post_type_projects() {
+function custom_post_type_portfolio() {
 
 	// Set UI labels for Custom Post Type
 	$labels = array(
-		'name' => _x( 'Projects', 'Post Type General Name', 'twentythirteen' ),
-		'singular_name' => _x( 'Project', 'Post Type Singular Name', 'twentythirteen' ),
-		'menu_name' => __( 'Projects', 'twentythirteen' ),
+		'name' => _x( 'Portfolio', 'Post Type General Name', 'twentythirteen' ),
+		'singular_name' => _x( 'Portfolio', 'Post Type Singular Name', 'twentythirteen' ),
+		'menu_name' => __( 'Portfolio', 'twentythirteen' ),
 	);
 	// Set other options for Custom Post Type
 	$args = array(
-		'label' => __( 'projects', 'twentythirteen' ),
+		'label' => __( 'portfolio', 'twentythirteen' ),
 		'description' => __( 'Add projects', 'twentythirteen' ),
 		'labels' => $labels,
 		'supports' => array(
@@ -527,8 +527,8 @@ function custom_post_type_projects() {
 		* Parent and child items. A non-hierarchical CPT
 		* is like Posts.
 		*/
-		'hierarchical' => false,
-		'has_archive' => true,
+		'hierarchical' => true,
+		'has_archive' => 'portfolio',
 		'public' => true,
 		'publicly_queryable' => true,
 		'show_ui' => true,
@@ -544,11 +544,11 @@ function custom_post_type_projects() {
 	);
 
 	// Registering your Custom Post Type
-	register_post_type( 'projects', $args );
+	register_post_type( 'portfolio', $args );
 }
 /* Hook into the 'init' action so that the function
 * Containing our post type registration is not
 * unnecessarily executed.
 */
 
-add_action( 'init', 'custom_post_type_projects', 0 );
+add_action( 'init', 'custom_post_type_portfolio', 0 );

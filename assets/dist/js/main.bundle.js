@@ -15,12 +15,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _plugins_ScrollMagic_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./src/plugins/ScrollMagic.js");
 /* harmony import */ var _js_testimonials_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./src/js/testimonials.js");
 /* harmony import */ var _plugins_selectric_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./src/plugins/selectric.js");
-/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("../node_modules/normalize.css/normalize.css");
-/* harmony import */ var _scss_admin_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("./src/scss/admin.scss");
-/* harmony import */ var _scss_screen_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("./src/scss/screen.scss");
+/* harmony import */ var _js_accordions_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./src/js/accordions.js");
+/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("../node_modules/normalize.css/normalize.css");
+/* harmony import */ var _scss_admin_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("./src/scss/admin.scss");
+/* harmony import */ var _scss_screen_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__("./src/scss/screen.scss");
 // imports
 
 window.$ = window.jQuery = (jquery__WEBPACK_IMPORTED_MODULE_0___default());
+
 
 
 
@@ -44,8 +46,10 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   // scrollmagic.stickyNav();
   // swiper.init();
   // autosize.init();
+  _plugins_swiper_js__WEBPACK_IMPORTED_MODULE_2__.testimonials();
   _js_overlay_js__WEBPACK_IMPORTED_MODULE_4__.init();
   _plugins_selectric_js__WEBPACK_IMPORTED_MODULE_7__.init();
+  _js_accordions_js__WEBPACK_IMPORTED_MODULE_8__.init();
   // testimonials.more();
   // ux.swiperBulletsTabbing();
   // ux.swiperArrowsTabbing();
@@ -150,7 +154,7 @@ function init() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "init": () => /* binding */ init
+/* harmony export */   "testimonials": () => /* binding */ testimonials
 /* harmony export */ });
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../node_modules/swiper/esm/components/core/core-class.js");
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("../node_modules/swiper/esm/components/autoplay/autoplay.js");
@@ -170,34 +174,30 @@ swiper__WEBPACK_IMPORTED_MODULE_0__.default.use([swiper__WEBPACK_IMPORTED_MODULE
 
 
 
-function init() {
-  var carousel = new swiper__WEBPACK_IMPORTED_MODULE_0__.default ('.module__testimonials .swiper', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    autoHeight: true,
-    autoplay: {
-      delay: 8000,
-    },
-    effect: 'fade',
-    speed: 1000,
-    allowTouchMove: false,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + '<span>' + (index + 1) + '</span>' + '</span>';
-      },
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+function testimonials() {
+  if ($('.module__testimonials').length > 0) {
+    $('.module__testimonials .swiper').each(function (index) {
+      var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__.default($(this)[0], {
+        // width: 270,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        autoHeight: true,
+        // effect: 'fade',
+        speed: 1000,
+        allowTouchMove: false,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true,
+        },
+      });
+    });
+  }
 
-  carousel.on('slideChange', function () {
-    _js_ux_fixes_js__WEBPACK_IMPORTED_MODULE_6__.swiperArrowsTabbing();
-    console.log('slide changed');
-  });
+  // swiper.on('slideChange', function () {
+  //   ux.swiperArrowsTabbing();
+  //   console.log('slide changed');
+  // });
 }
 
 
@@ -489,6 +489,25 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 	exports.default = autosize;
 	module.exports = exports['default'];
 });
+
+/***/ }),
+
+/***/ "./src/js/accordions.js":
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "init": () => /* binding */ init
+/* harmony export */ });
+function init() {
+  $('.module__accordions__item').on('click', function () {
+    var index = $(this).data('index');
+    console.log(index);
+    $(this).toggleClass('module__accordions__item--active');
+    $(this).find('.module__accordions__item__body').slideToggle();
+  });
+}
 
 /***/ }),
 

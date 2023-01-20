@@ -14,6 +14,7 @@ $text: $black;
 $orange: #EE7524;
 $teal: #2A7080;
 $lemon: #F9DE4A;
+$yellow: #F9D613;
 $aqua: #21BDC5;
 $gradient_1: #F9D613;
 $gradient_2: #EE7524;
@@ -44,6 +45,8 @@ $transition-slow: $transition-speed*2 $ease-out-quad;
 @import "partials/_module_text";
 @import "partials/_module_clients";
 @import "partials/_module_features";
+@import "partials/_module_accordions";
+@import "partials/_module_flash";
 
 /* GLOBAL*/
 *, *:before, *:after {

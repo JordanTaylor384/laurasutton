@@ -1,0 +1,87 @@
+$accordions: (
+0px: (18px, 36px)
+);
+
+.module__accordions {
+  padding: 68px 0px;
+
+  &__grid {
+    @include display-grid;
+    @include display-grid-columns(6fr 6fr);
+    @include display-grid-gap(40);
+    @media (min-width: $screen-lg-min) {
+      @include display-grid-columns(5fr 7fr);
+      @include display-grid-gap(100);
+    }
+    &__col {
+      position: relative;
+    }
+  }
+
+  &__intro {
+    @include inter($large-intro, 400);
+    @include marginBottom(50);
+  }
+
+  &__image {
+
+  }
+
+  &__item {
+    margin-left: -20px;
+    &__head {
+      cursor: pointer;
+      border-top: 1px solid #DADADA;
+      @include inter($accordions, 500);
+      padding: 18px 20px;
+      padding-right: 50px;
+      position: relative;
+      &:after {
+        @extend .icon-caret_down;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        font-size: 12px;
+      }
+    }
+    &__body {
+      display: none;
+      padding-bottom: 30px;
+      padding-left: 20px;
+      color: #6A6A6A !important;
+      @extend .text-styles;
+    }
+    &__button {
+      @include inter($p, 700);
+      color: $black;
+      position: relative;
+      border-bottom: 4px solid $orange;
+    }
+    &:nth-child(1) {
+      .module__accordions__item__head {
+        border-top: 0;
+      }
+    }
+  }
+
+  &--teal {
+    background-color: $teal;
+    color: white;
+  }
+  &--white {
+    background-color: white;
+    color: $black;
+  }
+  &--gradient {
+    background-image: linear-gradient(to right, rgba($gradient_1, 0.1) , rgba($gradient_2, 0.1));
+    color: $black;
+  }
+  &--orange {
+    background-color: $orange;
+    color: white;
+  }
+  &--yellow {
+    background-color: $lemon;
+    color: $black;
+  }
+}

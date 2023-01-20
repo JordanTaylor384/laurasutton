@@ -9,6 +9,7 @@ import * as overlay from './js/overlay.js';
 import * as scrollmagic from './plugins/ScrollMagic.js';
 import * as testimonials from './js/testimonials.js';
 import * as selectric from './plugins/selectric.js';
+import * as accordions from './js/accordions.js';
 
 // custom js
 $(function () {
@@ -24,8 +25,10 @@ $(function () {
   // scrollmagic.stickyNav();
   // swiper.init();
   // autosize.init();
+  swiper.testimonials();
   overlay.init();
   selectric.init();
+  accordions.init();
   // testimonials.more();
   // ux.swiperBulletsTabbing();
   // ux.swiperArrowsTabbing();

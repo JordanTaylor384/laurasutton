@@ -54,6 +54,12 @@ get_header(); ?>
 			<?php if (get_row_layout() == 'form'): ?>
 				<?php get_template_part( 'views/module-form', 'form' ); ?>
 			<?php endif; ?>
+			<?php if (get_row_layout() == 'accordions'): ?>
+				<?php get_template_part( 'views/module-accordions', 'accordions' ); ?>
+			<?php endif; ?>
+			<?php if (get_row_layout() == 'flash'): ?>
+				<?php get_template_part( 'views/module-flash', 'flash' ); ?>
+			<?php endif; ?>
 		<?php endwhile; ?>
 	</div>
 <?php endif; ?>

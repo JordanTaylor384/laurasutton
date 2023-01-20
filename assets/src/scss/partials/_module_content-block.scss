@@ -1,9 +1,13 @@
 $content-title: (
-0px: (42px, 60px)
+0px: (36px, 58px),
+1024px: (42px, 60px)
 );
 
 .module__content-block {
-  padding: 120px 0px;
+  padding: 60px 0px;
+  @media (min-width: $screen-lg-min) {
+    padding: 120px 0px;
+  }
 
   &__grid {
     @include display-grid;
@@ -19,7 +23,10 @@ $content-title: (
       }
       .module__content-block__content {
         @include display-grid-area(left);
-        padding-right: 50px;
+        padding-right: 30px;
+        @media (min-width: $screen-lg-min) {
+          padding-right: 50px;
+        }
       }
     }
   }
@@ -30,7 +37,10 @@ $content-title: (
       }
       .module__content-block__content {
         @include display-grid-area(right);
-        padding-left: 50px;
+        padding-left: 30px;
+        @media (min-width: $screen-lg-min) {
+          padding-left: 50px;
+        }
       }
     }
   }
@@ -78,7 +88,13 @@ $content-title: (
     background-color: $lemon;
     color: $black;
     .module__content-block__link {
-        border-bottom: 4px solid white;
+      border-bottom: 4px solid white;
     }
+  }
+}
+
+#content {
+  & > .module__content-block:first-child() {
+    padding-top: 230px;
   }
 }

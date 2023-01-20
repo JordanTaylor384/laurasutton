@@ -40,8 +40,8 @@
     @include display-grid-columns(1fr);
     padding: 70px 0px 40px 0px;
     .module__text__grid__col--1 {
-      text-align: center;
-      padding: 0px 60px;
+      max-width: 678px;
+      margin: 0 auto;
     }
   }
   &--columns-2 {

@@ -1,17 +1,19 @@
 // General
 $title: (
 0px: (36px, 44px),
-1240px: (51px, 59px)
+10240px: (51px, 59px)
 );
 $heading: (
 0px: (26px, 37px),
-1240px: (36px, 50px),
+10240px: (36px, 50px),
 );
 $large-intro: (
-0px: (22px, 34px),
+0px: (20px, 30px),
+768px: (22px, 34px),
 );
 $intro: (
-0px: (18px, 31px),
+0px: (16px, 28px),
+1024px: (18px, 31px),
 );
 $p: (
 0px: (16px, 26px),
@@ -110,6 +112,14 @@ $input: (
 .icon-caret_down {
   @extend .icon;
   content: "\e904";
+}
+.icon-caret_left {
+  @extend .icon;
+  content: "\e908";
+}
+.icon-caret_right {
+  @extend .icon;
+  content: "\e909";
 }
 .icon-cross {
   @extend .icon;

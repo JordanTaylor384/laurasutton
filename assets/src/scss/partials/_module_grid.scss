@@ -1,5 +1,6 @@
 $grid: (
-0px: (36px, 50px)
+0px: (26px, 37px),
+10240px: (36px, 50px),
 );
 
 .module__grid {
@@ -14,8 +15,14 @@ $grid: (
   }
   &__grid {
     @include display-grid;
-    @include display-grid-columns(1fr 1fr 1fr);
-    @include display-grid-gap(26);
+    @media (min-width: $screen-sm-min) {
+      @include display-grid-columns(1fr 1fr);
+      @include display-grid-gap(26);
+    }
+    @media (min-width: $screen-lg-min) {
+      @include display-grid-columns(1fr 1fr 1fr);
+      @include display-grid-gap(26);
+    }
   }
   &__item {
     background-color: white;

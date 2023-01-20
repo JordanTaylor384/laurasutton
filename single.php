@@ -10,7 +10,11 @@
 get_header(); ?>
 
 <?php
-get_template_part( 'views/view-single-post', 'post' );
+if (get_post_type() == 'portfolio') {
+  get_template_part( 'views/projects/view-single-projects', 'portfolio' );
+} else {
+  get_template_part( 'views/posts/view-single-post', 'post' );
+}
 ?>
 
 <?php get_footer();

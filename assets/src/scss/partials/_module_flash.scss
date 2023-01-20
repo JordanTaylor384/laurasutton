@@ -1,0 +1,53 @@
+$flash: (
+0px: (28px, 40px)
+);
+
+.module__flash {
+  &__inner {
+    padding: 36px 0px;
+    margin-left: -45px;
+    margin-right: -45px;
+    position: relative;
+    &:before,
+    &:after {
+      @extend .icon-star;
+      font-size: 60px;
+      @include center-pos(false, true);
+      color: white;
+    }
+    &:before {
+      left: 45px;
+    }
+    &:after {
+      left: auto;
+      right: 45px;
+    }
+  }
+  &__text {
+    width: 730px;
+    padding: 0 60px;
+    margin: 0 auto;
+    color: $text;
+    text-align: center;
+    p,h1,h2,h3,h4,h5,h6 {
+      @include bebas($flash, 400);
+      @include marginBottom(0);
+    }
+  }
+
+  &--yellow {
+    .module__flash__inner {
+      background-color: $yellow;
+    }
+  }
+  &--orange {
+    .module__flash__inner {
+      background-color: $orange;
+    }
+  }
+  &--teal {
+    .module__flash__inner {
+      background-color: $teal;
+    }
+  }
+}
