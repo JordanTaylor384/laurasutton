@@ -35,6 +35,12 @@
           border-radius: 100%;
           border: 3px solid $lemon;
           padding: 14px;
+          @media (max-width: $screen-xs-max) {
+            padding: 8px;
+            max-width: 200px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+          }
         }
       }
     }

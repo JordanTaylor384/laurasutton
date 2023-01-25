@@ -21,7 +21,8 @@
     }
   }
   &__item {
-    @include marginBottom(30);
+    @include marginBottom(22, 30);
+    padding: 22px 16px;
     @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
       padding: 30px 20px;
     }
@@ -33,15 +34,18 @@
     }
     p {
       @include inter($p, 400);
-      @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+      @media (max-width: $screen-md-max) {
         margin-bottom: 0px !important;
       }
     }
     &__grid {
       display: flex;
-      grid-gap: 47px;
+      grid-gap: 20px;
       @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
         align-items: center;
+      }
+      @media (min-width: $screen-sm-min) {
+        grid-gap: 47px;
       }
     }
     &--grey {
