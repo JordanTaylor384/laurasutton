@@ -1,4 +1,7 @@
 .module__text {
+  @media (max-width: $screen-xs-max) {
+    padding: 30px 0px;
+  }
   p {
     @include inter($intro, 400);
     &.intro-text {
@@ -38,20 +41,26 @@
   }
   &--columns-1 {
     @include display-grid-columns(1fr);
-    padding: 70px 0px 40px 0px;
+    @media (min-width: $screen-sm-min) {
+      padding: 70px 0px 40px 0px;
+    }
     .module__text__grid__col--1 {
       max-width: 678px;
       margin: 0 auto;
     }
   }
   &--columns-2 {
-    @include display-grid-columns(5fr 7fr);
-    @include display-grid-gap(60);
-    padding: 70px 0px 70px 0px;
+    @media (min-width: $screen-sm-min) {
+      @include display-grid-columns(5fr 7fr);
+      @include display-grid-gap(60);
+      padding: 70px 0px 70px 0px;
+    }
   }
   &--columns-img {
-    @include display-grid-columns(4fr 8fr);
-    @include display-grid-gap(90);
-    padding: 70px 0px 70px 0px;
+    @media (min-width: $screen-sm-min) {
+      @include display-grid-columns(4fr 8fr);
+      @include display-grid-gap(90);
+      padding: 70px 0px 70px 0px;
+    }
   }
 }

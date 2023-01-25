@@ -1,14 +1,20 @@
 $accordions: (
-0px: (18px, 36px)
+0px: (17px, 34px),
+768px: (18px, 36px)
 );
 
 .module__accordions {
-  padding: 68px 0px;
+  padding: 40px 0px;
+  @media (min-width: $screen-sm-min) {
+    padding: 68px 0px;
+  }
 
   &__grid {
     @include display-grid;
-    @include display-grid-columns(6fr 6fr);
-    @include display-grid-gap(40);
+    @media (min-width: $screen-sm-min) {
+      @include display-grid-columns(6fr 6fr);
+      @include display-grid-gap(40);
+    }
     @media (min-width: $screen-lg-min) {
       @include display-grid-columns(5fr 7fr);
       @include display-grid-gap(100);
@@ -18,24 +24,32 @@ $accordions: (
     }
   }
 
-  &__intro {
-    @include inter($large-intro, 400);
-    @include marginBottom(50);
+  &__image {
+    @media (max-width: $screen-xs-max) {
+      display: none;
+    }
   }
 
-  &__image {
-
+  &__intro {
+    @include inter($large-intro, 400);
+    @include marginBottom(30, 50);
   }
 
   &__item {
-    margin-left: -20px;
+    @media (min-width: $screen-sm-min) {
+      margin-left: -20px;
+    }
     &__head {
       cursor: pointer;
       border-top: 1px solid #DADADA;
       @include inter($accordions, 500);
-      padding: 18px 20px;
-      padding-right: 50px;
       position: relative;
+      padding: 18px 0px;
+      padding-right: 30px;
+      @media (min-width: $screen-sm-min) {
+        padding: 18px 20px;
+        padding-right: 50px;
+      }
       &:after {
         @extend .icon-caret_down;
         position: absolute;
@@ -46,10 +60,13 @@ $accordions: (
     }
     &__body {
       display: none;
-      padding-bottom: 30px;
-      padding-left: 20px;
       color: #6A6A6A !important;
       @extend .text-styles;
+      padding-bottom: 30px;
+      padding-left: 0;
+      @media (min-width: $screen-sm-min) {
+        padding-left: 20px;
+      }
     }
     &__button {
       @include inter($p, 700);

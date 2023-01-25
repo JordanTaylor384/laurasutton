@@ -1,5 +1,6 @@
 $homepage-header: (
-0px: (42px, 60px),
+0px: (36px, 42px),
+768px: (42px, 60px),
 1024px: (58px, 70px)
 );
 
@@ -8,14 +9,19 @@ $homepage-header: (
   background-image: linear-gradient(to right, rgba($gradient_1, 0.1) , rgba($gradient_2, 0.1));
   color: $black;
   text-align: center;
-  padding: 260px 0px 140px 0px;
+  padding: 160px 0px 90px 0px;
+  @media (min-width: $screen-sm-min) {
+    padding: 260px 0px 140px 0px;
+  }
 
   &__heading {
     @include bebas($homepage-header, 400);
-    max-width: 870px;
-    padding: 0px 60px;
     margin: 0 auto;
     @include marginBottom(50);
+    @media (min-width: $screen-sm-min) {
+      max-width: 870px;
+      padding: 0px 60px;
+    }
   }
   &__button {
     @extend .btn--block;

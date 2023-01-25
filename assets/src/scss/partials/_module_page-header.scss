@@ -1,12 +1,16 @@
 $page-header: (
-0px: (36px, 44px)
+0px: (24px, 34px),
+768px: (36px, 44px),
 );
 
 .module__page-header {
-  height: 300px;
   position: relative;
   background-image: linear-gradient(to right, rgba($gradient_1, 0.1) , rgba($gradient_2, 0.1));
   color: $black;
+  height: 240px;
+  @media (min-width: $screen-sm-min) {
+    height: 300px;
+  }
 
   &__title {
     @include center-pos(true, false);

@@ -1,11 +1,16 @@
 .module__posts,
 .module__projects {
   position: relative;
-  padding: 90px 0px;
+  padding: 40px 0px;
+  @media (min-width: $screen-sm-min) {
+    padding: 90px 0px;
+  }
   &__grid {
     @include display-grid;
-    @include display-grid-columns(1fr 1fr);
-    @include display-grid-gap(60);
+    @media (min-width: $screen-sm-min) {
+      @include display-grid-columns(1fr 1fr);
+      @include display-grid-gap(60);
+    }
     @media (min-width: $screen-lg-min) {
       @include display-grid-gap(95);
     }
@@ -16,10 +21,13 @@
   }
   &__background {
     position: absolute;
-    height: 66.666%;
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 100%;
+    @media (min-width: $screen-sm-min) {
+      height: 66.666%;
+    }
   }
 
   &--orange {
@@ -53,16 +61,24 @@
 
   &__featured {
     background-color: $lemon;
-    padding: 100px 0px 0px 0px;
+    padding: 40px 0px 30px 0px;
+    @media (min-width: $screen-sm-min) {
+      padding: 100px 0px 60px 0px;
+    }
     .post__item {
       @include marginBottom(60);
       a {
-        @include display-grid;
-        @include display-grid-columns(1fr 1fr);
-        @include display-grid-gap(60);
+        @media (min-width: $screen-sm-min) {
+          @include display-grid;
+          @include display-grid-columns(1fr 1fr);
+          @include display-grid-gap(60);
+        }
         @media (min-width: $screen-lg-min) {
           @include display-grid-gap(95);
         }
+      }
+      &__image {
+        height: fit-content;
       }
     }
   }
@@ -70,22 +86,31 @@
     padding: 0;
     .module__posts__grid,
     .module__projects__grid {
-      padding: 90px 0px;
+      padding: 40px 0px;
+      @media (min-width: $screen-sm-min) {
+        padding: 90px 0px;
+      }
     }
     .post__item {
       @include marginBottom(60);
     }
   }
+
+
+  .post__item {
+    @include marginBottom(30, 30, 30, 0);
+  }
 }
 
 $post-title: (
-0px: (30px, 42px)
+0px: (24px, 34px),
+768px: (30px, 42px)
 );
 
 .post__item {
   &__image {
     box-shadow: 6px 6px 0px -2px $orange;
-    @include marginBottom(24);
+    @include marginBottom(30, 24);
   }
   &__title {
     @include bebas($post-title, 700);
@@ -101,15 +126,20 @@ $post-title: (
 }
 
 $single-title: (
-0px: (60px, 72px)
+0px: (36px, 44px),
+768px: (60px, 72px),
 );
 $single-back: (
 0px: (24px, 34px)
 );
 
 .article {
-  padding: 218px 0px 60px 0px;
   @extend .text-styles;
+  padding: 190px 0px 60px 0px;
+
+  @media (min-width: $screen-sm-min) {
+    padding: 218px 0px 60px 0px;
+  }
   .container {
     @media (min-width: $screen-lg-min) {
       max-width: 678px;
@@ -136,6 +166,12 @@ $single-back: (
   }
 }
 
+$related: (
+0px: (24px, 34px),
+768px: (26px, 37px),
+10240px: (36px, 50px),
+);
+
 .module__related {
   border-top: 1px solid #CACACA;
   padding: 70px 0px 40px 0px;
@@ -143,6 +179,7 @@ $single-back: (
     padding: 40px 0px;
   }
   &__grid {
+    grid-gap: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -153,7 +190,7 @@ $single-back: (
       @include bebas($large-intro, 700);
     }
     a {
-      @include bebas($heading, 700);
+      @include bebas($related, 700);
     }
     &--prev a,
     &--next a {
@@ -169,7 +206,7 @@ $single-back: (
         @extend .icon-caret_left;
         @media (max-width: $screen-md-max) {
           position: absolute;
-          top: -50px;
+          top: -55px;
           left: -5px;
         }
         @media (min-width: $screen-lg-min) {
@@ -184,9 +221,13 @@ $single-back: (
     &--next a {
       &:before {
         @extend .icon-caret_right;
-        @include center-pos(false, true);
-        right: 0;
+        @media (max-width: $screen-md-max) {
+          position: absolute;
+          top: -55px;
+          right: -5px;
+        }
         @media (min-width: $screen-lg-min) {
+          @include center-pos(false, true);
           right: -60px;
         }
       }

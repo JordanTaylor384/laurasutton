@@ -2,14 +2,21 @@
   position: relative;
   background-image: linear-gradient(to right, rgba($gradient_1, 0.1) , rgba($gradient_2, 0.1));
   color: $black;
-  padding: 230px 0px 200px 0px;
+  padding: 180px 0px 90px 0px;
+  @media (min-width: $screen-sm-min) {
+    padding: 230px 0px 200px 0px;
+  }
   .container {
     max-width: 620px;
   }
   &__form {
     background-color: white;
-    padding: 60px 50px;
     box-shadow: 5px 5px 0px 0px $black;
+    padding: 40px 22px;
+    @media (min-width: $screen-sm-min) {
+      padding: 60px 50px;
+    }
+
     input[type="text"],
     input[type="email"],
     input[type="telephone"],
@@ -42,10 +49,13 @@
 
 .input-simple {
   border: 2px solid #EDEDED;
-  padding: 16px 23px;
-  @include marginBottom(30);
+  @include marginBottom(15, 30);
   width: 100%;
   @include inter($input, 500);
+  padding: 12px 18px;
+  @media (min-width: $screen-sm-min) {
+    padding: 16px 23px;
+  }
   @include placeholder() {
     @include inter($input, 400);
     color: $black;
@@ -72,7 +82,7 @@
 }
 
 .selectric-wrapper {
-  @include marginBottom(30);
+  @include marginBottom(15, 30);
 }
 .selectric {
   .label {
@@ -81,7 +91,10 @@
     @include inter($input, 400);
     position: relative;
     border: 2px solid #EDEDED;
-    padding: 16px 23px;
+    padding: 12px 18px;
+    @media (min-width: $screen-sm-min) {
+      padding: 16px 23px;
+    }
     &:after {
       @include center-pos(false, true);
       right: 18px;

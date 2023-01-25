@@ -5,11 +5,18 @@ $flash: (
 .module__flash {
   &__inner {
     padding: 36px 0px;
-    margin-left: -45px;
-    margin-right: -45px;
     position: relative;
+    margin-right: -30px;
+    margin-left: -30px;
+    @media (min-width: $screen-sm-min) {
+      margin-right: -45px;
+      margin-left: -45px;
+    }
     &:before,
     &:after {
+      @media (max-width: $screen-xs-max) {
+        display: none;
+      }
       @extend .icon-star;
       font-size: 60px;
       @include center-pos(false, true);
@@ -24,11 +31,16 @@ $flash: (
     }
   }
   &__text {
-    width: 730px;
-    padding: 0 60px;
     margin: 0 auto;
     color: $text;
     text-align: center;
+    @media (max-width: $screen-xs-max) {
+      padding: 0px 30px;
+    }
+    @media (min-width: $screen-sm-min) {
+      width: 730px;
+      padding: 0 60px;
+    }
     p,h1,h2,h3,h4,h5,h6 {
       @include bebas($flash, 400);
       @include marginBottom(0);

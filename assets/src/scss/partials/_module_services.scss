@@ -1,14 +1,20 @@
 $services: (
-0px: (44px, 48px)
+0px: (32px, 40px),
+768px: (44px, 48px)
 );
 
 .module__services {
   background-color: $teal;
-  padding: 100px 0px 80px 0px;
+  padding: 40px 0px;
+  @media (min-width: $screen-sm-min) {
+    padding: 100px 0px 80px 0px;
+  }
   &__grid {
     @include display-grid;
-    @include display-grid-columns(1fr 1fr 1fr);
-    @include display-grid-gap(28);
+    @media (min-width: $screen-sm-min) {
+      @include display-grid-columns(1fr 1fr 1fr);
+      @include display-grid-gap(28);
+    }
   }
   &__heading {
     @include inter($intro, 400);
@@ -20,16 +26,24 @@ $services: (
     border-top: 5px solid transparent;
     color: white;
     background-color: $teal;
-    height: 260px;
     position: relative;
+    @include marginBottom(40, 0);
     padding-top: 24px;
+    height: 140px;
+    @media (min-width: $screen-sm-min) {
+      padding-top: 24px;
+      height: 260px;
+    }
     &:after {
       @extend .icon-arrow_right;
       color: white;
       font-size: 30px;
       position: absolute;
-      bottom: 0;
       left: 0;
+      bottom: 30px;
+      @media (min-width: $screen-sm-min) {
+        bottom: 0;
+      }
     }
     &--orange {
       border-color: $orange;

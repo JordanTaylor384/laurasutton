@@ -1,20 +1,26 @@
 $content-title: (
-0px: (36px, 58px),
+0px: (28px, 36px),
+768px: (36px, 58px),
 1024px: (42px, 60px)
 );
 
 .module__content-block {
-  padding: 60px 0px;
+  padding: 40px 0px;
+  @media (min-width: $screen-sm-min) {
+    padding: 60px 0px;
+  }
   @media (min-width: $screen-lg-min) {
     padding: 120px 0px;
   }
 
   &__grid {
-    @include display-grid;
-    @include display-grid-columns(1fr 1fr);
-    @include display-grid-areas("left right");
-    @include display-grid-gap(32);
-    @include align-items(center);
+    @media (min-width: $screen-sm-min) {
+      @include display-grid;
+      @include display-grid-columns(1fr 1fr);
+      @include display-grid-areas("left right");
+      @include display-grid-gap(32);
+      @include align-items(center);
+    }
   }
   &--image-right {
     .module__content-block__grid {
@@ -23,7 +29,10 @@ $content-title: (
       }
       .module__content-block__content {
         @include display-grid-area(left);
-        padding-right: 30px;
+        padding-right: 0;
+        @media (min-width: $screen-sm-min) {
+          padding-right: 30px;
+        }
         @media (min-width: $screen-lg-min) {
           padding-right: 50px;
         }
@@ -37,7 +46,10 @@ $content-title: (
       }
       .module__content-block__content {
         @include display-grid-area(right);
-        padding-left: 30px;
+        padding-left: 0px;
+        @media (min-width: $screen-sm-min) {
+          padding-left: 30px;
+        }
         @media (min-width: $screen-lg-min) {
           padding-left: 50px;
         }
@@ -51,6 +63,7 @@ $content-title: (
   }
   &__content {
     @include inter($intro, 400);
+    @include marginBottom(30, 0);
   }
   &__image {
     box-shadow: 6px 6px 0px -2px $orange;

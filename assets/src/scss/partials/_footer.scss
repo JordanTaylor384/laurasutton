@@ -5,18 +5,38 @@ $footer: (
 .site-footer {
   background-color: $dark-grey;
   color: white;
-  padding: 40px 50px 40px 50px;
+  padding: 40px 30px 60px 30px;
+  @media (min-width: $screen-sm-min) {
+    padding: 40px 35px 40px 35px;
+  }
+  @media (min-width: $screen-lg-min) {
+    padding: 40px 50px 40px 50px;
+  }
   &__grid {
     @include display-grid;
-    @include display-grid-columns(1fr 1fr 1fr);
-    @include align-items(end);
+    @media (min-width: $screen-sm-min) {
+      @include display-grid-columns(1fr 1fr 1fr);
+      @include align-items(end);
+    }
 
   }
   &__logo {
     @include inter($footer, 400);
+    @include marginBottom(20, 0);
+    @media (max-width: $screen-xs-max) {
+      display: flex;
+      align-items: center;
+    }
     &__image {
-      display: block;
-      @include marginBottom(10);
+      @include marginBottom(0, 10);
+      display: inline-block;
+      @media (max-width: $screen-xs-max) {
+        padding-right: 20px;
+      }
+      @media (min-width: $screen-sm-min) {
+        display: block;
+      }
+
       &:after {
         @extend .icon-star;
         color: $orange;
@@ -25,20 +45,30 @@ $footer: (
     }
   }
   &__nav {
-    text-align: center;
+    @include marginBottom(30, 0);
+    @media (min-width: $screen-sm-min) {
+      text-align: center;
+    }
     li {
-      display: inline-block;
+      @include marginBottom(10, 0);
+      @media (min-width: $screen-sm-min) {
+        display: inline-block;
+      }
       a {
         @include inter($footer, 400);
       }
       & + li {
-        margin-left: 50px;
+        @media (min-width: $screen-sm-min) {
+          margin-left: 50px;
+        }
       }
     }
   }
   &__socials {
-    @include justify-self(end);
     @extend .socials;
+    @media (min-width: $screen-sm-min) {
+      @include justify-self(end);
+    }
     li {
       display: inline-block;
       & + li {
@@ -75,6 +105,11 @@ $footer: (
 }
 
 .contact-sticky {
+
+  @media (max-width: $screen-xs-max) {
+    display: none;
+  }
+
   position: fixed;
   bottom: 120px;
   right: 60px;

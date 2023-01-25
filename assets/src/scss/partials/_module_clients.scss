@@ -1,5 +1,8 @@
 .module__clients {
-  padding: 48px 0px;
+  padding: 30px 0px;
+  @media (min-width: $screen-sm-min) {
+    padding: 48px 0px;
+  }
   &__heading {
     text-transform: uppercase;
     @include inter($p, 500);

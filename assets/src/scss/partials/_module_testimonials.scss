@@ -1,5 +1,6 @@
 $quote: (
-0px: (28px, 44px),
+0px: (24px, 36px),
+768px: (28px, 44px),
 1024px: (32px, 48px)
 );
 $testimonials-heading: (
@@ -9,8 +10,11 @@ $testimonials-heading: (
 
 .module__testimonials {
   background-image: linear-gradient(to right, rgba($gradient_1, 0.1) , rgba($gradient_2, 0.1));
-  padding: 70px 0px;
   position: relative;
+  padding: 30px 0px;
+  @media (min-width: $screen-sm-min) {
+    padding: 70px 0px;
+  }
 
   &__heading {
     @include bebas($testimonials-heading, 375);
@@ -22,7 +26,10 @@ $testimonials-heading: (
 
   &__item {
     background-color: white;
-    padding: 30px 90px;
+    padding: 30px 30px;
+    @media (min-width: $screen-sm-min) {
+      padding: 30px 90px;
+    }
     @media (min-width: $screen-lg-min) {
       padding: 60px 110px;
     }
@@ -34,12 +41,19 @@ $testimonials-heading: (
     &__image {
       border-radius: 100%;
       border: 1px solid $orange;
-      height: 68px;
-      width: 68px;
+      height: 58px;
+      width: 58px;
+      @media (min-width: $screen-sm-min) {
+        height: 68px;
+        width: 68px;
+      }
     }
     &__name {
-      padding-left: 15px;
       @include inter($p, 400);
+      padding-left: 8px;
+      @media (min-width: $screen-sm-min) {
+        padding-left: 15px;
+      }
     }
     &__quote {
       position: relative;

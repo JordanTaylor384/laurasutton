@@ -1,7 +1,8 @@
 // General
 $title: (
-0px: (36px, 44px),
-10240px: (51px, 59px)
+0px: (29px, 40px),
+768px: (36px, 44px),
+1024px: (51px, 59px)
 );
 $heading: (
 0px: (26px, 37px),
@@ -16,14 +17,17 @@ $intro: (
 1024px: (18px, 31px),
 );
 $p: (
-0px: (16px, 26px),
+0px: (15px, 24px),
+768px: (16px, 26px),
 );
 
 $overlay: (
-0px: (28px, 34px)
+0px: (24px, 28px),
+768px: (28px, 34px),
 );
 $input: (
-0px: (17px, 25px)
+0px: (14px, 22px),
+768px: (17px, 25px),
 );
 
 
