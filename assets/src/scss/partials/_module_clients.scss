@@ -1,4 +1,5 @@
 .module__clients {
+  @extend .clearfix;
   padding: 30px 0px;
   @media (min-width: $screen-sm-min) {
     padding: 48px 0px;
@@ -8,30 +9,56 @@
     @include inter($p, 500);
     letter-spacing: 1px;
     text-align: center;
-    @include marginBottom(30);
+    @include marginBottom(20, 30);
   }
   &__items {
-    max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    grid-gap: 45px;
-    flex-wrap: wrap;
+    @media (max-width: $screen-xs-max) {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-left: 20px;
+      align-items: center;
+      -webkit-overflow-scrolling: touch;
+    }
+    @media (min-width: $screen-sm-min) {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      grid-gap: 45px;
+    }
     @media (min-width: $screen-lg-min) {
+      max-width: 1200px;
       flex-wrap: nowrap;
     }
     img {
+      @media (max-width: $screen-xs-max) {
+        width: 100px;
+        margin-right: 30px;
+      }
       @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
         max-width: 100px;
       }
     }
   }
+
+  &__item {
+    @media (max-width: $screen-xs-max) {
+      flex: 0 0 auto;
+    }
+  }
+
   & + .module__text {
-    .module__text__grid {
+    @media (max-width: $screen-xs-max) {
       padding-top: 20px;
+    }
+    .module__text__grid {
+      @media (min-width: $screen-sm-min) {
+        padding-top: 20px;
+      }
     }
   }
 }

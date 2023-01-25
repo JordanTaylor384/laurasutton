@@ -19,7 +19,7 @@ export function testimonials() {
         autoHeight: true,
         // effect: 'fade',
         speed: 1000,
-        allowTouchMove: false,
+        allowTouchMove: true,
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
