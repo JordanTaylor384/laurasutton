@@ -14,7 +14,7 @@
     z-index: 9;
     padding: 50px 30px 0px 30px;
     pointer-events: none;
-    
+
     @media (min-width: $screen-lg-min) {
       padding: 50px 60px 0px 60px;
     }
@@ -144,7 +144,7 @@
     }
   }
   &__inner {
-    padding: 50px 40px;
+    padding: 60px 40px 50px 40px;
     @media (min-width: $screen-sm-min) {
       padding: 70px 80px 60px 80px;
     }

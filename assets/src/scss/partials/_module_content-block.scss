@@ -64,6 +64,7 @@ $content-title: (
   &__content {
     @include inter($intro, 400);
     @include marginBottom(30, 0);
+    @extend .text-styles;
   }
   &__image {
     box-shadow: 6px 6px 0px -2px $orange;

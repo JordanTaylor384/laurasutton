@@ -206,7 +206,7 @@ strong {
       padding-left: 20px;
       position: relative;
       @include inter($p, 400);
-      @include marginBottom(15);
+      @include marginBottom(8, 15);
       a {
         // text-decoration: underline;
         color: $orange;
