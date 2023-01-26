@@ -45,7 +45,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   // ux.removeTabIndexes();
   // scrollmagic.stickyNav();
   // swiper.init();
-  // autosize.init();
+  _plugins_autosize_js__WEBPACK_IMPORTED_MODULE_3__.init();
   _plugins_swiper_js__WEBPACK_IMPORTED_MODULE_2__.testimonials();
   _js_overlay_js__WEBPACK_IMPORTED_MODULE_4__.init();
   _plugins_selectric_js__WEBPACK_IMPORTED_MODULE_7__.init();

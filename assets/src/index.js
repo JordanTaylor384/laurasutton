@@ -24,7 +24,7 @@ $(function () {
   // ux.removeTabIndexes();
   // scrollmagic.stickyNav();
   // swiper.init();
-  // autosize.init();
+  autosize.init();
   swiper.testimonials();
   overlay.init();
   selectric.init();

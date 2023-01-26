@@ -3051,6 +3051,8 @@ object {
     @media (min-width: 768px) {
       .module__contact__form {
         padding: 60px 50px; } }
+    .module__contact__form textarea {
+      height: 100px; }
     .module__contact__form input[type="submit"],
     .module__contact__form button {
       width: 100%;
@@ -3702,6 +3704,8 @@ object {
     @media (min-width: 768px) {
       .module__contact__form {
         padding: 60px 50px; } }
+    .module__contact__form textarea {
+      height: 100px; }
     .module__contact__form input[type="submit"],
     .module__contact__form button {
       width: 100%;
