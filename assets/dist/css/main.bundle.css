@@ -3346,7 +3346,8 @@ object {
     left: 0;
     width: 100%;
     z-index: 9;
-    padding: 50px 30px 0px 30px; }
+    padding: 50px 30px 0px 30px;
+    pointer-events: none; }
     @media (min-width: 1240px) {
       .site-header__fixed {
         padding: 50px 60px 0px 60px; } }
@@ -3358,14 +3359,15 @@ object {
         padding: 50px 60px 0px 60px; } }
   .site-header__grid {
     display: -ms-grid;
-    -ms-grid-columns: 1fr 1fr; }
+    -ms-grid-columns: 70px 1fr; }
     @supports (display: grid) {
       .site-header__grid {
         display: grid; } }
     @supports (display: grid) {
       .site-header__grid {
-        grid-template-columns: 1fr 1fr; } }
+        grid-template-columns: 70px 1fr; } }
   .site-header__nav-toggle {
+    pointer-events: all;
     -ms-grid-column-align: end;
     background-color: #EE7524;
     border-radius: 100%;
@@ -3396,6 +3398,7 @@ object {
         width: 22px; }
         @media (min-width: 768px) {
           .site-header__nav-toggle .hamburger span {
+            height: 3px;
             width: 30px; } }
         .site-header__nav-toggle .hamburger span:nth-child(2) {
           margin-top: 4.5px; }
@@ -3419,21 +3422,23 @@ object {
       @media (min-width: 768px) {
         .site-header__nav-toggle:hover .hamburger span:nth-child(3) {
           width: 30px; } }
-  .site-header__logo--fixed {
-    display: inline-block;
-    max-width: 38px; }
-    @media (min-width: 768px) {
-      .site-header__logo--fixed {
-        max-width: 70px; } }
-  .site-header__logo--text {
-    max-width: 140px;
-    margin-left: 45px;
-    padding-top: 4px; }
-    @media (min-width: 768px) {
-      .site-header__logo--text {
-        margin-left: 80px;
-        padding-top: 10px;
-        max-width: 224px; } }
+  .site-header__logo {
+    pointer-events: all; }
+    .site-header__logo--fixed {
+      display: inline-block;
+      max-width: 38px; }
+      @media (min-width: 768px) {
+        .site-header__logo--fixed {
+          max-width: 70px; } }
+    .site-header__logo--text {
+      max-width: 140px;
+      margin-left: 45px;
+      padding-top: 4px; }
+      @media (min-width: 768px) {
+        .site-header__logo--text {
+          margin-left: 80px;
+          padding-top: 10px;
+          max-width: 224px; } }
 
 .overlay {
   position: fixed;
@@ -3489,16 +3494,30 @@ object {
     padding: 50px 40px; }
     @media (min-width: 768px) {
       .overlay__inner {
-        padding: 60px 80px; } }
+        padding: 70px 80px 60px 80px; } }
   .overlay__close {
     display: block;
     color: white;
     float: right;
     cursor: pointer;
-    font-size: 24px; }
+    font-size: 24px;
+    position: relative;
+    height: 30px;
+    width: 30px; }
     @media (min-width: 768px) {
       .overlay__close {
         font-size: 30px; } }
+    .overlay__close:after {
+      position: absolute;
+      -webkit-transition: -webkit-transform 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -moz-transition: -moz-transform 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -o-transition: -o-transform 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      transition: transform 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+    .overlay__close:hover:after {
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg); }
   .overlay__menu {
     margin-top: 60px; }
     @media (min-width: 768px) {
@@ -5521,7 +5540,11 @@ object {
       position: absolute;
       top: 30px;
       right: 20px;
-      font-size: 12px; }
+      font-size: 12px;
+      -webkit-transition: -webkit-transform 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -moz-transition: -moz-transform 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -o-transition: -o-transform 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      transition: transform 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
   .module__accordions__item__body {
     display: none;
     color: #6A6A6A !important;
@@ -5550,6 +5573,11 @@ object {
         line-height: 26px; } }
   .module__accordions__item:nth-child(1) .module__accordions__item__head {
     border-top: 0; }
+  .module__accordions__item--active .module__accordions__item__head:after {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
   .module__accordions--teal {
     background-color: #2A7080;
     color: white; }

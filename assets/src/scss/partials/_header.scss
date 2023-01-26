@@ -13,6 +13,8 @@
     width: 100%;
     z-index: 9;
     padding: 50px 30px 0px 30px;
+    pointer-events: none;
+    
     @media (min-width: $screen-lg-min) {
       padding: 50px 60px 0px 60px;
     }
@@ -26,9 +28,10 @@
   }
   &__grid {
     @include display-grid;
-    @include display-grid-columns(1fr 1fr );
+    @include display-grid-columns(70px 1fr);
   }
   &__nav-toggle {
+    pointer-events: all;
     @include justify-self(end);
     background-color: $orange;
     border-radius: 100%;
@@ -50,6 +53,7 @@
         height: 2px;
         width: 22px;
         @media (min-width: $screen-sm-min) {
+          height: 3px;
           width: 30px;
         }
         &:nth-child(2) {
@@ -89,6 +93,7 @@
     }
   }
   &__logo {
+    pointer-events: all;
     &--fixed {
       display: inline-block;
       max-width: 38px;
@@ -141,7 +146,7 @@
   &__inner {
     padding: 50px 40px;
     @media (min-width: $screen-sm-min) {
-      padding: 60px 80px;
+      padding: 70px 80px 60px 80px;
     }
   }
   &__close {
@@ -150,11 +155,21 @@
     float: right;
     cursor: pointer;
     font-size: 24px;
+    position: relative;
+    height: 30px;
+    width: 30px;
     @media (min-width: $screen-sm-min) {
       font-size: 30px;
     }
     &:after {
       @extend .icon-cross;
+      position: absolute;
+      @include transition(transform $transition);
+    }
+    &:hover {
+      &:after {
+        @include transform(rotate(90deg));
+      }
     }
   }
   &__menu {

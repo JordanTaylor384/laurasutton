@@ -56,6 +56,7 @@ $accordions: (
         top: 30px;
         right: 20px;
         font-size: 12px;
+        @include transition(transform $transition);
       }
     }
     &__body {
@@ -77,6 +78,14 @@ $accordions: (
     &:nth-child(1) {
       .module__accordions__item__head {
         border-top: 0;
+      }
+    }
+
+    &--active {
+      .module__accordions__item__head {
+        &:after {
+          @include transform(rotate(180deg));
+        }
       }
     }
   }
