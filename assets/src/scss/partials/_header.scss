@@ -131,6 +131,12 @@
   &--open {
     right: 0;
     pointer-events: all;
+    .overlay__menu li {
+      opacity: 1;
+      transform:translateX(0);
+      @include transition(opacity $transition, transform $transition);
+      @include animationDelay();
+    }
   }
   &__inner {
     padding: 50px 40px;
@@ -156,6 +162,8 @@
     li {
       @include inter($overlay, 400);
       color: white;
+      opacity: 0;
+      transform:translateX(20px);
       @include marginBottom(15, 30);
     }
   }

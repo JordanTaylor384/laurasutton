@@ -3458,6 +3458,33 @@ object {
   .overlay--open {
     right: 0;
     pointer-events: all; }
+    .overlay--open .overlay__menu li {
+      opacity: 1;
+      transform: translateX(0);
+      -webkit-transition: opacity 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), -webkit-transform 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -moz-transition: opacity 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), -moz-transform 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -o-transition: opacity 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), -o-transform 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      transition: opacity 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955), transform 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+      .overlay--open .overlay__menu li:nth-child(1) {
+        transition-delay: 150ms; }
+      .overlay--open .overlay__menu li:nth-child(2) {
+        transition-delay: 300ms; }
+      .overlay--open .overlay__menu li:nth-child(3) {
+        transition-delay: 450ms; }
+      .overlay--open .overlay__menu li:nth-child(4) {
+        transition-delay: 600ms; }
+      .overlay--open .overlay__menu li:nth-child(5) {
+        transition-delay: 750ms; }
+      .overlay--open .overlay__menu li:nth-child(6) {
+        transition-delay: 900ms; }
+      .overlay--open .overlay__menu li:nth-child(7) {
+        transition-delay: 1050ms; }
+      .overlay--open .overlay__menu li:nth-child(8) {
+        transition-delay: 1200ms; }
+      .overlay--open .overlay__menu li:nth-child(9) {
+        transition-delay: 1350ms; }
+      .overlay--open .overlay__menu li:nth-child(10) {
+        transition-delay: 1500ms; }
   .overlay__inner {
     padding: 50px 40px; }
     @media (min-width: 768px) {
@@ -3491,6 +3518,8 @@ object {
       font-weight: 400;
       font-style: normal;
       color: white;
+      opacity: 0;
+      transform: translateX(20px);
       margin-bottom: 15px; }
       @media (min-width: 0px) {
         .overlay__menu li {
