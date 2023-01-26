@@ -41,7 +41,8 @@ $testimonials-heading: (
     }
     &__image {
       border-radius: 100%;
-      border: 1px solid $orange;
+      border: 2px solid $orange;
+      padding: 4px;
       height: 58px;
       width: 58px;
       @media (min-width: $screen-sm-min) {

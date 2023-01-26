@@ -4049,7 +4049,8 @@ object {
           grid-template-columns: 70px 1fr; } }
     .module__testimonials__item__image {
       border-radius: 100%;
-      border: 1px solid #EE7524;
+      border: 2px solid #EE7524;
+      padding: 4px;
       height: 58px;
       width: 58px; }
       @media (min-width: 768px) {
