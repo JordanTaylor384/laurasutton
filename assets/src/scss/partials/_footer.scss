@@ -56,6 +56,10 @@ $footer: (
       }
       a {
         @include inter($footer, 400);
+        @include transition(color $transition);
+        &:hover {
+          color: $orange;
+        }
       }
       & + li {
         @media (min-width: $screen-sm-min) {

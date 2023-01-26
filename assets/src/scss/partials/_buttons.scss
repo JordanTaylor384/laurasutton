@@ -6,13 +6,23 @@ $button: (
   border: 0;
   &--block {
     box-shadow: 5px 5px 0px 0px $black;
-    padding: 10px 16px 10px 16px;
     text-align: center;
     min-width: 160px;
     @include inter($button, 700);
+    padding: 10px 16px 10px 16px;
+    @media (min-width: $screen-lg-min) {
+      padding: 14px 16px 14px 16px;
+    }
   }
   &--orange {
+    border: 3px solid transparent;
     background-color: $orange;
     color: white;
+    @include transition(background-color $transition, color $transition, border-color $transition);
+    &:hover {
+      background-color: white;
+      color: $orange;
+      border-color: $orange;
+    }
   }
 }
