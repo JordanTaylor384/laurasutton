@@ -2970,7 +2970,7 @@ object {
   src: url("../../fonts/icomoon/icomoon.eot?#iefix") format("eot"), url("../../fonts/icomoon/icomoon.woff") format("woff"), url("../../fonts/icomoon/icomoon.ttf") format("truetype"), url("../../fonts/icomoon/icomoon.svg#icomoon") format("svg");
   /* Legacy iOS */ }
 
-[class^="icon-"], [class*=" icon-"], .icon, .icon-twitter, .socials a.twitter:after, .site-footer__socials a.twitter:after, .icon-linkedin, .socials a.linkedin:after, .site-footer__socials a.linkedin:after, .icon-star, .site-footer__logo__image:after, .contact-sticky__button:before, .module__flash__inner:before, .module__flash__inner:after, .icon-arrow_right, .module__services__item:after, .icon-arrow_left, .article__back:before, .icon-triangle_down, .selectric .label:after, .icon-caret_down, .module__accordions__item__head:after, .icon-caret_left, .module__related__item--prev a:before, .icon-caret_right, .module__related__item--next a:before, .icon-cross, .overlay__close:after {
+[class^="icon-"], [class*=" icon-"], .icon, .icon-twitter, .socials a.twitter:after, .site-footer__socials a.twitter:after, .icon-linkedin, .socials a.linkedin:after, .site-footer__socials a.linkedin:after, .icon-star, .site-footer__logo__image:after, .contact-sticky__button:before, .module__flash__inner:before, .module__flash__inner:after, .icon-arrow_right, .module__services__item:after, .icon-arrow_left, .article__back:before, .icon-quote_top, .module__testimonials__item__quote:before, .icon-quote_bottom, .module__testimonials__item__quote:after, .icon-triangle_down, .selectric .label:after, .icon-caret_down, .module__accordions__item__head:after, .icon-caret_left, .module__related__item--prev a:before, .icon-caret_right, .module__related__item--next a:before, .icon-cross, .overlay__close:after {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons' !important;
   speak: none;
@@ -2997,6 +2997,12 @@ object {
 
 .icon-arrow_left, .article__back:before {
   content: "\e903"; }
+
+.icon-quote_top, .module__testimonials__item__quote:before {
+  content: "\e90b"; }
+
+.icon-quote_bottom, .module__testimonials__item__quote:after {
+  content: "\e90a"; }
 
 .icon-triangle_down, .selectric .label:after {
   content: "\e906"; }
@@ -4166,19 +4172,17 @@ object {
           .module__testimonials__item__quote p {
             font-size: 32px !important;
             line-height: 48px; } }
+      .module__testimonials__item__quote:before, .module__testimonials__item__quote:after {
+        font-size: 26px; }
       .module__testimonials__item__quote:before {
         position: absolute;
-        top: -30px;
-        left: -50px;
-        content: "\0022";
-        font-size: 70px;
+        top: 0px;
+        left: -60px;
         color: #EE7524; }
       .module__testimonials__item__quote:after {
         position: absolute;
-        bottom: -50px;
+        bottom: 0px;
         right: -50px;
-        content: "\0022";
-        font-size: 70px;
         color: #EE7524; }
 
 .swiper-pagination {

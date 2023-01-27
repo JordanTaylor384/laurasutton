@@ -109,6 +109,15 @@ $input: (
   content: "\e903";
 }
 
+.icon-quote_top {
+  @extend .icon;
+  content: "\e90b";
+}
+.icon-quote_bottom {
+  @extend .icon;
+  content: "\e90a";
+}
+
 .icon-triangle_down {
   @extend .icon;
   content: "\e906";
