@@ -27,7 +27,7 @@ $testimonials-heading: (
 
   &__item {
     background-color: white;
-    padding: 30px 30px;
+    padding: 80px 30px 50px 30px;
     @media (min-width: $screen-sm-min) {
       padding: 30px 90px;
     }
@@ -69,16 +69,23 @@ $testimonials-heading: (
       &:before {
         @extend .icon-quote_top;
         position: absolute;
-        top: 0px;
-        left: -60px;
         color: $orange;
+        top: -36px;
+        @media (min-width: $screen-sm-min) {
+          top: 0px;
+          left: -60px;
+        }
       }
       &:after {
         @extend .icon-quote_bottom;
         position: absolute;
-        bottom: 0px;
-        right: -50px;
         color: $orange;
+        bottom: -10px;
+        right: 0;
+        @media (min-width: $screen-sm-min) {
+          bottom: 0px;
+          right: -50px;
+}
       }
     }
   }
