@@ -9,6 +9,14 @@
     }
   }
 
+  &__heading {
+    @include bebas($testimonials-heading, 375);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    @include marginBottom(0);
+    text-align: center;
+  }
+
   &__grid {
     @include display-grid();
     &__col {

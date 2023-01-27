@@ -1,3 +1,8 @@
+$heading-contact: (
+0px: (26px, 37px),
+768px: (36px, 50px),
+);
+
 .module__contact {
   position: relative;
   background-image: linear-gradient(to right, rgba($gradient_1, 0.1) , rgba($gradient_2, 0.1));
@@ -39,7 +44,7 @@
     }
   }
   &__heading {
-    @include bebas($heading, 700);
+    @include bebas($heading-contact, 700);
     @include marginBottom(15);
     text-align: center;
   }

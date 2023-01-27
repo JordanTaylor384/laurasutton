@@ -1,6 +1,12 @@
 <section class="module__text">
   <div class="container">
 
+    <?php if (get_sub_field('heading')): ?>
+      <div class="module__text__heading">
+        <?=the_sub_field('heading');?>
+      </div>
+    <?php endif; ?>
+
     <div class="module__text__grid <?=the_sub_field('columns');?>">
 
       <?php if (get_sub_field('img')): ?>
