@@ -67,7 +67,7 @@ $content-title: (
     @extend .text-styles;
   }
   &__image {
-    box-shadow: 6px 6px 0px -2px $orange;
+    box-shadow: 6px 6px 0px -2px $orange-offset;
   }
   &__link {
   @extend .btn--text;
