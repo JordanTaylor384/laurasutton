@@ -70,10 +70,7 @@ $content-title: (
     box-shadow: 6px 6px 0px -2px $orange;
   }
   &__link {
-    @include inter($p, 700);
-    display: table;
-    position: relative;
-    border-bottom: 4px solid $orange;
+  @extend .btn--text;
     & + .module__content-block__link {
       @include marginTop(10);
     }
@@ -95,14 +92,18 @@ $content-title: (
     background-color: $orange;
     color: white;
     .module__content-block__link {
-      border-bottom: 4px solid white;
+      &:after {
+        background-color: white;
+      }
     }
   }
   &--yellow {
     background-color: $lemon;
     color: $black;
     .module__content-block__link {
-      border-bottom: 4px solid white;
+      &:after {
+        background-color: white;
+      }
     }
   }
 }

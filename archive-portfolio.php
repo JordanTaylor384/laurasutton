@@ -91,6 +91,19 @@ get_header();
 		</div>
 	</div>
 
+
+	<?php // check if the flexible content field has rows of data ?>
+	<?php $post_id = get_option('page_for_posts'); ?>
+	<?php if (have_rows('module', 14)): ?>
+		<?php // loop through the rows of data ?>
+		<?php while (have_rows('module', 14)) : the_row();?>
+			<?php if (get_row_layout() == 'calltoaction'): ?>
+				<?php get_template_part( 'views/module-calltoaction', 'calltoaction' ); ?>
+			<?php endif; ?>
+
+		<?php endwhile; ?>
+	<?php endif; ?>
+
 </div>
 
 <?php

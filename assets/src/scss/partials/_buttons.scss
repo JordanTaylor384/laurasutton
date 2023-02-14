@@ -4,6 +4,27 @@ $button: (
 
 .btn {
   border: 0;
+  &--text {
+    @include inter($p, 700);
+    display: table;
+    position: relative;
+    // border-bottom: 4px solid $orange;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      background-color: $orange;
+      height: 4px;
+      @include transition(width $transition);
+    }
+    &:hover {
+      &:after {
+        width: calc(100% + 20px);
+      }
+    }
+  }
   &--block {
     box-shadow: 5px 5px 0px 0px $black;
     text-align: center;
