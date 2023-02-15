@@ -23,7 +23,6 @@
               </a>
             <?php endif; ?>
 
-
           <?php endwhile; ?>
         <?php endif; ?>
       </div>
@@ -32,7 +31,6 @@
         <?php $image = get_sub_field('image');?>
         <img src="<?=$image['url'];?>" alt="<?=$image['title'];?>" />
       </div>
-
 
     </div>
   </div>

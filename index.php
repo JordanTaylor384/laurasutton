@@ -23,7 +23,7 @@ $args = array(
 	'post_type' => 'post',
 	'paged' => get_query_var( 'paged' ),
 	'orderby' => 'post_date',
-	'posts_per_page' => 9,
+	'posts_per_page' => 10,
 	'order' => 'DESC',
 );
 $wp_query = new WP_Query($args);

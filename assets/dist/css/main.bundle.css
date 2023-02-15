@@ -4470,10 +4470,9 @@ object {
     z-index: 10;
     pointer-events: none;
     opacity: 0;
-    max-width: calc(100% - 40px); }
-    @media (max-width: 991px) {
-      .module__content-block__modal {
-        width: 100%; } }
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%; }
     .module__content-block__modal--active {
       pointer-events: all;
       opacity: 1; }
@@ -4481,14 +4480,19 @@ object {
       background-color: white;
       border: 3px solid #EE7524;
       box-shadow: 6px 6px 0px -2px #EE7524;
-      position: relative;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: fixed;
       height: 560px;
       width: 100%;
-      max-width: 720px;
       overflow-y: scroll;
-      padding: 20px 40px 20px 20px; }
+      padding: 20px 40px 20px 20px;
+      max-width: calc(100% - 30px); }
       @media (min-width: 768px) {
         .module__content-block__modal__inner {
+          max-width: 720px;
           padding: 30px 90px 30px 50px; } }
     .module__content-block__modal__close {
       color: #EE7524;

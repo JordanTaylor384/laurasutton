@@ -116,10 +116,10 @@ $content-title: (
     z-index: 10;
     pointer-events: none;
     opacity: 0;
-    max-width: calc(100% - 40px);
-    @media (max-width: $screen-sm-max) {
-      width: 100%;
-    }
+    // max-width: calc(100% - 40px);
+    background-color: rgba(black, 0.5);
+    height: 100%;
+    width: 100%;
     &--active {
       pointer-events: all;
       opacity: 1;
@@ -130,13 +130,16 @@ $content-title: (
       border: 3px solid $orange;
       box-shadow: 6px 6px 0px -2px $orange;
       @extend .text-styles;
-      position: relative;
+      // position: relative;
+      @include center-pos();
+      position: fixed;
       height: 560px;
       width: 100%;
-      max-width: 720px;
       overflow-y: scroll;
       padding: 20px 40px 20px 20px;
+      max-width: calc(100% - 30px);
       @media (min-width: $screen-sm-min) {
+        max-width: 720px;
         padding: 30px 90px 30px 50px;
       }
     }
