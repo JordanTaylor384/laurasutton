@@ -67,10 +67,12 @@ $content-title: (
     @extend .text-styles;
   }
   &__image {
-    box-shadow: 6px 6px 0px -2px $orange-offset;
+    box-shadow: 6px 6px 0px -2px $orange;
   }
-  &__link {
-  @extend .btn--text;
+  &__link,
+  &__open {
+    cursor: pointer;
+    @extend .btn--text;
     & + .module__content-block__link {
       @include marginTop(10);
     }
@@ -106,6 +108,67 @@ $content-title: (
       }
     }
   }
+
+
+  &__modal {
+    @include center-pos();
+    position: fixed;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    width: 100%;
+    max-width: calc(100% - 40px);
+    &--active {
+      pointer-events: all;
+      opacity: 1;
+    }
+    &__inner {
+      background-color: white;
+      color: $orange;
+      border: 3px solid $orange;
+      box-shadow: 6px 6px 0px -2px $orange;
+      @extend .text-styles;
+      position: relative;
+      height: 560px;
+      width: 100%;
+      max-width: 720px;
+      overflow-y: scroll;
+      padding: 20px 40px 20px 20px;
+      @media (min-width: $screen-sm-min) {
+        padding: 30px 90px 30px 50px;
+      }
+    }
+    &__close {
+      color: $orange;
+      position: fixed;
+      cursor: pointer;
+      top: 30px;
+      right: 14px;
+      height: 24px;
+      width: 24px;
+      @media (min-width: $screen-sm-min) {
+        top: 40px;
+        right: 42px;
+        height: 30px;
+        width: 30px;
+      }
+      &:after {
+        @extend .icon-cross;
+        position: absolute;
+        @include transition(transform $transition);
+        font-size: 24px;
+        @media (min-width: $screen-sm-min) {
+          font-size: 30px;
+        }
+      }
+      &:hover {
+        &:after {
+          @include transform(rotate(90deg));
+        }
+      }
+    }
+  }
+
 }
 
 #content {

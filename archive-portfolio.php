@@ -91,7 +91,6 @@ get_header();
 		</div>
 	</div>
 
-
 	<?php // check if the flexible content field has rows of data ?>
 	<?php $post_id = get_option('page_for_posts'); ?>
 	<?php if (have_rows('module', 14)): ?>

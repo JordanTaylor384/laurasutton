@@ -2970,7 +2970,7 @@ object {
   src: url("../../fonts/icomoon/icomoon.eot?#iefix") format("eot"), url("../../fonts/icomoon/icomoon.woff") format("woff"), url("../../fonts/icomoon/icomoon.ttf") format("truetype"), url("../../fonts/icomoon/icomoon.svg#icomoon") format("svg");
   /* Legacy iOS */ }
 
-[class^="icon-"], [class*=" icon-"], .icon, .icon-twitter, .socials a.twitter:after, .site-footer__socials a.twitter:after, .icon-linkedin, .socials a.linkedin:after, .site-footer__socials a.linkedin:after, .icon-star, .site-footer__logo__image:after, .contact-sticky__button:before, .module__flash__inner:before, .module__flash__inner:after, .icon-arrow_right, .module__services__item:after, .icon-arrow_left, .article__back:before, .icon-quote_top, .module__testimonials__item__quote:before, .icon-quote_bottom, .module__testimonials__item__quote:after, .icon-triangle_down, .selectric .label:after, .icon-caret_down, .module__accordions__item__head:after, .icon-caret_left, .module__related__item--prev a:before, .icon-caret_right, .module__related__item--next a:before, .icon-cross, .overlay__close:after {
+[class^="icon-"], [class*=" icon-"], .icon, .icon-twitter, .socials a.twitter:after, .site-footer__socials a.twitter:after, .icon-linkedin, .socials a.linkedin:after, .site-footer__socials a.linkedin:after, .icon-star, .site-footer__logo__image:after, .contact-sticky__button:before, .module__flash__inner:before, .module__flash__inner:after, .icon-arrow_right, .module__services__item:after, .icon-arrow_left, .article__back:before, .icon-quote_top, .module__testimonials__item__quote:before, .icon-quote_bottom, .module__testimonials__item__quote:after, .icon-triangle_down, .selectric .label:after, .icon-caret_down, .module__accordions__item__head:after, .icon-caret_left, .module__related__item--prev a:before, .icon-caret_right, .module__related__item--next a:before, .icon-cross, .overlay__close:after, .module__content-block__modal__close:after {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons' !important;
   speak: none;
@@ -3016,12 +3016,12 @@ object {
 .icon-caret_right, .module__related__item--next a:before {
   content: "\e909"; }
 
-.icon-cross, .overlay__close:after {
+.icon-cross, .overlay__close:after, .module__content-block__modal__close:after {
   content: "\e905"; }
 
 .btn {
   border: 0; }
-  .btn--text, .module__content-block__link {
+  .btn--text, .module__content-block__link, .module__content-block__open {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -3031,14 +3031,14 @@ object {
     display: table;
     position: relative; }
     @media (min-width: 0px) {
-      .btn--text, .module__content-block__link {
+      .btn--text, .module__content-block__link, .module__content-block__open {
         font-size: 15px !important;
         line-height: 24px; } }
     @media (min-width: 768px) {
-      .btn--text, .module__content-block__link {
+      .btn--text, .module__content-block__link, .module__content-block__open {
         font-size: 16px !important;
         line-height: 26px; } }
-    .btn--text:after, .module__content-block__link:after {
+    .btn--text:after, .module__content-block__link:after, .module__content-block__open:after {
       content: "";
       position: absolute;
       bottom: -3px;
@@ -3050,7 +3050,7 @@ object {
       -moz-transition: width 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
       -o-transition: width 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
       transition: width 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-    .btn--text:hover:after, .module__content-block__link:hover:after {
+    .btn--text:hover:after, .module__content-block__link:hover:after, .module__content-block__open:hover:after {
       width: calc(100% + 20px); }
   .btn--block, .module__contact__form input[type="submit"],
   .module__contact__form button, .module__calltoaction__button, .module__homepage-header__button, .module__text__grid__col--1 .module__text__button {
@@ -4428,18 +4428,20 @@ object {
       .module__content-block__content {
         margin-bottom: 0px; } }
   .module__content-block__image {
-    box-shadow: 6px 6px 0px -2px #d77431; }
-  .module__content-block__link + .module__content-block__link {
-    margin-top: 10px; }
-    @media (min-width: 768px) {
-      .module__content-block__link + .module__content-block__link {
-        margin-top: 10px; } }
-    @media (min-width: 992px) {
-      .module__content-block__link + .module__content-block__link {
-        margin-top: 10px; } }
-    @media (min-width: 1240px) {
-      .module__content-block__link + .module__content-block__link {
-        margin-top: 10px; } }
+    box-shadow: 6px 6px 0px -2px #EE7524; }
+  .module__content-block__link, .module__content-block__open {
+    cursor: pointer; }
+    .module__content-block__link + .module__content-block__link, .module__content-block__open + .module__content-block__link {
+      margin-top: 10px; }
+      @media (min-width: 768px) {
+        .module__content-block__link + .module__content-block__link, .module__content-block__open + .module__content-block__link {
+          margin-top: 10px; } }
+      @media (min-width: 992px) {
+        .module__content-block__link + .module__content-block__link, .module__content-block__open + .module__content-block__link {
+          margin-top: 10px; } }
+      @media (min-width: 1240px) {
+        .module__content-block__link + .module__content-block__link, .module__content-block__open + .module__content-block__link {
+          margin-top: 10px; } }
   .module__content-block--teal {
     background-color: #2A7080;
     color: white; }
@@ -4459,6 +4461,63 @@ object {
     color: #0E0036; }
     .module__content-block--yellow .module__content-block__link:after {
       background-color: white; }
+  .module__content-block__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    width: 100%;
+    max-width: calc(100% - 40px); }
+    .module__content-block__modal--active {
+      pointer-events: all;
+      opacity: 1; }
+    .module__content-block__modal__inner {
+      background-color: white;
+      color: #EE7524;
+      border: 3px solid #EE7524;
+      box-shadow: 6px 6px 0px -2px #EE7524;
+      position: relative;
+      height: 560px;
+      width: 100%;
+      max-width: 720px;
+      overflow-y: scroll;
+      padding: 20px 40px 20px 20px; }
+      @media (min-width: 768px) {
+        .module__content-block__modal__inner {
+          padding: 30px 90px 30px 50px; } }
+    .module__content-block__modal__close {
+      color: #EE7524;
+      position: fixed;
+      cursor: pointer;
+      top: 30px;
+      right: 14px;
+      height: 24px;
+      width: 24px; }
+      @media (min-width: 768px) {
+        .module__content-block__modal__close {
+          top: 40px;
+          right: 42px;
+          height: 30px;
+          width: 30px; } }
+      .module__content-block__modal__close:after {
+        position: absolute;
+        -webkit-transition: -webkit-transform 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        -moz-transition: -moz-transform 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        -o-transition: -o-transform 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        transition: transform 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        font-size: 24px; }
+        @media (min-width: 768px) {
+          .module__content-block__modal__close:after {
+            font-size: 30px; } }
+      .module__content-block__modal__close:hover:after {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg); }
 
 #content > .module__content-block:first-child {
   padding-top: 230px; }
@@ -5873,7 +5932,7 @@ em, i {
 strong {
   font-weight: 600; }
 
-.text-styles p, .module__content-block__content p, .article p, .module__accordions__item__body p {
+.text-styles p, .module__content-block__content p, .module__content-block__modal__inner p, .article p, .module__accordions__item__body p {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -5882,23 +5941,23 @@ strong {
   font-style: normal;
   margin-bottom: 20px; }
   @media (min-width: 0px) {
-    .text-styles p, .module__content-block__content p, .article p, .module__accordions__item__body p {
+    .text-styles p, .module__content-block__content p, .module__content-block__modal__inner p, .article p, .module__accordions__item__body p {
       font-size: 15px !important;
       line-height: 24px; } }
   @media (min-width: 768px) {
-    .text-styles p, .module__content-block__content p, .article p, .module__accordions__item__body p {
+    .text-styles p, .module__content-block__content p, .module__content-block__modal__inner p, .article p, .module__accordions__item__body p {
       font-size: 16px !important;
       line-height: 26px; } }
   @media (min-width: 768px) {
-    .text-styles p, .module__content-block__content p, .article p, .module__accordions__item__body p {
+    .text-styles p, .module__content-block__content p, .module__content-block__modal__inner p, .article p, .module__accordions__item__body p {
       margin-bottom: 30px; } }
   @media (min-width: 992px) {
-    .text-styles p, .module__content-block__content p, .article p, .module__accordions__item__body p {
+    .text-styles p, .module__content-block__content p, .module__content-block__modal__inner p, .article p, .module__accordions__item__body p {
       margin-bottom: 30px; } }
   @media (min-width: 1240px) {
-    .text-styles p, .module__content-block__content p, .article p, .module__accordions__item__body p {
+    .text-styles p, .module__content-block__content p, .module__content-block__modal__inner p, .article p, .module__accordions__item__body p {
       margin-bottom: 30px; } }
-  .text-styles p a, .module__content-block__content p a, .article p a, .module__accordions__item__body p a {
+  .text-styles p a, .module__content-block__content p a, .module__content-block__modal__inner p a, .article p a, .module__accordions__item__body p a {
     color: #0E0036;
     text-decoration: underline;
     position: relative;
@@ -5906,9 +5965,9 @@ strong {
     -moz-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     -o-transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     transition: color 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-    .text-styles p a:hover, .module__content-block__content p a:hover, .article p a:hover, .module__accordions__item__body p a:hover {
+    .text-styles p a:hover, .module__content-block__content p a:hover, .module__content-block__modal__inner p a:hover, .article p a:hover, .module__accordions__item__body p a:hover {
       color: #EE7524; }
-  .text-styles p.intro-text, .module__content-block__content p.intro-text, .article p.intro-text, .module__accordions__item__body p.intro-text {
+  .text-styles p.intro-text, .module__content-block__content p.intro-text, .module__content-block__modal__inner p.intro-text, .article p.intro-text, .module__accordions__item__body p.intro-text {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -5916,14 +5975,14 @@ strong {
     font-weight: 400;
     font-style: normal; }
     @media (min-width: 0px) {
-      .text-styles p.intro-text, .module__content-block__content p.intro-text, .article p.intro-text, .module__accordions__item__body p.intro-text {
+      .text-styles p.intro-text, .module__content-block__content p.intro-text, .module__content-block__modal__inner p.intro-text, .article p.intro-text, .module__accordions__item__body p.intro-text {
         font-size: 20px !important;
         line-height: 30px; } }
     @media (min-width: 768px) {
-      .text-styles p.intro-text, .module__content-block__content p.intro-text, .article p.intro-text, .module__accordions__item__body p.intro-text {
+      .text-styles p.intro-text, .module__content-block__content p.intro-text, .module__content-block__modal__inner p.intro-text, .article p.intro-text, .module__accordions__item__body p.intro-text {
         font-size: 22px !important;
         line-height: 34px; } }
-    .text-styles p.intro-text strong, .module__content-block__content p.intro-text strong, .article p.intro-text strong, .module__accordions__item__body p.intro-text strong, .text-styles p.intro-text b, .module__content-block__content p.intro-text b, .article p.intro-text b, .module__accordions__item__body p.intro-text b {
+    .text-styles p.intro-text strong, .module__content-block__content p.intro-text strong, .module__content-block__modal__inner p.intro-text strong, .article p.intro-text strong, .module__accordions__item__body p.intro-text strong, .text-styles p.intro-text b, .module__content-block__content p.intro-text b, .module__content-block__modal__inner p.intro-text b, .article p.intro-text b, .module__accordions__item__body p.intro-text b {
       font-family: 'Inter', sans-serif;
       font-weight: 600;
       font-style: normal;
@@ -5931,14 +5990,14 @@ strong {
       font-weight: 600;
       font-style: normal; }
       @media (min-width: 0px) {
-        .text-styles p.intro-text strong, .module__content-block__content p.intro-text strong, .article p.intro-text strong, .module__accordions__item__body p.intro-text strong, .text-styles p.intro-text b, .module__content-block__content p.intro-text b, .article p.intro-text b, .module__accordions__item__body p.intro-text b {
+        .text-styles p.intro-text strong, .module__content-block__content p.intro-text strong, .module__content-block__modal__inner p.intro-text strong, .article p.intro-text strong, .module__accordions__item__body p.intro-text strong, .text-styles p.intro-text b, .module__content-block__content p.intro-text b, .module__content-block__modal__inner p.intro-text b, .article p.intro-text b, .module__accordions__item__body p.intro-text b {
           font-size: 20px !important;
           line-height: 30px; } }
       @media (min-width: 768px) {
-        .text-styles p.intro-text strong, .module__content-block__content p.intro-text strong, .article p.intro-text strong, .module__accordions__item__body p.intro-text strong, .text-styles p.intro-text b, .module__content-block__content p.intro-text b, .article p.intro-text b, .module__accordions__item__body p.intro-text b {
+        .text-styles p.intro-text strong, .module__content-block__content p.intro-text strong, .module__content-block__modal__inner p.intro-text strong, .article p.intro-text strong, .module__accordions__item__body p.intro-text strong, .text-styles p.intro-text b, .module__content-block__content p.intro-text b, .module__content-block__modal__inner p.intro-text b, .article p.intro-text b, .module__accordions__item__body p.intro-text b {
           font-size: 22px !important;
           line-height: 34px; } }
-  .text-styles p.heading-text, .module__content-block__content p.heading-text, .article p.heading-text, .module__accordions__item__body p.heading-text {
+  .text-styles p.heading-text, .module__content-block__content p.heading-text, .module__content-block__modal__inner p.heading-text, .article p.heading-text, .module__accordions__item__body p.heading-text {
     font-family: 'bebas-neue-pro', sans-serif;
     font-weight: medium;
     font-style: normal;
@@ -5946,14 +6005,14 @@ strong {
     font-weight: medium;
     font-style: normal; }
     @media (min-width: 0px) {
-      .text-styles p.heading-text, .module__content-block__content p.heading-text, .article p.heading-text, .module__accordions__item__body p.heading-text {
+      .text-styles p.heading-text, .module__content-block__content p.heading-text, .module__content-block__modal__inner p.heading-text, .article p.heading-text, .module__accordions__item__body p.heading-text {
         font-size: 26px !important;
         line-height: 37px; } }
     @media (min-width: 10240px) {
-      .text-styles p.heading-text, .module__content-block__content p.heading-text, .article p.heading-text, .module__accordions__item__body p.heading-text {
+      .text-styles p.heading-text, .module__content-block__content p.heading-text, .module__content-block__modal__inner p.heading-text, .article p.heading-text, .module__accordions__item__body p.heading-text {
         font-size: 36px !important;
         line-height: 50px; } }
-    .text-styles p.heading-text strong, .module__content-block__content p.heading-text strong, .article p.heading-text strong, .module__accordions__item__body p.heading-text strong, .text-styles p.heading-text b, .module__content-block__content p.heading-text b, .article p.heading-text b, .module__accordions__item__body p.heading-text b {
+    .text-styles p.heading-text strong, .module__content-block__content p.heading-text strong, .module__content-block__modal__inner p.heading-text strong, .article p.heading-text strong, .module__accordions__item__body p.heading-text strong, .text-styles p.heading-text b, .module__content-block__content p.heading-text b, .module__content-block__modal__inner p.heading-text b, .article p.heading-text b, .module__accordions__item__body p.heading-text b {
       font-family: 'bebas-neue-pro', sans-serif;
       font-weight: bold;
       font-style: normal;
@@ -5961,14 +6020,14 @@ strong {
       font-weight: bold;
       font-style: normal; }
       @media (min-width: 0px) {
-        .text-styles p.heading-text strong, .module__content-block__content p.heading-text strong, .article p.heading-text strong, .module__accordions__item__body p.heading-text strong, .text-styles p.heading-text b, .module__content-block__content p.heading-text b, .article p.heading-text b, .module__accordions__item__body p.heading-text b {
+        .text-styles p.heading-text strong, .module__content-block__content p.heading-text strong, .module__content-block__modal__inner p.heading-text strong, .article p.heading-text strong, .module__accordions__item__body p.heading-text strong, .text-styles p.heading-text b, .module__content-block__content p.heading-text b, .module__content-block__modal__inner p.heading-text b, .article p.heading-text b, .module__accordions__item__body p.heading-text b {
           font-size: 26px !important;
           line-height: 37px; } }
       @media (min-width: 10240px) {
-        .text-styles p.heading-text strong, .module__content-block__content p.heading-text strong, .article p.heading-text strong, .module__accordions__item__body p.heading-text strong, .text-styles p.heading-text b, .module__content-block__content p.heading-text b, .article p.heading-text b, .module__accordions__item__body p.heading-text b {
+        .text-styles p.heading-text strong, .module__content-block__content p.heading-text strong, .module__content-block__modal__inner p.heading-text strong, .article p.heading-text strong, .module__accordions__item__body p.heading-text strong, .text-styles p.heading-text b, .module__content-block__content p.heading-text b, .module__content-block__modal__inner p.heading-text b, .article p.heading-text b, .module__accordions__item__body p.heading-text b {
           font-size: 36px !important;
           line-height: 50px; } }
-  .text-styles p.title-text, .module__content-block__content p.title-text, .article p.title-text, .module__accordions__item__body p.title-text {
+  .text-styles p.title-text, .module__content-block__content p.title-text, .module__content-block__modal__inner p.title-text, .article p.title-text, .module__accordions__item__body p.title-text {
     font-family: 'bebas-neue-pro', sans-serif;
     font-weight: medium;
     font-style: normal;
@@ -5979,18 +6038,18 @@ strong {
     font-weight: medium;
     font-style: normal; }
     @media (min-width: 0px) {
-      .text-styles p.title-text, .module__content-block__content p.title-text, .article p.title-text, .module__accordions__item__body p.title-text {
+      .text-styles p.title-text, .module__content-block__content p.title-text, .module__content-block__modal__inner p.title-text, .article p.title-text, .module__accordions__item__body p.title-text {
         font-size: 29px !important;
         line-height: 40px; } }
     @media (min-width: 768px) {
-      .text-styles p.title-text, .module__content-block__content p.title-text, .article p.title-text, .module__accordions__item__body p.title-text {
+      .text-styles p.title-text, .module__content-block__content p.title-text, .module__content-block__modal__inner p.title-text, .article p.title-text, .module__accordions__item__body p.title-text {
         font-size: 36px !important;
         line-height: 44px; } }
     @media (min-width: 1024px) {
-      .text-styles p.title-text, .module__content-block__content p.title-text, .article p.title-text, .module__accordions__item__body p.title-text {
+      .text-styles p.title-text, .module__content-block__content p.title-text, .module__content-block__modal__inner p.title-text, .article p.title-text, .module__accordions__item__body p.title-text {
         font-size: 51px !important;
         line-height: 59px; } }
-    .text-styles p.title-text strong, .module__content-block__content p.title-text strong, .article p.title-text strong, .module__accordions__item__body p.title-text strong, .text-styles p.title-text b, .module__content-block__content p.title-text b, .article p.title-text b, .module__accordions__item__body p.title-text b {
+    .text-styles p.title-text strong, .module__content-block__content p.title-text strong, .module__content-block__modal__inner p.title-text strong, .article p.title-text strong, .module__accordions__item__body p.title-text strong, .text-styles p.title-text b, .module__content-block__content p.title-text b, .module__content-block__modal__inner p.title-text b, .article p.title-text b, .module__accordions__item__body p.title-text b {
       font-family: 'bebas-neue-pro', sans-serif;
       font-weight: medium;
       font-style: normal;
@@ -6001,42 +6060,42 @@ strong {
       font-weight: medium;
       font-style: normal; }
       @media (min-width: 0px) {
-        .text-styles p.title-text strong, .module__content-block__content p.title-text strong, .article p.title-text strong, .module__accordions__item__body p.title-text strong, .text-styles p.title-text b, .module__content-block__content p.title-text b, .article p.title-text b, .module__accordions__item__body p.title-text b {
+        .text-styles p.title-text strong, .module__content-block__content p.title-text strong, .module__content-block__modal__inner p.title-text strong, .article p.title-text strong, .module__accordions__item__body p.title-text strong, .text-styles p.title-text b, .module__content-block__content p.title-text b, .module__content-block__modal__inner p.title-text b, .article p.title-text b, .module__accordions__item__body p.title-text b {
           font-size: 29px !important;
           line-height: 40px; } }
       @media (min-width: 768px) {
-        .text-styles p.title-text strong, .module__content-block__content p.title-text strong, .article p.title-text strong, .module__accordions__item__body p.title-text strong, .text-styles p.title-text b, .module__content-block__content p.title-text b, .article p.title-text b, .module__accordions__item__body p.title-text b {
+        .text-styles p.title-text strong, .module__content-block__content p.title-text strong, .module__content-block__modal__inner p.title-text strong, .article p.title-text strong, .module__accordions__item__body p.title-text strong, .text-styles p.title-text b, .module__content-block__content p.title-text b, .module__content-block__modal__inner p.title-text b, .article p.title-text b, .module__accordions__item__body p.title-text b {
           font-size: 36px !important;
           line-height: 44px; } }
       @media (min-width: 1024px) {
-        .text-styles p.title-text strong, .module__content-block__content p.title-text strong, .article p.title-text strong, .module__accordions__item__body p.title-text strong, .text-styles p.title-text b, .module__content-block__content p.title-text b, .article p.title-text b, .module__accordions__item__body p.title-text b {
+        .text-styles p.title-text strong, .module__content-block__content p.title-text strong, .module__content-block__modal__inner p.title-text strong, .article p.title-text strong, .module__accordions__item__body p.title-text strong, .text-styles p.title-text b, .module__content-block__content p.title-text b, .module__content-block__modal__inner p.title-text b, .article p.title-text b, .module__accordions__item__body p.title-text b {
           font-size: 51px !important;
           line-height: 59px; } }
 
-.text-styles img, .module__content-block__content img, .article img, .module__accordions__item__body img {
+.text-styles img, .module__content-block__content img, .module__content-block__modal__inner img, .article img, .module__accordions__item__body img {
   margin-bottom: 20px; }
   @media (min-width: 768px) {
-    .text-styles img, .module__content-block__content img, .article img, .module__accordions__item__body img {
+    .text-styles img, .module__content-block__content img, .module__content-block__modal__inner img, .article img, .module__accordions__item__body img {
       margin-bottom: 30px; } }
   @media (min-width: 992px) {
-    .text-styles img, .module__content-block__content img, .article img, .module__accordions__item__body img {
+    .text-styles img, .module__content-block__content img, .module__content-block__modal__inner img, .article img, .module__accordions__item__body img {
       margin-bottom: 30px; } }
   @media (min-width: 1240px) {
-    .text-styles img, .module__content-block__content img, .article img, .module__accordions__item__body img {
+    .text-styles img, .module__content-block__content img, .module__content-block__modal__inner img, .article img, .module__accordions__item__body img {
       margin-bottom: 30px; } }
 
-.text-styles ul, .module__content-block__content ul, .article ul, .module__accordions__item__body ul {
+.text-styles ul, .module__content-block__content ul, .module__content-block__modal__inner ul, .article ul, .module__accordions__item__body ul {
   margin-bottom: 20px; }
   @media (min-width: 768px) {
-    .text-styles ul, .module__content-block__content ul, .article ul, .module__accordions__item__body ul {
+    .text-styles ul, .module__content-block__content ul, .module__content-block__modal__inner ul, .article ul, .module__accordions__item__body ul {
       margin-bottom: 30px; } }
   @media (min-width: 992px) {
-    .text-styles ul, .module__content-block__content ul, .article ul, .module__accordions__item__body ul {
+    .text-styles ul, .module__content-block__content ul, .module__content-block__modal__inner ul, .article ul, .module__accordions__item__body ul {
       margin-bottom: 30px; } }
   @media (min-width: 1240px) {
-    .text-styles ul, .module__content-block__content ul, .article ul, .module__accordions__item__body ul {
+    .text-styles ul, .module__content-block__content ul, .module__content-block__modal__inner ul, .article ul, .module__accordions__item__body ul {
       margin-bottom: 30px; } }
-  .text-styles ul li, .module__content-block__content ul li, .article ul li, .module__accordions__item__body ul li {
+  .text-styles ul li, .module__content-block__content ul li, .module__content-block__modal__inner ul li, .article ul li, .module__accordions__item__body ul li {
     padding-left: 20px;
     position: relative;
     font-family: 'Inter', sans-serif;
@@ -6047,25 +6106,25 @@ strong {
     font-style: normal;
     margin-bottom: 8px; }
     @media (min-width: 0px) {
-      .text-styles ul li, .module__content-block__content ul li, .article ul li, .module__accordions__item__body ul li {
+      .text-styles ul li, .module__content-block__content ul li, .module__content-block__modal__inner ul li, .article ul li, .module__accordions__item__body ul li {
         font-size: 15px !important;
         line-height: 24px; } }
     @media (min-width: 768px) {
-      .text-styles ul li, .module__content-block__content ul li, .article ul li, .module__accordions__item__body ul li {
+      .text-styles ul li, .module__content-block__content ul li, .module__content-block__modal__inner ul li, .article ul li, .module__accordions__item__body ul li {
         font-size: 16px !important;
         line-height: 26px; } }
     @media (min-width: 768px) {
-      .text-styles ul li, .module__content-block__content ul li, .article ul li, .module__accordions__item__body ul li {
+      .text-styles ul li, .module__content-block__content ul li, .module__content-block__modal__inner ul li, .article ul li, .module__accordions__item__body ul li {
         margin-bottom: 15px; } }
     @media (min-width: 992px) {
-      .text-styles ul li, .module__content-block__content ul li, .article ul li, .module__accordions__item__body ul li {
+      .text-styles ul li, .module__content-block__content ul li, .module__content-block__modal__inner ul li, .article ul li, .module__accordions__item__body ul li {
         margin-bottom: 15px; } }
     @media (min-width: 1240px) {
-      .text-styles ul li, .module__content-block__content ul li, .article ul li, .module__accordions__item__body ul li {
+      .text-styles ul li, .module__content-block__content ul li, .module__content-block__modal__inner ul li, .article ul li, .module__accordions__item__body ul li {
         margin-bottom: 15px; } }
-    .text-styles ul li a, .module__content-block__content ul li a, .article ul li a, .module__accordions__item__body ul li a {
+    .text-styles ul li a, .module__content-block__content ul li a, .module__content-block__modal__inner ul li a, .article ul li a, .module__accordions__item__body ul li a {
       color: #EE7524; }
-    .text-styles ul li:before, .module__content-block__content ul li:before, .article ul li:before, .module__accordions__item__body ul li:before {
+    .text-styles ul li:before, .module__content-block__content ul li:before, .module__content-block__modal__inner ul li:before, .article ul li:before, .module__accordions__item__body ul li:before {
       content: "";
       height: 6px;
       width: 6px;
@@ -6074,7 +6133,7 @@ strong {
       top: 10px;
       background-color: #0E0036;
       left: 0px; }
-    .text-styles ul li ul li:before, .module__content-block__content ul li ul li:before, .article ul li ul li:before, .module__accordions__item__body ul li ul li:before {
+    .text-styles ul li ul li:before, .module__content-block__content ul li ul li:before, .module__content-block__modal__inner ul li ul li:before, .article ul li ul li:before, .module__accordions__item__body ul li ul li:before {
       content: "";
       height: 2px;
       width: 6px;
@@ -6084,19 +6143,19 @@ strong {
       background-color: #0E0036;
       left: 0px; }
 
-.text-styles ol, .module__content-block__content ol, .article ol, .module__accordions__item__body ol {
+.text-styles ol, .module__content-block__content ol, .module__content-block__modal__inner ol, .article ol, .module__accordions__item__body ol {
   margin-bottom: 20px;
   padding-left: 20px; }
   @media (min-width: 768px) {
-    .text-styles ol, .module__content-block__content ol, .article ol, .module__accordions__item__body ol {
+    .text-styles ol, .module__content-block__content ol, .module__content-block__modal__inner ol, .article ol, .module__accordions__item__body ol {
       margin-bottom: 30px; } }
   @media (min-width: 992px) {
-    .text-styles ol, .module__content-block__content ol, .article ol, .module__accordions__item__body ol {
+    .text-styles ol, .module__content-block__content ol, .module__content-block__modal__inner ol, .article ol, .module__accordions__item__body ol {
       margin-bottom: 30px; } }
   @media (min-width: 1240px) {
-    .text-styles ol, .module__content-block__content ol, .article ol, .module__accordions__item__body ol {
+    .text-styles ol, .module__content-block__content ol, .module__content-block__modal__inner ol, .article ol, .module__accordions__item__body ol {
       margin-bottom: 30px; } }
-  .text-styles ol li, .module__content-block__content ol li, .article ol li, .module__accordions__item__body ol li {
+  .text-styles ol li, .module__content-block__content ol li, .module__content-block__modal__inner ol li, .article ol li, .module__accordions__item__body ol li {
     list-style-type: decimal;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -6106,29 +6165,29 @@ strong {
     font-style: normal;
     margin-bottom: 15px; }
     @media (min-width: 0px) {
-      .text-styles ol li, .module__content-block__content ol li, .article ol li, .module__accordions__item__body ol li {
+      .text-styles ol li, .module__content-block__content ol li, .module__content-block__modal__inner ol li, .article ol li, .module__accordions__item__body ol li {
         font-size: 15px !important;
         line-height: 24px; } }
     @media (min-width: 768px) {
-      .text-styles ol li, .module__content-block__content ol li, .article ol li, .module__accordions__item__body ol li {
+      .text-styles ol li, .module__content-block__content ol li, .module__content-block__modal__inner ol li, .article ol li, .module__accordions__item__body ol li {
         font-size: 16px !important;
         line-height: 26px; } }
     @media (min-width: 768px) {
-      .text-styles ol li, .module__content-block__content ol li, .article ol li, .module__accordions__item__body ol li {
+      .text-styles ol li, .module__content-block__content ol li, .module__content-block__modal__inner ol li, .article ol li, .module__accordions__item__body ol li {
         margin-bottom: 15px; } }
     @media (min-width: 992px) {
-      .text-styles ol li, .module__content-block__content ol li, .article ol li, .module__accordions__item__body ol li {
+      .text-styles ol li, .module__content-block__content ol li, .module__content-block__modal__inner ol li, .article ol li, .module__accordions__item__body ol li {
         margin-bottom: 15px; } }
     @media (min-width: 1240px) {
-      .text-styles ol li, .module__content-block__content ol li, .article ol li, .module__accordions__item__body ol li {
+      .text-styles ol li, .module__content-block__content ol li, .module__content-block__modal__inner ol li, .article ol li, .module__accordions__item__body ol li {
         margin-bottom: 15px; } }
-    .text-styles ol li a, .module__content-block__content ol li a, .article ol li a, .module__accordions__item__body ol li a {
+    .text-styles ol li a, .module__content-block__content ol li a, .module__content-block__modal__inner ol li a, .article ol li a, .module__accordions__item__body ol li a {
       color: #EE7524; }
 
-.text-styles iframe, .module__content-block__content iframe, .article iframe, .module__accordions__item__body iframe {
+.text-styles iframe, .module__content-block__content iframe, .module__content-block__modal__inner iframe, .article iframe, .module__accordions__item__body iframe {
   width: 100%; }
   @media (max-width: 767px) {
-    .text-styles iframe, .module__content-block__content iframe, .article iframe, .module__accordions__item__body iframe {
+    .text-styles iframe, .module__content-block__content iframe, .module__content-block__modal__inner iframe, .article iframe, .module__accordions__item__body iframe {
       height: 200px; } }
 
 .edit-link {
