@@ -126,7 +126,7 @@ $content-title: (
     }
     &__inner {
       background-color: white;
-      color: $orange;
+      // color: $orange;
       border: 3px solid $orange;
       box-shadow: 6px 6px 0px -2px $orange;
       @extend .text-styles;
