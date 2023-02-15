@@ -98,7 +98,7 @@
 
 
   .post__item {
-    @include marginBottom(30, 30, 30, 0);
+    @include marginBottom(30, 30, 30, 30);
   }
 }
 
@@ -109,7 +109,7 @@ $post-title: (
 
 .post__item {
   &__image {
-    box-shadow: 6px 6px 0px -2px $orange;
+    box-shadow: 6px 6px 0px -2px $black;
     @include marginBottom(30, 24);
   }
   &__title {

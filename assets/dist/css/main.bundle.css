@@ -4428,7 +4428,7 @@ object {
       .module__content-block__content {
         margin-bottom: 0px; } }
   .module__content-block__image {
-    box-shadow: 6px 6px 0px -2px #EE7524; }
+    box-shadow: 6px 6px 0px -2px #0E0036; }
   .module__content-block__link, .module__content-block__open {
     cursor: pointer; }
     .module__content-block__link + .module__content-block__link, .module__content-block__open + .module__content-block__link {
@@ -4994,10 +4994,10 @@ object {
     @media (min-width: 1240px) {
       .module__posts .post__item,
       .module__projects .post__item {
-        margin-bottom: 0px; } }
+        margin-bottom: 30px; } }
 
 .post__item__image {
-  box-shadow: 6px 6px 0px -2px #EE7524;
+  box-shadow: 6px 6px 0px -2px #0E0036;
   margin-bottom: 30px; }
   @media (min-width: 768px) {
     .post__item__image {
