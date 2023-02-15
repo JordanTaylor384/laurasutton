@@ -116,8 +116,10 @@ $content-title: (
     z-index: 10;
     pointer-events: none;
     opacity: 0;
-    width: 100%;
     max-width: calc(100% - 40px);
+    @media (max-width: $screen-sm-max) {
+      width: 100%;
+    }
     &--active {
       pointer-events: all;
       opacity: 1;
