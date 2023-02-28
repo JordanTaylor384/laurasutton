@@ -3333,6 +3333,9 @@ object {
         font-size: 17px !important;
         line-height: 25px; } }
 
+.grecaptcha-badge {
+  visibility: hidden; }
+
 .selectric {
   border: 0;
   background: none; }
@@ -4038,6 +4041,9 @@ object {
       .module__contact__form textarea:-ms-input-placeholder {
         font-size: 17px !important;
         line-height: 25px; } }
+
+.grecaptcha-badge {
+  visibility: hidden; }
 
 .selectric {
   border: 0;
